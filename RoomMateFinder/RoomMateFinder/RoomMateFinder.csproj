@@ -17,13 +17,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Domain\ValueObjects\" />
-      <Folder Include="Features\Conversations\" />
-      <Folder Include="Features\Matching\" />
-      <Folder Include="Features\Profiles\CreateProfile\" />
-      <Folder Include="Features\Profiles\GetMyProfile\" />
-      <Folder Include="Features\Reviews\" />
-      <Folder Include="Features\RoomListings\" />
+      <Folder Include="Tests\Integration\" />
+      <Folder Include="Tests\Unit\" />
     </ItemGroup>
 
 </Project>
