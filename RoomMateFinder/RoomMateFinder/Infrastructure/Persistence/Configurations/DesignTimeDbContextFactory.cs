@@ -12,7 +12,7 @@ public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<AppDbConte
 
        
         const string connectionString =
-            "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=sirene99";
+            "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=PAROLAVOASTRAAICI";
 
         optionsBuilder.UseNpgsql(connectionString);
 

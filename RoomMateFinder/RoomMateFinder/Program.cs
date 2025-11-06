@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var cs = builder.Configuration.GetConnectionString("DefaultConnection")
          ?? Environment.GetEnvironmentVariable("POSTGRES_CONNECTION_STRING")
-         ?? "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=sirene99";
+         ?? "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=PAROLAVOASTRAAICI";
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseNpgsql(cs));
 
 
