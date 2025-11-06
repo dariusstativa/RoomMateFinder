@@ -258,3 +258,14 @@ E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinder\obj\Debug\net9.0\re
 E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinder\obj\Debug\net9.0\RoomMateFinder.pdb
 E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinder\obj\Debug\net9.0\RoomMateFinder.genruntimeconfig.cache
 E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinder\obj\Debug\net9.0\ref\RoomMateFinder.dll
+E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinder\bin\Debug\net9.0\FluentValidation.dll
+E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinder\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
+E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinder\bin\Debug\net9.0\MediatR.dll
+E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinder\bin\Debug\net9.0\MediatR.Contracts.dll
+E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinder\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinder\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinder\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinder\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinder\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinder\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinder\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
