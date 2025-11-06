@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RoomMateFinder")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+095ffd175c5584e65a693aa5abc9b1ff0e753249")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d03fd1ea16ab03ee04568e2797a3d11d15360424")]
 [assembly: System.Reflection.AssemblyProductAttribute("RoomMateFinder")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RoomMateFinder")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
