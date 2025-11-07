@@ -13,17 +13,34 @@ using System.Reflection;
 using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+<<<<<<< Updated upstream
 using RoomMateFinder.Features.Profiles.CreateProfile;
 using RoomMateFinder.Features.Profiles.GetMyProfile;
 using RoomMateFinder.Features.Profiles.UpdateProfile;
 using RoomMateFinder.Features.RoomListings; 
+=======
+>>>>>>> Stashed changes
 using RoomMateFinder.Infrastructure.Persistence;
+
+using RoomMateFinder.Features.Profiles.CreateProfile;
+using RoomMateFinder.Features.Profiles.GetMyProfile;
+using RoomMateFinder.Features.Profiles.UpdateProfile;
+
+using RoomMateFinder.Features.RoomListings.CreateListing;
+using RoomMateFinder.Features.RoomListings.GetListingById;
+using RoomMateFinder.Features.RoomListings.GetAllListings;
+using RoomMateFinder.Features.RoomListings.UpdateListing;
+using RoomMateFinder.Features.RoomListings.DeleteListing;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var cs = builder.Configuration.GetConnectionString("DefaultConnection")
          ?? Environment.GetEnvironmentVariable("POSTGRES_CONNECTION_STRING")
+<<<<<<< Updated upstream
          ?? "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=PAROLA_TA_AICI";
+=======
+         ?? "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=admin123";
+>>>>>>> Stashed changes
 
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseNpgsql(cs));
 
@@ -49,12 +66,17 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+
+>>>>>>> Stashed changes
 
 >>>>>>> Stashed changes
 
 var summaries = new[]
 {
+<<<<<<< Updated upstream
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
 
@@ -73,6 +95,12 @@ app.MapGet("/weatherforecast", () =>
     })
     .WithName("GetWeatherForecast");
 =======
+=======
+    var id = await mediator.Send(new CreateProfileCommand(userId, body));
+    return Results.Created($"/profiles/{id}", id);
+});
+
+>>>>>>> Stashed changes
 app.MapGet("/profiles/{userId:guid}", async (Guid userId, IMediator mediator) =>
 {
     var profile = await mediator.Send(new GetProfileQuery(userId));
@@ -93,6 +121,13 @@ app.MapGetAllListingsEndpoint();
 app.MapUpdateListingEndpoint();
 app.MapDeleteListingEndpoint();
 
+
+
+app.MapCreateListingEndpoint();
+app.MapGetListingByIdEndpoint();
+app.MapGetAllListingsEndpoint();
+app.MapUpdateListingEndpoint();
+app.MapDeleteListingEndpoint();
 
 app.Run();
 
