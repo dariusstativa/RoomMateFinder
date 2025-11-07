@@ -1,0 +1,9 @@
+bin/
+obj/
+*.cache
+*.user
+*.DS_Store
+*.dll
+*.exe
+*.log
+*.nuget/
