@@ -1,8 +1,14 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ﻿using System.Security.Claims;
 using MediatR;
 =======
 using MediatR;
+=======
+using MediatR;
+
+namespace RoomMateFinder.Features.Profiles.GetMyProfile;
+>>>>>>> Stashed changes
 
 namespace RoomMateFinder.Features.Profiles.GetMyProfile;
 >>>>>>> Stashed changes
@@ -13,6 +19,7 @@ public static class GetMyProfileEndpoint
 {
     public static void MapGetMyProfileEndpoint(this IEndpointRouteBuilder app)
     {
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
         app.MapGet("/profiles/me", async (ClaimsPrincipal user, IMediator mediator, CancellationToken ct) =>
             {
@@ -25,6 +32,8 @@ public static class GetMyProfileEndpoint
             })
             .RequireAuthorization();
 =======
+=======
+>>>>>>> Stashed changes
         app.MapGet("/profiles/me", async (IMediator mediator, CancellationToken ct) =>
         {
             // TEMP user Id until JWT auth is added

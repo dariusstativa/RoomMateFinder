@@ -22,6 +22,7 @@ public class Profile
 <<<<<<< Updated upstream
 
     public bool IsOnboarded { get; set; }
+<<<<<<< Updated upstream
     
 =======
     
@@ -29,5 +30,8 @@ public class Profile
 >>>>>>> Stashed changes
     public DateTime? OnboardedAt { get; set; }
     
+=======
+    public DateTime? OnboardedAt { get; set; }
+>>>>>>> Stashed changes
     public User User { get; set; } = default!;
 }
