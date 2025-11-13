@@ -4,7 +4,7 @@
 public class Profile
 {
     public Guid Id { get; set; }
-    public Guid UserId { get; set; }   // FK to User
+    public Guid UserId { get; set; }   
 
     public string FullName { get; set; } = default!;
     public int Age { get; set; }

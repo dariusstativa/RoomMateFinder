@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var cs = builder.Configuration.GetConnectionString("DefaultConnection")
          ?? Environment.GetEnvironmentVariable("POSTGRES_CONNECTION_STRING")
-         ?? "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=PAROLAVOASTRAAICI";
+         ?? "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=sirene99";
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseNpgsql(cs));
 
 
@@ -25,7 +25,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Apply migrations automatically (optional, remove if you prefer manual control)
+
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
