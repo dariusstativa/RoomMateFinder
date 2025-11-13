@@ -13,7 +13,8 @@ using RoomMateFinder.Features.Profiles.CompleteOnboarding;
 
 using RoomMateFinder.Features.Login.RegisterUser;
 using RoomMateFinder.Features.Login.LoginUser;
-
+using RoomMateFinder.Features.Matching.DislikeProfile;
+using RoomMateFinder.Features.Matching.GetMatches;
 using RoomMateFinder.Features.Matching.LikeProfile;
 using RoomMateFinder.Features.Profiles.GetAllProfiles;
 using RoomMateFinder.Features.RoomListings.CreateListing;
@@ -29,7 +30,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var cs = builder.Configuration.GetConnectionString("DefaultConnection")
          ?? Environment.GetEnvironmentVariable("POSTGRES_CONNECTION_STRING")
-         ?? "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=AICIPAROLAVOASTRA";
+         ?? "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=sirene99";
 
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseNpgsql(cs));
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
@@ -108,5 +109,6 @@ app.MapDeleteListingEndpoint();
 app.MapGetAllListingsEndpoint();
 app.MapGetListingByIdEndpoint();
 app.MapGetAllProfilesEndpoint();
-
+app.MapDislikeEndpoint();
+app.MapGetMatchesEndpoint();
 app.Run();

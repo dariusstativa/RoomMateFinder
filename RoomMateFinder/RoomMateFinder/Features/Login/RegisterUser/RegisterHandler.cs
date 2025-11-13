@@ -26,14 +26,14 @@ public class RegisterHandler : IRequestHandler<RegisterCommand, Guid>
             
             throw new ValidationException(validationResult.Errors);
         }
-        // verificăm dacă email-ul există
+        
         if (await _db.Users.AnyAsync(x => x.Email == request.Request.Email, cancellationToken))
             throw new Exception("Email already registered.");
 
-        // generăm salt
+      
         var salt = Convert.ToBase64String(RandomNumberGenerator.GetBytes(16));
 
-        // hash la parolă
+       
         var hashedPassword = HashPassword(request.Request.Password, salt);
 
         var user = new User

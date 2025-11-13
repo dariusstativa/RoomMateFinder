@@ -23,6 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Features\Matching\Compatibility\" />
       <Folder Include="Tests\Integration\" />
       <Folder Include="Tests\Unit\" />
     </ItemGroup>
