@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RoommateFinder • Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="roommatefinder.css" rel="stylesheet"/>
+</head>
+<body>
+<main>
+  <div class="main-window">
+    <div class="title"><h2>Log in to RoommateFinder</h2></div>
+    <div class="subtitle">Welcome back! Sign in to find and manage your matches.</div>
+
+    <div class="credentials">
+      <div class="input-field">
+        <span class="material-icons no-cursor">mail</span>
+        <input id="loginInput" type="email" placeholder="Email" autocomplete="username"/>
+      </div>
+      <div class="input-field">
+        <span class="material-icons no-cursor">lock</span>
+        <input id="passwordInput" type="password" placeholder="Password" autocomplete="current-password"/>
+        <span class="material-icons toggle-password" id="togglePass">visibility_off</span>
+      </div>
+    </div>
+
+    <div class="forgot-password">
+      <div class="login-error-div" id="login-error"><p class="login-error-text" id="login-error-text"></p></div>
+      <p class="forgot-password-text"><a href="#" style="color:inherit; text-decoration:underline; opacity:.85">Forgot password?</a></p>
+    </div>
+
+    <div class="get-started">
+      <button class="login-button" id="loginBtn">Log In</button>
+    </div>
+
+    <div class="or">or</div>
+
+    <div class="register">
+      <a class="register-button" href="register.html">Create an account</a>
+    </div>
+  </div>
+</main>
+
+<footer>© 2025 RoommateFinder. All rights reserved.</footer>
+
+<script src="../auth-adapter.js"></script>
+<script>
+  const emailEl = document.getElementById('loginInput');
+  const passEl = document.getElementById('passwordInput');
+  const errBox = document.getElementById('login-error');
+  const errText = document.getElementById('login-error-text');
+  const toggle = document.getElementById('togglePass');
+
+  toggle.addEventListener('click', () => {
+    const t = passEl.type === 'password' ? 'text' : 'password';
+    passEl.type = t;
+    toggle.textContent = (t === 'password') ? 'visibility_off' : 'visibility';
+  });
+
+  document.getElementById('loginBtn').addEventListener('click', onLogin);
+  document.addEventListener('keydown', (e)=>{ if(e.key==='Enter') onLogin(); });
+
+  async function onLogin(){
+    hideError();
+    const user = (emailEl.value || '').trim();
+    const pass = (passEl.value || '');
+    if(!user || !pass){ return showError('Please fill in email and password.'); }
+    try{
+      const res = await Auth.login(user, pass);
+      if(res.ok){
+        // redirect placeholder
+        window.location.href = '../dashboard.html';
+      }else{
+        const msg = (res.data && (res.data.message || res.data.error)) || ('Login failed ('+res.status+')');
+        showError(String(msg));
+      }
+    }catch(err){
+      showError(err.message || 'Network error');
+    }
+  }
+
+  function showError(m){
+    errText.textContent = m;
+    errBox.classList.add('show');
+  }
+  function hideError(){
+    errText.textContent = '';
+    errBox.classList.remove('show');
+  }
+</script>
+</body>
+</html>

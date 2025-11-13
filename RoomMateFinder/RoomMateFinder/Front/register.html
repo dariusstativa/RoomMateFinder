@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RoommateFinder • Register</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="roommatefinder.css" rel="stylesheet"/>
+</head>
+<body>
+<main>
+  <div class="main-window">
+    <div class="title"><h2>Create your RoommateFinder account</h2></div>
+    <div class="subtitle">Join and start finding compatible roommates in minutes.</div>
+
+    <div class="credentials form-row">
+      <div class="two-col">
+        <div class="input-field">
+          <span class="material-icons no-cursor">badge</span>
+          <input id="usernameInput" type="text" placeholder="Username" autocomplete="username"/>
+        </div>
+        <div class="input-field">
+          <span class="material-icons no-cursor">mail</span>
+          <input id="emailInput" type="email" placeholder="Email" autocomplete="email"/>
+        </div>
+      </div>
+      <div class="input-field">
+        <span class="material-icons no-cursor">lock</span>
+        <input id="regPasswordInput" type="password" placeholder="Password" autocomplete="new-password"/>
+        <span class="material-icons toggle-password" id="toggleRegPass">visibility_off</span>
+      </div>
+      <div class="input-field">
+        <span class="material-icons no-cursor">lock</span>
+        <input id="regConfirmInput" type="password" placeholder="Confirm password" autocomplete="new-password"/>
+        <span class="material-icons toggle-password" id="toggleRegConf">visibility_off</span>
+      </div>
+      <div class="error-inline" id="regError" style="display:none"></div>
+      <div class="success-inline" id="regSuccess" style="display:none"></div>
+    </div>
+
+    <div class="get-started">
+      <button class="register-button" id="registerBtn">Create account</button>
+    </div>
+
+    <div class="or">already have an account?</div>
+
+    <div class="register">
+      <a class="register-button" href="login.html">Log in</a>
+    </div>
+  </div>
+</main>
+
+<footer>© 2025 RoommateFinder. All rights reserved.</footer>
+
+<script src="../auth-adapter.js"></script>
+<script>
+  const u = document.getElementById('usernameInput');
+  const e = document.getElementById('emailInput');
+  const p = document.getElementById('regPasswordInput');
+  const c = document.getElementById('regConfirmInput');
+  const err = document.getElementById('regError');
+  const ok = document.getElementById('regSuccess');
+
+  document.getElementById('toggleRegPass').addEventListener('click', ()=>toggle(p,'toggleRegPass'));
+  document.getElementById('toggleRegConf').addEventListener('click', ()=>toggle(c,'toggleRegConf'));
+  document.getElementById('registerForm').addEventListener('submit', (e)=>{ e.preventDefault(); onRegister(); });
+  document.getElementById('registerBtn').addEventListener('click', (e)=>{ e.preventDefault(); onRegister(); });
+
+
+  function toggle(el, id){
+    const t = el.type === 'password' ? 'text' : 'password';
+    el.type = t;
+    document.getElementById(id).textContent = (t === 'password') ? 'visibility_off' : 'visibility';
+  }
+
+  function show(el, msg){ el.textContent = msg; el.style.display=''; }
+  function hide(el){ el.textContent=''; el.style.display='none'; }
+
+  async function onRegister(){
+    hide(err); hide(ok);
+    const username = (u.value||'').trim();
+    const email = (e.value||'').trim();
+    const pass = p.value||'';
+    const conf = c.value||'';
+    if(!username || !email || !pass) return show(err,'Please fill all fields.');
+    if(pass !== conf) return show(err,'Passwords do not match.');
+
+    try{
+      const res = await Auth.register(username, email, pass);
+      if(res.ok){
+        show(ok,'Account created. You can log in now.');
+        setTimeout(()=> window.location.href='login.html', 900);
+      }else{
+        const msg = (res.data && (res.data.message || res.data.error)) || ('Registration failed ('+res.status+')');
+        show(err, String(msg));
+      }
+    }catch(er){
+      show(err, er.message || 'Network error');
+    }
+  }
+</script>
+</body>
+</html>
