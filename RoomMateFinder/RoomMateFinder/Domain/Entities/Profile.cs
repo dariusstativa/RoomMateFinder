@@ -19,9 +19,14 @@ public class Profile
     public string SmokingPreference { get; set; } = default!;
     public string PetPreference { get; set; } = default!;
     public string StudyHabits { get; set; } = default!;
+<<<<<<< Updated upstream
 
     public bool IsOnboarded { get; set; }
     
+=======
+    
+    public bool IsOnboarded { get; set; }
+>>>>>>> Stashed changes
     public DateTime? OnboardedAt { get; set; }
     
     public User User { get; set; } = default!;
