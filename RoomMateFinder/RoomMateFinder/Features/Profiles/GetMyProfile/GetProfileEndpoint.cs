@@ -1,14 +1,21 @@
-﻿using MediatR;
-using RoomMateFinder.Features.Profiles.GetMyProfile;
+using MediatR;
+
+namespace RoomMateFinder.Features.Profiles.GetMyProfile;
 
 public static class GetProfileEndpoint
 {
-    public static void MapGetProfileEndpoint(this IEndpointRouteBuilder app)
+    public static void MapGetMyProfileEndpoint(this IEndpointRouteBuilder app)
     {
-        app.MapGet("/profiles/{userId:guid}", async (Guid userId, IMediator mediator) =>
+        app.MapGet("/profiles/me", async (IMediator mediator, CancellationToken ct) =>
         {
-            var profile = await mediator.Send(new GetProfileQuery(userId));
-            return profile is not null ? Results.Ok(profile) : Results.NotFound();
+          
+            var userId = Guid.Parse("00000000-0000-0000-0000-000000000001");
+
+            var profile = await mediator.Send(new GetProfileQuery(userId), ct);
+
+            return profile is not null
+                ? Results.Ok(profile)
+                : Results.NotFound();
         });
     }
 }

@@ -1,22 +1,24 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
-using RoomMateFinder.Infrastructure.Persistence;
 using RoomMateFinder.Domain.Entities;
-using RoomMateFinder.Features.Profiles.GetMyProfile;
+using RoomMateFinder.Infrastructure.Persistence;
+
+namespace RoomMateFinder.Features.Profiles.GetMyProfile;
 
 public class GetProfileHandler : IRequestHandler<GetProfileQuery, Profile?>
 {
-    private readonly AppDbContext _context;
+    private readonly AppDbContext _db;
 
-    public GetProfileHandler(AppDbContext context)
+    public GetProfileHandler(AppDbContext db)
     {
-        _context = context;
+        _db = db;
     }
 
-    public async Task<Profile?> Handle(GetProfileQuery query, CancellationToken ct)
+    public async Task<Profile?> Handle(GetProfileQuery request, CancellationToken ct)
     {
-        return await _context.Profiles
+        return await _db.Profiles
             .Include(p => p.User)
-            .FirstOrDefaultAsync(p => p.UserId == query.UserId, ct);
+            .AsNoTracking()
+            .FirstOrDefaultAsync(p => p.UserId == request.UserId, ct);
     }
 }
