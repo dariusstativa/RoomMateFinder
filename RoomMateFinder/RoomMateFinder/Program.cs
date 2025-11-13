@@ -1,18 +1,23 @@
 using System.Reflection;
 using FluentValidation;
 using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RoomMateFinder.Features.Profiles.CreateProfile;
 using RoomMateFinder.Features.Profiles.GetMyProfile; 
 using RoomMateFinder.Features.Profiles.UpdateProfile; 
 using RoomMateFinder.Infrastructure.Persistence;
+using RoomMateFinder.Features.Login.RegisterUser;
+using RoomMateFinder.Features.Login.LoginUser;
+using RoomMateFinder.Features.Matching.LikeProfile;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
 var cs = builder.Configuration.GetConnectionString("DefaultConnection")
          ?? Environment.GetEnvironmentVariable("POSTGRES_CONNECTION_STRING")
-         ?? "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=PAROLAVOASTRAAICI";
+         ?? "Host=localhost;Port=1326;Database=roommatefinder;Username=postgres;Password=tudor";
+
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseNpgsql(cs));
 
 
@@ -58,5 +63,21 @@ app.MapPut("/profiles/{userId:guid}", async (Guid userId, UpdateProfileRequest b
     var ok = await mediator.Send(new UpdateProfileCommand(userId, body));
     return ok ? Results.NoContent() : Results.NotFound();
 });
+app.MapPost("/auth/register", async ([FromBody] RegisterRequest req, IMediator mediator) =>
+{
+    var id = await mediator.Send(new RegisterCommand(req));
+    return Results.Created($"/users/{id}", id);
+});
+
+// LOGIN
+app.MapPost("/auth/login", async (LoginRequest req, IMediator mediator) =>
+{
+    Guid userId = await mediator.Send(new LoginCommand(req));
+    return Results.Ok(userId);
+
+});
+
+app.MapLikeEndpoints();
+
 
 app.Run();
