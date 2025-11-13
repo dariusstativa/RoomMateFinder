@@ -15,12 +15,19 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 <<<<<<< Updated upstream
 using RoomMateFinder.Features.Profiles.CreateProfile;
+<<<<<<< Updated upstream
 using RoomMateFinder.Features.Profiles.GetMyProfile;
 using RoomMateFinder.Features.Profiles.UpdateProfile;
 using RoomMateFinder.Features.RoomListings; 
 =======
 >>>>>>> Stashed changes
+=======
+using RoomMateFinder.Features.Profiles.UpdateProfile;
+using RoomMateFinder.Features.Profiles.GetProfileById;
+using RoomMateFinder.Features.Profiles.CompleteOnboarding;
+>>>>>>> Stashed changes
 using RoomMateFinder.Infrastructure.Persistence;
+using System.Security.Claims;
 
 using RoomMateFinder.Features.Profiles.CreateProfile;
 using RoomMateFinder.Features.Profiles.GetMyProfile;
@@ -37,9 +44,13 @@ var builder = WebApplication.CreateBuilder(args);
 var cs = builder.Configuration.GetConnectionString("DefaultConnection")
          ?? Environment.GetEnvironmentVariable("POSTGRES_CONNECTION_STRING")
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
          ?? "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=PAROLA_TA_AICI";
 =======
          ?? "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=admin123";
+>>>>>>> Stashed changes
+=======
+         ?? "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=3924";
 >>>>>>> Stashed changes
 
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseNpgsql(cs));
@@ -64,6 +75,7 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
+<<<<<<< Updated upstream
 app.UseHttpsRedirection();
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -102,14 +114,45 @@ app.MapGet("/weatherforecast", () =>
 
 >>>>>>> Stashed changes
 app.MapGet("/profiles/{userId:guid}", async (Guid userId, IMediator mediator) =>
+=======
+app.MapPost("/profiles/{userId:guid}", async (Guid userId, CreateProfileRequest body, IMediator mediator, CancellationToken ct) =>
 {
-    var profile = await mediator.Send(new GetProfileQuery(userId));
+    var id = await mediator.Send(new CreateProfileCommand(userId, body), ct);
+    return Results.Created($"/profiles/{id}", id);
+});
+
+app.MapPut("/profiles/{userId:guid}", async (Guid userId, UpdateProfileRequest body, IMediator mediator, CancellationToken ct) =>
+>>>>>>> Stashed changes
+{
+    var ok = await mediator.Send(new UpdateProfileCommand(userId, body), ct);
+    return ok ? Results.NoContent() : Results.NotFound();
+});
+
+app.MapGet("/profiles/{userId:guid}", async (Guid userId, IMediator mediator, CancellationToken ct) =>
+{
+    var profile = await mediator.Send(new GetProfileByIdQuery(userId), ct);
     return profile is not null ? Results.Ok(profile) : Results.NotFound();
 });
 
+<<<<<<< Updated upstream
 app.MapPut("/profiles/{userId:guid}", async (Guid userId, UpdateProfileRequest body, IMediator mediator) =>
+=======
+app.MapGet("/profiles/me", async (IMediator mediator, CancellationToken ct) =>
+>>>>>>> Stashed changes
 {
-    var ok = await mediator.Send(new UpdateProfileCommand(userId, body));
+    var userId = Guid.Parse("00000000-0000-0000-0000-000000000001");
+
+    var profile = await mediator.Send(new GetProfileByIdQuery(userId), ct);
+    return profile is not null ? Results.Ok(profile) : Results.NotFound();
+});
+
+app.MapPost("/profiles/{userId:guid}/onboarding", async (
+    Guid userId,
+    CompleteOnboardingRequest body,
+    IMediator mediator,
+    CancellationToken ct) =>
+{
+    var ok = await mediator.Send(new CompleteOnboardingCommand(userId, body), ct);
     return ok ? Results.NoContent() : Results.NotFound();
 });
 >>>>>>> Stashed changes

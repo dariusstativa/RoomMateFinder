@@ -20,6 +20,9 @@ public class Profile
     public string PetPreference { get; set; } = default!;
     public string StudyHabits { get; set; } = default!;
 
+    public bool IsOnboarded { get; set; }
+    
+    public DateTime? OnboardedAt { get; set; }
     
     public User User { get; set; } = default!;
 }
