@@ -11,37 +11,39 @@ public class DislikeHandler : IRequestHandler<DislikeCommand, bool>
 {
     private readonly AppDbContext _db;
     private readonly IValidator<DislikeRequest> _validator;
+
     public DislikeHandler(AppDbContext db, IValidator<DislikeRequest> validator)
-    {_validator = validator;
+    {
         _db = db;
+        _validator = validator;
     }
 
     public async Task<bool> Handle(DislikeCommand request, CancellationToken cancellationToken)
     {
-        ValidationResult validationResult = _validator.Validate(request.Request);
-        if (!validationResult.IsValid)
-        {
-            throw new  ValidationException(validationResult.Errors);
-        }
-        var req = request.Request;
+        await _validator.ValidateAndThrowAsync(request.Request, cancellationToken);
+
+        var userId = request.UserId;
+        var targetId = request.Request.TargetProfileId;
 
         var existing = await _db.Likes
-            .FirstOrDefaultAsync(x =>
-                    x.LikerUserId == req.LikerUserId &&
-                    x.TargetProfileId == req.TargetProfileId,
+            .FirstOrDefaultAsync(
+                x => x.LikerUserId == userId && x.TargetProfileId == targetId,
                 cancellationToken);
 
         if (existing != null)
         {
-            existing.IsLike = false;   
+            existing.IsLike = false;
+            existing.CreatedAt = DateTime.UtcNow;
+
             await _db.SaveChangesAsync(cancellationToken);
             return true;
         }
 
         var dislike = new Like
         {
-            LikerUserId = req.LikerUserId,
-            TargetProfileId = req.TargetProfileId,
+            Id = Guid.NewGuid(),
+            LikerUserId = userId,
+            TargetProfileId = targetId,
             IsLike = false,
             CreatedAt = DateTime.UtcNow
         };

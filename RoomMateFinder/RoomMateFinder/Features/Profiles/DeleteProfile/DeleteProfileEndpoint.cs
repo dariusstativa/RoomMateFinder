@@ -7,13 +7,18 @@ public static class DeleteProfileEndpoint
 {
     public static void MapDeleteProfileEndpoint(this IEndpointRouteBuilder app)
     {
-        app.MapDelete("/profiles/{userId:guid}", async (
-            Guid userId,
-            IMediator mediator) =>
-        {
-            var result = await mediator.Send(new DeleteProfileCommand(userId));
+        app.MapDelete("/profiles", async (
+                HttpContext http,
+                IMediator mediator) =>
+            {
+               
+                var userId = Guid.Parse(http.User.FindFirst("sub")!.Value);
 
-            return result ? Results.NoContent() : Results.NotFound();
-        });
+               
+                var result = await mediator.Send(new DeleteProfileCommand(userId));
+
+                return result ? Results.NoContent() : Results.NotFound();
+            })
+            .RequireAuthorization(); 
     }
 }

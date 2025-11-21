@@ -6,16 +6,16 @@ public static class GetProfileEndpoint
 {
     public static void MapGetMyProfileEndpoint(this IEndpointRouteBuilder app)
     {
-        app.MapGet("/profiles/me", async (IMediator mediator, CancellationToken ct) =>
-        {
-          
-            var userId = Guid.Parse("00000000-0000-0000-0000-000000000001");
+        app.MapGet("/profiles/me", async (HttpContext http, IMediator mediator, CancellationToken ct) =>
+            {
+                var userId = Guid.Parse(http.User.FindFirst("sub")!.Value);
 
-            var profile = await mediator.Send(new GetProfileQuery(userId), ct);
+                var profile = await mediator.Send(new GetProfileQuery(userId), ct);
 
-            return profile is not null
-                ? Results.Ok(profile)
-                : Results.NotFound();
-        });
+                return profile is not null
+                    ? Results.Ok(profile)
+                    : Results.NotFound();
+            })
+            .RequireAuthorization();
     }
 }

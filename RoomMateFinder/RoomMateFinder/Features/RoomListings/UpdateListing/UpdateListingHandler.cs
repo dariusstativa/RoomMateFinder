@@ -19,20 +19,16 @@ public class UpdateListingHandler : IRequestHandler<UpdateListingCommand, bool>
 
     public async Task<bool> Handle(UpdateListingCommand request, CancellationToken ct)
     {
-
         ValidationResult validationResult = _validator.Validate(request.Request);
         if (!validationResult.IsValid)
-        {
-            throw new  ValidationException(validationResult.Errors);
-        }
-        
+            throw new ValidationException(validationResult.Errors);
+
         var listing = await _db.RoomListings
-            .FirstOrDefaultAsync(x => x.Id == request.Id, ct);
+            .FirstOrDefaultAsync(x => x.Id == request.ListingId && x.OwnerId == request.UserId, ct);
 
         if (listing is null)
             return false;
 
-        
         listing.Title = request.Request.Title;
         listing.Description = request.Request.Description;
         listing.Address = request.Request.Address;

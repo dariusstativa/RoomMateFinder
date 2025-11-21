@@ -2,4 +2,5 @@
 
 namespace RoomMateFinder.Features.Login.LoginUser;
 
-public record LoginCommand(LoginRequest Request) : IRequest<Guid>;
+public record LoginCommand(LoginRequest Request) : IRequest<LoginResponse>;
+

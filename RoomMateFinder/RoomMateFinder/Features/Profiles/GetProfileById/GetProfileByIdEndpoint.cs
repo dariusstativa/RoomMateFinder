@@ -7,9 +7,10 @@ public static class GetProfileByIdEndpoint
     public static void MapGetProfileByIdEndpoint(this IEndpointRouteBuilder app)
     {
         app.MapGet("/profiles/{userId:guid}", async (Guid userId, IMediator mediator) =>
-        {
-            var profile = await mediator.Send(new GetProfileByIdQuery(userId));
-            return Results.Ok(profile);
-        });
+            {
+                var profile = await mediator.Send(new GetProfileByIdQuery(userId));
+                return Results.Ok(profile);
+            })
+            .RequireAuthorization();
     }
 }

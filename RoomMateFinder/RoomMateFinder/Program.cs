@@ -1,16 +1,18 @@
 using System.Reflection;
+using System.Text;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using RoomMateFinder.Features.Login;
 using RoomMateFinder.Features.Profiles.CreateProfile;
 using RoomMateFinder.Features.Profiles.UpdateProfile;
 using RoomMateFinder.Features.Profiles.DeleteProfile;
 using RoomMateFinder.Features.Profiles.GetMyProfile;
 using RoomMateFinder.Features.Profiles.GetProfileById;
 using RoomMateFinder.Features.Profiles.CompleteOnboarding;
-
 using RoomMateFinder.Features.Login.RegisterUser;
 using RoomMateFinder.Features.Login.LoginUser;
 using RoomMateFinder.Features.Matching.DislikeProfile;
@@ -30,16 +32,71 @@ var builder = WebApplication.CreateBuilder(args);
 
 var cs = builder.Configuration.GetConnectionString("DefaultConnection")
          ?? Environment.GetEnvironmentVariable("POSTGRES_CONNECTION_STRING")
-         ?? "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=sirene99";
+         ?? "Host=localhost;Port=1326;Database=roommatefinder;Username=postgres;Password=tudor";
 
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseNpgsql(cs));
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer(options =>
+    {
+        var keyString = builder.Configuration["Jwt:Key"];
+
+        // aplicăm aceeași regulă de padding ca în JwtTokenGenerator
+        if (string.IsNullOrWhiteSpace(keyString) || keyString.Length < 32)
+            keyString = (keyString ?? "").PadRight(32, '0');
+
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keyString))
+        };
+    });
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new() { Title = "RoomMateFinder API", Version = "v1" });
+
+    c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    {
+        Description = "JWT Authorization header using the Bearer scheme.\r\n\r\n" +
+                      "Enter your token like this: Bearer {token}",
+        Name = "Authorization",
+        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT"
+    });
+
+    c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    {
+        {
+            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+            {
+                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                {
+                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            new List<string>()
+        }
+    });
+});
+
+builder.Services.AddAuthorization();
+
 
 var app = builder.Build();
 app.UseErrorHandling();
+app.UseAuthentication();
+app.UseAuthorization();
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
@@ -52,43 +109,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.MapPost("/profiles/{userId:guid}", async (Guid userId, CreateProfileRequest body, IMediator mediator, CancellationToken ct) =>
-{
-    var id = await mediator.Send(new CreateProfileCommand(userId, body), ct);
-    return Results.Created($"/profiles/{id}", id);
-});
-
-app.MapGet("/profiles/{userId:guid}", async (Guid userId, IMediator mediator, CancellationToken ct) =>
-{
-    var profile = await mediator.Send(new GetProfileByIdQuery(userId), ct);
-    return profile is not null ? Results.Ok(profile) : Results.NotFound();
-});
-
-app.MapGet("/profiles/me", async (IMediator mediator, CancellationToken ct) =>
-{
-    var userId = Guid.Parse("00000000-0000-0000-0000-000000000001");
-    var profile = await mediator.Send(new GetProfileQuery(userId), ct);
-    return profile is not null ? Results.Ok(profile) : Results.NotFound();
-});
-
-app.MapPut("/profiles/{userId:guid}", async (Guid userId, UpdateProfileRequest body, IMediator mediator, CancellationToken ct) =>
-{
-    var ok = await mediator.Send(new UpdateProfileCommand(userId, body), ct);
-    return ok ? Results.NoContent() : Results.NotFound();
-});
-
-app.MapDelete("/profiles/{userId:guid}", async (Guid userId, IMediator mediator, CancellationToken ct) =>
-{
-    var ok = await mediator.Send(new DeleteProfileCommand(userId), ct);
-    return ok ? Results.NoContent() : Results.NotFound();
-});
-
-app.MapPost("/profiles/{userId:guid}/onboarding", async (Guid userId, CompleteOnboardingRequest body, IMediator mediator, CancellationToken ct) =>
-{
-    var ok = await mediator.Send(new CompleteOnboardingCommand(userId, body), ct);
-    return ok ? Results.NoContent() : Results.NotFound();
-});
-
 app.MapPost("/auth/register", async ([FromBody] RegisterRequest req, IMediator mediator) =>
 {
     var id = await mediator.Send(new RegisterCommand(req));
@@ -97,18 +117,27 @@ app.MapPost("/auth/register", async ([FromBody] RegisterRequest req, IMediator m
 
 app.MapPost("/auth/login", async (LoginRequest req, IMediator mediator) =>
 {
-    Guid userId = await mediator.Send(new LoginCommand(req));
-    return Results.Ok(userId);
+    var response = await mediator.Send(new LoginCommand(req));
+    return Results.Ok(response);
 });
 
-app.MapLikeEndpoints();
 
+app.MapCreateProfileEndpoint();
+app.MapUpdateProfileEndpoint();
+app.MapDeleteProfileEndpoint();
+app.MapGetMyProfileEndpoint();
+app.MapGetProfileByIdEndpoint();
+app.MapGetAllProfilesEndpoint();
+
+// matching
+app.MapLikeEndpoints();
+app.MapDislikeEndpoint();
+app.MapGetMatchesEndpoint();
+
+// room listings
 app.MapCreateRoomListingEndpoint();
 app.MapUpdateListingEndpoint();
 app.MapDeleteListingEndpoint();
 app.MapGetAllListingsEndpoint();
 app.MapGetListingByIdEndpoint();
-app.MapGetAllProfilesEndpoint();
-app.MapDislikeEndpoint();
-app.MapGetMatchesEndpoint();
 app.Run();
