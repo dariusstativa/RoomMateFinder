@@ -12,8 +12,8 @@ using RoomMateFinder.Infrastructure.Persistence;
 namespace RoomMateFinder.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251113153822_FixProfileSchema")]
-    partial class FixProfileSchema
+    [Migration("20251121091814_AddUserRatingAndMatchingChanges")]
+    partial class AddUserRatingAndMatchingChanges
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -234,6 +234,9 @@ namespace RoomMateFinder.Migrations
                     b.Property<string>("PasswordHash")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Role")
                         .IsRequired()

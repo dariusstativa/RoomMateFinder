@@ -22,6 +22,33 @@ namespace RoomMateFinder.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("RoomMateFinder.Domain.Entities.Like", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<bool>("IsLike")
+                        .HasColumnType("boolean");
+
+                    b.Property<Guid>("LikerUserId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TargetProfileId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LikerUserId");
+
+                    b.HasIndex("TargetProfileId");
+
+                    b.ToTable("Likes");
+                });
+
             modelBuilder.Entity("RoomMateFinder.Domain.Entities.Message", b =>
                 {
                     b.Property<Guid>("Id")
@@ -205,13 +232,39 @@ namespace RoomMateFinder.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("Rating")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Salt")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("RoomMateFinder.Domain.Entities.Like", b =>
+                {
+                    b.HasOne("RoomMateFinder.Domain.Entities.User", "LikerUser")
+                        .WithMany()
+                        .HasForeignKey("LikerUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RoomMateFinder.Domain.Entities.Profile", "TargetProfile")
+                        .WithMany()
+                        .HasForeignKey("TargetProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("LikerUser");
+
+                    b.Navigation("TargetProfile");
                 });
 
             modelBuilder.Entity("RoomMateFinder.Domain.Entities.Message", b =>

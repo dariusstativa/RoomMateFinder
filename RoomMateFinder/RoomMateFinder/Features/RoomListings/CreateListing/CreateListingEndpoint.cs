@@ -1,15 +1,17 @@
 ﻿using MediatR;
-using RoomMateFinder.Domain.Entities;
+using RoomMateFinder.Features.RoomListings.CreateListing;
 
-namespace RoomMateFinder.Features.RoomListings.CreateListing;
-
-public static class CreateListingEndpoint
+public static class CreateRoomListingEndpoint
 {
-    public static void MapCreateListingEndpoint(this IEndpointRouteBuilder app)
+    public static void MapCreateRoomListingEndpoint(this IEndpointRouteBuilder app)
     {
-        app.MapPost("/listings", async (RoomListing listing, IMediator mediator) =>
+        app.MapPost("/users/{ownerId:guid}/listings", async (
+            Guid ownerId,
+            CreateListingRequest request,
+            IMediator mediator,
+            CancellationToken ct) =>
         {
-            var id = await mediator.Send(new CreateListingCommand(listing));
+            var id = await mediator.Send(new CreateRoomListingCommand(ownerId, request), ct);
             return Results.Created($"/listings/{id}", id);
         });
     }

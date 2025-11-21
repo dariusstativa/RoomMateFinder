@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\git\\.NET\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.csproj": {}
+    "C:\\Users\\radug\\Downloads\\RoomMateFinder-DariusBranch\\RoomMateFinder-DariusBranch\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.csproj": {}
   },
   "projects": {
-    "C:\\git\\.NET\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.csproj": {
+    "C:\\Users\\radug\\Downloads\\RoomMateFinder-DariusBranch\\RoomMateFinder-DariusBranch\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\git\\.NET\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.csproj",
+        "projectUniqueName": "C:\\Users\\radug\\Downloads\\RoomMateFinder-DariusBranch\\RoomMateFinder-DariusBranch\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.csproj",
         "projectName": "RoomMateFinder",
-        "projectPath": "C:\\git\\.NET\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.csproj",
+        "projectPath": "C:\\Users\\radug\\Downloads\\RoomMateFinder-DariusBranch\\RoomMateFinder-DariusBranch\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.csproj",
         "packagesPath": "C:\\Users\\radug\\.nuget\\packages\\",
-        "outputPath": "C:\\git\\.NET\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder\\obj\\",
+        "outputPath": "C:\\Users\\radug\\Downloads\\RoomMateFinder-DariusBranch\\RoomMateFinder-DariusBranch\\RoomMateFinder\\RoomMateFinder\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\radug\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -44,6 +44,18 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.1.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[12.1.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[13.1.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.9, )"
@@ -61,6 +73,18 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[9.0.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[9.0.6, )"
             }
           },
           "imports": [

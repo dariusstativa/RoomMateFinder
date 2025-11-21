@@ -12,19 +12,7 @@ public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<AppDbConte
 
        
         const string connectionString =
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=AICIPAROLAVOASTRA";
-=======
             "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=3924";
->>>>>>> Stashed changes
-=======
-            "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=3924";
->>>>>>> Stashed changes
-=======
-            "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=3924";
->>>>>>> Stashed changes
 
         optionsBuilder.UseNpgsql(connectionString);
 

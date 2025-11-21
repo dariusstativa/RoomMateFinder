@@ -12,8 +12,8 @@ using RoomMateFinder.Infrastructure.Persistence;
 namespace RoomMateFinder.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251110211952_AddProfileUpdates")]
-    partial class AddProfileUpdates
+    [Migration("20251113110335_Update")]
+    partial class Update
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -78,15 +78,9 @@ namespace RoomMateFinder.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<bool>("IsOnboarded")
-                        .HasColumnType("boolean");
-
                     b.Property<string>("NoiseTolerance")
                         .IsRequired()
                         .HasColumnType("text");
-
-                    b.Property<DateTime?>("OnboardedAt")
-                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("PetPreference")
                         .IsRequired()
@@ -209,6 +203,10 @@ namespace RoomMateFinder.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Salt")
                         .IsRequired()
                         .HasColumnType("text");
 
