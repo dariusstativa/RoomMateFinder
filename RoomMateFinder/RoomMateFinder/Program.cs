@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.IdentityModel.Tokens.Jwt;
 using RoomMateFinder.Features.Login;
 using RoomMateFinder.Features.Profiles.CreateProfile;
 using RoomMateFinder.Features.Profiles.UpdateProfile;
@@ -29,6 +30,9 @@ using RoomMateFinder.Infrastructure.Persistence;
 using RoomMateFinder.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Disable default claim type mapping to preserve JWT claim names
+JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
 var cs = builder.Configuration.GetConnectionString("DefaultConnection")
          ?? Environment.GetEnvironmentVariable("POSTGRES_CONNECTION_STRING")

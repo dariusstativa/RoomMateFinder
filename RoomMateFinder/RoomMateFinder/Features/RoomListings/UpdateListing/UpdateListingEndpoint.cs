@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using System.Security.Claims;
 
 namespace RoomMateFinder.Features.RoomListings.UpdateListing;
 
@@ -12,7 +13,7 @@ public static class UpdateListingEndpoint
                 UpdateListingRequest req,
                 IMediator mediator) =>
             {
-                var userId = Guid.Parse(http.User.FindFirst("sub")!.Value);
+                var userId = Guid.Parse(http.User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
 
                 var ok = await mediator.Send(new UpdateListingCommand(id, userId, req));
 

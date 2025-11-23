@@ -5,20 +5,23 @@ using RoomMateFinder.Infrastructure.Persistence;
 using System.Security.Cryptography;
 using System.Text;
 using FluentValidation;
+using RoomMateFinder.Features.Login.LoginUser;
 
 namespace RoomMateFinder.Features.Login.RegisterUser;
 
-public class RegisterHandler : IRequestHandler<RegisterCommand, Guid>
+public class RegisterHandler : IRequestHandler<RegisterCommand, LoginResponse>
 {
     private readonly AppDbContext _db;
     private readonly IValidator<RegisterCommand> _validator;
-    public RegisterHandler(AppDbContext db, IValidator<RegisterCommand> validator)
+    private readonly IJwtTokenGenerator _jwtTokenGenerator;
+    public RegisterHandler(AppDbContext db, IValidator<RegisterCommand> validator, IJwtTokenGenerator jwtTokenGenerator)
     {
         _db = db;
         _validator = validator;
+        _jwtTokenGenerator = jwtTokenGenerator;
     }
 
-    public async Task<Guid> Handle(RegisterCommand request, CancellationToken cancellationToken)
+    public async Task<LoginResponse> Handle(RegisterCommand request, CancellationToken cancellationToken)
     {
         var validationResult = _validator.Validate(request);
         if (!validationResult.IsValid)
@@ -30,10 +33,7 @@ public class RegisterHandler : IRequestHandler<RegisterCommand, Guid>
         if (await _db.Users.AnyAsync(x => x.Email == request.Request.Email, cancellationToken))
             throw new Exception("Email already registered.");
 
-      
         var salt = Convert.ToBase64String(RandomNumberGenerator.GetBytes(16));
-
-       
         var hashedPassword = HashPassword(request.Request.Password, salt);
 
         var user = new User
@@ -48,7 +48,8 @@ public class RegisterHandler : IRequestHandler<RegisterCommand, Guid>
         _db.Users.Add(user);
         await _db.SaveChangesAsync(cancellationToken);
 
-        return user.Id;
+        var token = _jwtTokenGenerator.Generate(user.Id, user.Email);
+        return new LoginResponse(user.Id, token);
     }
 
     private string HashPassword(string password, string salt)

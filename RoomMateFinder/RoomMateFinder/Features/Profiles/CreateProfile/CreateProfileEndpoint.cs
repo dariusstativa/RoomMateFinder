@@ -2,6 +2,7 @@
 
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 public static class CreateProfileEndpoint
 {
@@ -13,7 +14,7 @@ public static class CreateProfileEndpoint
                 IMediator mediator) =>
             {
                
-                var userId = Guid.Parse(http.User.FindFirst("sub")!.Value);
+                var userId = Guid.Parse(http.User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
 
                 
                 var id = await mediator.Send(new CreateProfileCommand(userId, request));

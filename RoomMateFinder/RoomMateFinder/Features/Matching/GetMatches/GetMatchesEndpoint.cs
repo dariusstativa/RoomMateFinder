@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using System.Security.Claims;
 
 namespace RoomMateFinder.Features.Matching.GetMatches;
 
@@ -11,7 +12,7 @@ public static class GetMatchesEndpoint
                 IMediator mediator,
                 CancellationToken ct) =>
             {
-                var userId = Guid.Parse(http.User.FindFirst("sub")!.Value);
+                var userId = Guid.Parse(http.User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
 
                 var matches = await mediator.Send(new GetMatchesQuery(userId), ct);
 

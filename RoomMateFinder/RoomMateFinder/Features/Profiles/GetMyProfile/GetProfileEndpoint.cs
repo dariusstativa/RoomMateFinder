@@ -1,4 +1,5 @@
 using MediatR;
+using System.Security.Claims;
 
 namespace RoomMateFinder.Features.Profiles.GetMyProfile;
 
@@ -8,7 +9,7 @@ public static class GetProfileEndpoint
     {
         app.MapGet("/profiles/me", async (HttpContext http, IMediator mediator, CancellationToken ct) =>
             {
-                var userId = Guid.Parse(http.User.FindFirst("sub")!.Value);
+                var userId = Guid.Parse(http.User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
 
                 var profile = await mediator.Send(new GetProfileQuery(userId), ct);
 

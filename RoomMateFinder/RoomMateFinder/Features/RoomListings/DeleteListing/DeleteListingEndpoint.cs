@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using System.Security.Claims;
 
 namespace RoomMateFinder.Features.RoomListings.DeleteListing;
 
@@ -11,7 +12,7 @@ public static class DeleteListingEndpoint
                 Guid id,
                 IMediator mediator) =>
             {
-                var userId = Guid.Parse(http.User.FindFirst("sub")!.Value);
+                var userId = Guid.Parse(http.User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
 
                 var ok = await mediator.Send(new DeleteListingCommand(id, userId));
 

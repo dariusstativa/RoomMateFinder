@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using RoomMateFinder.Features.RoomListings.CreateListing;
+using System.Security.Claims;
 
 public static class CreateRoomListingEndpoint
 {
@@ -11,7 +12,7 @@ public static class CreateRoomListingEndpoint
                 IMediator mediator,
                 CancellationToken ct) =>
             {
-                var ownerId = Guid.Parse(http.User.FindFirst("sub")!.Value);
+                var ownerId = Guid.Parse(http.User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
 
                 var id = await mediator.Send(new CreateRoomListingCommand(ownerId, request), ct);
 
