@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using RoomMateFinder.Domain.Entities;
 using RoomMateFinder.Features.Profiles.CreateProfile;
 using RoomMateFinder.Infrastructure.Persistence;
@@ -19,8 +20,16 @@ public class CreateProfileHandler : IRequestHandler<CreateProfileCommand, Guid>
 
     public async Task<Guid> Handle(CreateProfileCommand request, CancellationToken cancellationToken)
     {
-        
-        await _validator.ValidateAndThrowAsync(request.Request, cancellationToken);
+        var alreadyHasProfile = await _db.Profiles
+            .AnyAsync(p => p.UserId == request.UserId, cancellationToken);
+
+        if (alreadyHasProfile)
+            throw new ValidationException("This user already has a profile. Use UPDATE instead of CREATE.");
+        var validationResult = _validator.Validate(request.Request);
+        if (!validationResult.IsValid)
+        {
+            throw new ValidationException(validationResult.Errors);
+        }
 
         var p = new Profile
         {
@@ -36,7 +45,9 @@ public class CreateProfileHandler : IRequestHandler<CreateProfileCommand, Guid>
             NoiseTolerance = request.Request.NoiseTolerance,
             SmokingPreference = request.Request.SmokingPreference,
             PetPreference = request.Request.PetPreference,
-            StudyHabits = request.Request.StudyHabits
+            StudyHabits = request.Request.StudyHabits,
+            IsOnboarded=false,
+            OnboardedAt=null
         };
 
         _db.Profiles.Add(p);

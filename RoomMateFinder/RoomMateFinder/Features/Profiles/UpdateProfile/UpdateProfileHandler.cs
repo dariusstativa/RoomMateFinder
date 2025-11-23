@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using FluentValidation;
+using FluentValidation.Results;
+using MediatR;
 using RoomMateFinder.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using RoomMateFinder.Features.Profiles.UpdateProfile;
@@ -8,10 +10,21 @@ public record UpdateProfileCommand(Guid UserId, UpdateProfileRequest Request) : 
 public class UpdateProfileHandler : IRequestHandler<UpdateProfileCommand, bool>
 {
     private readonly AppDbContext _context;
-    public UpdateProfileHandler(AppDbContext context) => _context = context;
+    private readonly IValidator<UpdateProfileRequest> _validator;
+
+    public UpdateProfileHandler(AppDbContext context, IValidator<UpdateProfileRequest> validator)
+    {
+        _context = context;
+        _validator = validator;
+    }
 
     public async Task<bool> Handle(UpdateProfileCommand cmd, CancellationToken ct)
     {
+        ValidationResult validationResult=_validator.Validate(cmd.Request);
+        if (!validationResult.IsValid)
+        {
+            throw  new ValidationException(validationResult.Errors);
+        }
         var profile = await _context.Profiles.FirstOrDefaultAsync(p => p.UserId == cmd.UserId, ct);
         if (profile == null) return false;
 

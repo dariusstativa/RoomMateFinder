@@ -1,0 +1,927 @@
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\.msCoverageSourceRootsMapping_RoomMateFinderTests
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\CoverletSourceRootsMapping_RoomMateFinderTests
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\testhost.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinder.deps.json
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinder.runtimeconfig.json
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\appsettings.json
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinder.staticwebassets.endpoints.json
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinder.exe
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\testhost.exe
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\xunit.runner.visualstudio.testadapter.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.deps.json
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.runtimeconfig.json
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.pdb
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Castle.Core.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\FluentAssertions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\MediatR.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\MediatR.Contracts.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.TestPlatform.CoreUtilities.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.TestPlatform.PlatformAbstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.TestPlatform.CommunicationUtilities.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.TestPlatform.CrossPlatEngine.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.TestPlatform.Utilities.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.Common.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Moq.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Npgsql.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\xunit.abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\xunit.assert.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\xunit.core.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\xunit.execution.dotnet.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinder.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinder.pdb
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.csproj.AssemblyReference.cache
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.AssemblyInfoInputs.cache
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.AssemblyInfo.cs
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.csproj.CoreCompileInputs.cache
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMate.947A9802.Up2Date
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\refint\RoomMateFinderTests.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.pdb
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.genruntimeconfig.cache
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\ref\RoomMateFinderTests.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\MvcTestingAppManifest.json
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Antiforgery.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.BearerToken.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.Cookies.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.Core.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.OAuth.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authorization.Policy.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Endpoints.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Server.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Cors.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.DataProtection.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Diagnostics.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Diagnostics.HealthChecks.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.HostFiltering.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Hosting.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Connections.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Results.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.HttpLogging.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.HttpOverrides.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.HttpsPolicy.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Identity.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Localization.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Localization.Routing.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Metadata.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Cors.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Formatters.Xml.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Localization.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Razor.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.RazorPages.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.OutputCaching.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.RateLimiting.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Razor.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Razor.Runtime.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.RequestDecompression.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.ResponseCaching.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.ResponseCompression.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Rewrite.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Routing.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.HttpSys.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.IIS.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.IISIntegration.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.Core.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.Transport.NamedPipes.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.Transport.Quic.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Session.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.SignalR.Core.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.SignalR.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.StaticAssets.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.StaticFiles.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.WebSockets.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.CSharp.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.CommandLine.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Ini.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Xml.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Diagnostics.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Features.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.FileProviders.Composite.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Hosting.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Http.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Localization.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.Console.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.EventLog.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.EventSource.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.TraceSource.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Options.DataAnnotations.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Options.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Primitives.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.WebEncoders.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.JSInterop.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Net.Http.Headers.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.VisualBasic.Core.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.VisualBasic.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Win32.Primitives.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Win32.Registry.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\mscorlib.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\netstandard.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.AppContext.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Buffers.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Collections.Concurrent.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Collections.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Collections.Immutable.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Collections.NonGeneric.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Collections.Specialized.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ComponentModel.Annotations.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ComponentModel.DataAnnotations.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ComponentModel.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ComponentModel.EventBasedAsync.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ComponentModel.Primitives.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ComponentModel.TypeConverter.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Configuration.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Console.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Core.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Data.Common.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Data.DataSetExtensions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Data.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.Contracts.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.Debug.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.EventLog.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.Process.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.StackTrace.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.TextWriterTraceListener.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.Tools.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.TraceSource.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.Tracing.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Drawing.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Drawing.Primitives.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Dynamic.Runtime.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Formats.Asn1.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Formats.Tar.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Globalization.Calendars.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Globalization.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Globalization.Extensions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.Compression.Brotli.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.Compression.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.Compression.FileSystem.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.Compression.ZipFile.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.FileSystem.AccessControl.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.FileSystem.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.FileSystem.Primitives.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.FileSystem.Watcher.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.IsolatedStorage.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.MemoryMappedFiles.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.Pipelines.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.Pipes.AccessControl.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.Pipes.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.UnmanagedMemoryStream.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Linq.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Linq.Expressions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Linq.Parallel.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Linq.Queryable.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Memory.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.Http.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.Http.Json.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.HttpListener.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.Mail.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.NameResolution.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.NetworkInformation.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.Ping.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.Primitives.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.Quic.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.Requests.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.Security.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.ServicePoint.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.Sockets.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.WebClient.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.WebHeaderCollection.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.WebProxy.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.WebSockets.Client.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.WebSockets.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Numerics.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Numerics.Vectors.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ObjectModel.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Reflection.DispatchProxy.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Reflection.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Reflection.Emit.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Reflection.Emit.ILGeneration.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Reflection.Emit.Lightweight.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Reflection.Extensions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Reflection.Metadata.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Reflection.Primitives.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Reflection.TypeExtensions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Resources.Reader.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Resources.ResourceManager.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Resources.Writer.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.CompilerServices.VisualC.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Extensions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Handles.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.InteropServices.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.InteropServices.JavaScript.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Intrinsics.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Loader.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Numerics.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Serialization.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Serialization.Formatters.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Serialization.Json.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Serialization.Primitives.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Serialization.Xml.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.AccessControl.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Claims.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Cryptography.Algorithms.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Cryptography.Cng.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Cryptography.Csp.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Cryptography.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Cryptography.Encoding.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Cryptography.OpenSsl.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Cryptography.Primitives.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Cryptography.Xml.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Principal.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Principal.Windows.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.SecureString.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ServiceModel.Web.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ServiceProcess.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Text.Encoding.CodePages.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Text.Encoding.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Text.Encoding.Extensions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Text.Encodings.Web.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Text.Json.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Text.RegularExpressions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.Channels.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.Overlapped.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.RateLimiting.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.Tasks.Dataflow.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.Tasks.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.Tasks.Extensions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.Tasks.Parallel.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.Thread.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.ThreadPool.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.Timer.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Transactions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Transactions.Local.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ValueTuple.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Web.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Web.HttpUtility.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Windows.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Xml.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Xml.Linq.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Xml.ReaderWriter.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Xml.Serialization.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Xml.XDocument.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Xml.XmlDocument.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Xml.XmlSerializer.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Xml.XPath.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Xml.XPath.XDocument.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\WindowsBase.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.Testing.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.AspNetCore.TestHost.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.CommandLine.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Diagnostics.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Hosting.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Logging.Console.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Logging.EventLog.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Logging.EventSource.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\System.Diagnostics.EventLog.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.dll
+C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\MvcTestingAppManifest.json
+E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.csproj.AssemblyReference.cache
+E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\MvcTestingAppManifest.json
+E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.GeneratedMSBuildEditorConfig.editorconfig
+E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.dll
+E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\refint\RoomMateFinderTests.dll
+E:\.NET proiect\RoomMateFinder\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.pdb
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\.msCoverageSourceRootsMapping_RoomMateFinderTests
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.csproj.AssemblyReference.cache
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\MvcTestingAppManifest.json
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.GeneratedMSBuildEditorConfig.editorconfig
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.AssemblyInfoInputs.cache
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.AssemblyInfo.cs
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.csproj.CoreCompileInputs.cache
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\refint\RoomMateFinderTests.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.pdb
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\appsettings.Development.json
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\appsettings.json
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinder.staticwebassets.endpoints.json
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\testhost.exe
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\testhost.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\xunit.runner.visualstudio.testadapter.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\xunit.runner.reporters.netcoreapp10.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\xunit.runner.utility.netcoreapp10.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinder.deps.json
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinder.runtimeconfig.json
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinder.exe
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\MvcTestingAppManifest.json
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.deps.json
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.runtimeconfig.json
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.pdb
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Antiforgery.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.BearerToken.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.Cookies.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.Core.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authentication.OAuth.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authorization.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Authorization.Policy.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Authorization.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Endpoints.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Forms.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Server.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Components.Web.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Cors.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.DataProtection.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Diagnostics.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Diagnostics.HealthChecks.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.HostFiltering.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Hosting.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Hosting.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Html.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Connections.Common.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Connections.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Extensions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Features.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Http.Results.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.HttpLogging.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.HttpOverrides.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.HttpsPolicy.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Identity.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Localization.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Localization.Routing.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Metadata.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Core.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Cors.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Formatters.Xml.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Localization.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.Razor.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.RazorPages.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.OutputCaching.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.RateLimiting.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Razor.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Razor.Runtime.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.RequestDecompression.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.ResponseCaching.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.ResponseCompression.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Rewrite.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Routing.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Routing.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.HttpSys.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.IIS.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.IISIntegration.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.Core.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.Transport.NamedPipes.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.Transport.Quic.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.Session.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.SignalR.Common.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.SignalR.Core.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.SignalR.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.StaticAssets.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.StaticFiles.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.WebSockets.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.AspNetCore.WebUtilities.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.CSharp.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Caching.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Caching.Memory.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Binder.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.CommandLine.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.FileExtensions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Ini.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Json.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Configuration.Xml.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.DependencyInjection.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Diagnostics.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Diagnostics.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Features.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.FileProviders.Composite.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.FileProviders.Physical.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.FileSystemGlobbing.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Hosting.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Http.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Identity.Core.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Identity.Stores.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Localization.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.Configuration.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.Console.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.Debug.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.EventLog.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.EventSource.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Logging.TraceSource.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.ObjectPool.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Options.DataAnnotations.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Options.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.Primitives.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Extensions.WebEncoders.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.JSInterop.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Net.Http.Headers.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.VisualBasic.Core.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.VisualBasic.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Win32.Primitives.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\Microsoft.Win32.Registry.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\mscorlib.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\netstandard.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.AppContext.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Buffers.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Collections.Concurrent.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Collections.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Collections.Immutable.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Collections.NonGeneric.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Collections.Specialized.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ComponentModel.Annotations.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ComponentModel.DataAnnotations.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ComponentModel.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ComponentModel.EventBasedAsync.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ComponentModel.Primitives.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ComponentModel.TypeConverter.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Configuration.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Console.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Core.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Data.Common.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Data.DataSetExtensions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Data.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.Contracts.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.Debug.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.DiagnosticSource.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.EventLog.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.FileVersionInfo.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.Process.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.StackTrace.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.TextWriterTraceListener.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.Tools.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.TraceSource.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Diagnostics.Tracing.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Drawing.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Drawing.Primitives.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Dynamic.Runtime.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Formats.Asn1.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Formats.Tar.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Globalization.Calendars.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Globalization.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Globalization.Extensions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.Compression.Brotli.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.Compression.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.Compression.FileSystem.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.Compression.ZipFile.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.FileSystem.AccessControl.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.FileSystem.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.FileSystem.DriveInfo.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.FileSystem.Primitives.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.FileSystem.Watcher.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.IsolatedStorage.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.MemoryMappedFiles.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.Pipelines.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.Pipes.AccessControl.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.Pipes.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.IO.UnmanagedMemoryStream.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Linq.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Linq.Expressions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Linq.Parallel.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Linq.Queryable.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Memory.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.Http.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.Http.Json.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.HttpListener.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.Mail.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.NameResolution.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.NetworkInformation.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.Ping.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.Primitives.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.Quic.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.Requests.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.Security.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.ServicePoint.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.Sockets.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.WebClient.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.WebHeaderCollection.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.WebProxy.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.WebSockets.Client.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Net.WebSockets.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Numerics.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Numerics.Vectors.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ObjectModel.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Reflection.DispatchProxy.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Reflection.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Reflection.Emit.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Reflection.Emit.ILGeneration.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Reflection.Emit.Lightweight.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Reflection.Extensions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Reflection.Metadata.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Reflection.Primitives.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Reflection.TypeExtensions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Resources.Reader.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Resources.ResourceManager.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Resources.Writer.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.CompilerServices.Unsafe.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.CompilerServices.VisualC.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Extensions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Handles.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.InteropServices.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.InteropServices.JavaScript.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Intrinsics.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Loader.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Numerics.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Serialization.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Serialization.Formatters.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Serialization.Json.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Serialization.Primitives.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Runtime.Serialization.Xml.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.AccessControl.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Claims.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Cryptography.Algorithms.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Cryptography.Cng.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Cryptography.Csp.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Cryptography.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Cryptography.Encoding.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Cryptography.OpenSsl.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Cryptography.Primitives.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Cryptography.X509Certificates.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Cryptography.Xml.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Principal.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.Principal.Windows.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Security.SecureString.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ServiceModel.Web.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ServiceProcess.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Text.Encoding.CodePages.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Text.Encoding.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Text.Encoding.Extensions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Text.Encodings.Web.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Text.Json.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Text.RegularExpressions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.Channels.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.Overlapped.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.RateLimiting.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.Tasks.Dataflow.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.Tasks.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.Tasks.Extensions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.Tasks.Parallel.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.Thread.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.ThreadPool.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Threading.Timer.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Transactions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Transactions.Local.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.ValueTuple.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Web.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Web.HttpUtility.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Windows.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Xml.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Xml.Linq.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Xml.ReaderWriter.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Xml.Serialization.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Xml.XDocument.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Xml.XmlDocument.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Xml.XmlSerializer.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Xml.XPath.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\System.Xml.XPath.XDocument.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\refs\WindowsBase.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Castle.Core.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\FluentAssertions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\FluentValidation.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\MediatR.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\MediatR.Contracts.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.Testing.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.AspNetCore.TestHost.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.InMemory.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.OpenApi.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.TestPlatform.CoreUtilities.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.TestPlatform.PlatformAbstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.TestPlatform.CommunicationUtilities.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.TestPlatform.CrossPlatEngine.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.TestPlatform.Utilities.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.Common.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Moq.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Newtonsoft.Json.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Npgsql.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\xunit.abstractions.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\xunit.assert.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\xunit.core.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\xunit.execution.dotnet.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinder.dll
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinder.pdb
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMate.947A9802.Up2Date
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\RoomMateFinderTests.genruntimeconfig.cache
+E:\RoomMateFinderClean\RoomMateFinder\RoomMateFinderTests\obj\Debug\net9.0\ref\RoomMateFinderTests.dll

@@ -7,13 +7,19 @@ public static class CreateProfileEndpoint
 {
     public static void MapCreateProfileEndpoint(this IEndpointRouteBuilder app)
     {
-        app.MapPost("/profiles/{userId:guid}", async (
-            Guid userId,
-            [FromBody] CreateProfileRequest request,
-            IMediator mediator) =>
-        {
-            var id = await mediator.Send(new CreateProfileCommand(userId, request));
-            return Results.Created($"/profiles/{id}", id);
-        });
+        app.MapPost("/profiles", async (
+                HttpContext http,
+                [FromBody] CreateProfileRequest request,
+                IMediator mediator) =>
+            {
+               
+                var userId = Guid.Parse(http.User.FindFirst("sub")!.Value);
+
+                
+                var id = await mediator.Send(new CreateProfileCommand(userId, request));
+
+                return Results.Created($"/profiles/{id}", id);
+            })
+            .RequireAuthorization();
     }
 }
