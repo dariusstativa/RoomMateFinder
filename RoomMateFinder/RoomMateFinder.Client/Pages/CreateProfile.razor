@@ -1,0 +1,404 @@
+﻿@page "/profile/create"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject RoomMateFinder.Client.Services.AuthService AuthService
+
+<div class="profile-container">
+    <div class="profile-card">
+        <h1>Create Your Profile</h1>
+        <p class="subtitle">Tell us about yourself</p>
+
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <div class="error-message">@errorMessage</div>
+        }
+
+        @if (!string.IsNullOrEmpty(successMessage))
+        {
+            <div class="success-message">@successMessage</div>
+        }
+
+        <EditForm Model="@profileRequest" OnValidSubmit="@HandleCreateProfile">
+            <div class="form-section">
+                <h3>Basic Information</h3>
+                
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <InputText @bind-Value="profileRequest.FullName" placeholder="John Doe" />
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Age *</label>
+                        <InputNumber @bind-Value="profileRequest.Age" placeholder="25" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender *</label>
+                        <InputSelect @bind-Value="profileRequest.Gender">
+                            <option value="">Select...</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </InputSelect>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>University *</label>
+                    <InputText @bind-Value="profileRequest.University" placeholder="University of Example" />
+                </div>
+
+                <div class="form-group">
+                    <label>Bio *</label>
+                    <InputTextArea @bind-Value="profileRequest.Bio" placeholder="Tell us about yourself..." rows="4" />
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Preferences</h3>
+
+                <div class="form-group">
+                    <label>Sleep Schedule *</label>
+                    <InputSelect @bind-Value="profileRequest.SleepSchedule">
+                        <option value="">Select...</option>
+                        <option value="Early Bird">Early Bird</option>
+                        <option value="Night Owl">Night Owl</option>
+                        <option value="Flexible">Flexible</option>
+                    </InputSelect>
+                </div>
+
+                <div class="form-group">
+                    <label>Cleanliness *</label>
+                    <InputSelect @bind-Value="profileRequest.Cleanliness">
+                        <option value="">Select...</option>
+                        <option value="Very Clean">Very Clean</option>
+                        <option value="Moderately Clean">Moderately Clean</option>
+                        <option value="Relaxed">Relaxed</option>
+                    </InputSelect>
+                </div>
+
+                <div class="form-group">
+                    <label>Noise Tolerance *</label>
+                    <InputSelect @bind-Value="profileRequest.NoiseTolerance">
+                        <option value="">Select...</option>
+                        <option value="Quiet">Quiet</option>
+                        <option value="Moderate">Moderate</option>
+                        <option value="Loud">Loud</option>
+                    </InputSelect>
+                </div>
+
+                <div class="form-group">
+                    <label>Smoking Preference *</label>
+                    <InputSelect @bind-Value="profileRequest.SmokingPreference">
+                        <option value="">Select...</option>
+                        <option value="No Smoking">No Smoking</option>
+                        <option value="Outside Only">Outside Only</option>
+                        <option value="Smoking Friendly">Smoking Friendly</option>
+                    </InputSelect>
+                </div>
+
+                <div class="form-group">
+                    <label>Pet Preference *</label>
+                    <InputSelect @bind-Value="profileRequest.PetPreference">
+                        <option value="">Select...</option>
+                        <option value="No Pets">No Pets</option>
+                        <option value="Cat Friendly">Cat Friendly</option>
+                        <option value="Dog Friendly">Dog Friendly</option>
+                        <option value="All Pets Welcome">All Pets Welcome</option>
+                    </InputSelect>
+                </div>
+
+                <div class="form-group">
+                    <label>Study Habits *</label>
+                    <InputSelect @bind-Value="profileRequest.StudyHabits">
+                        <option value="">Select...</option>
+                        <option value="Very Studious">Very Studious</option>
+                        <option value="Balanced">Balanced</option>
+                        <option value="Social">Social</option>
+                    </InputSelect>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-primary" disabled="@isLoading">
+                @if (isLoading)
+                {
+                    <span>Creating profile...</span>
+                }
+                else
+                {
+                    <span>Create Profile</span>
+                }
+            </button>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    private CreateProfileRequest profileRequest = new();
+    private string errorMessage = string.Empty;
+    private string successMessage = string.Empty;
+    private bool isLoading = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Check if user is authenticated
+        if (!AuthService.IsAuthenticated)
+        {
+            Navigation.NavigateTo("/login");
+            return;
+        }
+
+        // Check if user already has a profile
+        try
+        {
+            var profileResponse = await Http.GetAsync($"/profiles/{AuthService.UserId}");
+            if (profileResponse.IsSuccessStatusCode)
+            {
+                // User already has a profile, redirect to listings
+                errorMessage = "You already have a profile. Redirecting to listings...";
+                await Task.Delay(2000);
+                Navigation.NavigateTo("/listings");
+            }
+        }
+        catch
+        {
+            // Profile doesn't exist, continue with create
+        }
+    }
+
+    private async Task HandleCreateProfile()
+    {
+        errorMessage = string.Empty;
+        successMessage = string.Empty;
+
+        // Validate required fields
+        if (string.IsNullOrWhiteSpace(profileRequest.FullName))
+        {
+            errorMessage = "Full name is required.";
+            return;
+        }
+
+        if (profileRequest.Age < 18 || profileRequest.Age > 100)
+        {
+            errorMessage = "Age must be between 18 and 100.";
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(profileRequest.Gender))
+        {
+            errorMessage = "Gender is required.";
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(profileRequest.University))
+        {
+            errorMessage = "University is required.";
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(profileRequest.Bio))
+        {
+            errorMessage = "Bio is required.";
+            return;
+        }
+
+        // Validate preferences
+        if (string.IsNullOrWhiteSpace(profileRequest.SleepSchedule) ||
+            string.IsNullOrWhiteSpace(profileRequest.Cleanliness) ||
+            string.IsNullOrWhiteSpace(profileRequest.NoiseTolerance) ||
+            string.IsNullOrWhiteSpace(profileRequest.SmokingPreference) ||
+            string.IsNullOrWhiteSpace(profileRequest.PetPreference) ||
+            string.IsNullOrWhiteSpace(profileRequest.StudyHabits))
+        {
+            errorMessage = "All preference fields are required.";
+            return;
+        }
+
+        if (!AuthService.IsAuthenticated)
+        {
+            errorMessage = "User ID is missing. Please login again.";
+            Navigation.NavigateTo("/login");
+            return;
+        }
+
+        isLoading = true;
+
+        try
+        {
+            var response = await Http.PostAsJsonAsync($"/profiles/{AuthService.UserId}", profileRequest);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var profileId = await response.Content.ReadFromJsonAsync<Guid>();
+                successMessage = $"Profile created successfully!";
+                
+                // Redirect after 2 seconds
+                await Task.Delay(2000);
+                Navigation.NavigateTo("/listings");
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                
+                // Check if user already has a profile
+                if (errorContent.Contains("already has a profile"))
+                {
+                    errorMessage = "You already have a profile. Redirecting to listings...";
+                    await Task.Delay(2000);
+                    Navigation.NavigateTo("/listings");
+                }
+                else
+                {
+                    errorMessage = $"Failed to create profile: {errorContent}";
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}
+
+<style>
+    .profile-container {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 40px 20px;
+    }
+
+    .profile-card {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 32px;
+        font-weight: 600;
+        color: #667eea;
+        margin: 0 0 10px 0;
+        text-align: center;
+    }
+
+    .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    .form-section {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .form-section:last-of-type {
+        border-bottom: none;
+    }
+
+    .form-section h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #333;
+        margin: 0 0 20px 0;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 14px;
+        transition: border-color 0.3s;
+        box-sizing: border-box;
+        font-family: inherit;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        outline: none;
+        border-color: #667eea;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    .btn-primary {
+        width: 100%;
+        padding: 14px;
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s;
+        margin-top: 10px;
+    }
+
+    .btn-primary:hover:not(:disabled) {
+        background: #5568d3;
+    }
+
+    .btn-primary:disabled {
+        background: #a0aec0;
+        cursor: not-allowed;
+    }
+
+    .error-message {
+        background: #fed7d7;
+        color: #c53030;
+        padding: 12px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .success-message {
+        background: #c6f6d5;
+        color: #2f855a;
+        padding: 12px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    @@media (max-width: 640px) {
+        .form-row {
+            grid-template-columns: 1fr;
+        }
+
+        .profile-card {
+            padding: 30px 20px;
+        }
+    }
+</style>

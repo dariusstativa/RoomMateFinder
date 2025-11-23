@@ -1,0 +1,248 @@
+﻿@page "/login"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject RoomMateFinder.Client.Services.AuthService AuthService
+
+<div class="login-container">
+    <div class="login-card">
+        <h1>RoomMate Finder</h1>
+        <h2>Login</h2>
+
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <div class="error-message">@errorMessage</div>
+        }
+
+        @if (!string.IsNullOrEmpty(successMessage))
+        {
+            <div class="success-message">@successMessage</div>
+        }
+
+        <EditForm Model="@loginRequest" OnValidSubmit="@HandleLogin">
+            <div class="form-group">
+                <label>Email</label>
+                <InputText @bind-Value="loginRequest.Email" placeholder="your@email.com" />
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <InputText type="password" @bind-Value="loginRequest.Password" placeholder="••••••••" />
+            </div>
+
+            <button type="submit" class="btn-primary" disabled="@isLoading">
+                @if (isLoading)
+                {
+                    <span>Loading...</span>
+                }
+                else
+                {
+                    <span>Login</span>
+                }
+            </button>
+        </EditForm>
+
+        <div class="login-link">
+            Don't have an account? <a href="/register">Register here</a>
+        </div>
+    </div>
+</div>
+
+@code {
+    private LoginRequest loginRequest = new();
+    private string errorMessage = string.Empty;
+    private string successMessage = string.Empty;
+    private bool isLoading = false;
+
+    private async Task HandleLogin()
+    {
+        errorMessage = string.Empty;
+        successMessage = string.Empty;
+        isLoading = true;
+
+        try
+        {
+            var response = await Http.PostAsJsonAsync("/auth/login", loginRequest);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadFromJsonAsync<LoginResponse>();
+                
+                // Save userId in AuthService
+                AuthService.Login(result!.UserId);
+                
+                successMessage = $"Login successful! Checking profile...";
+                
+                // Reset form
+                loginRequest = new();
+
+                // Check if user has profile (in separate try-catch to handle profile check errors)
+                await Task.Delay(500);
+                
+                try
+                {
+                    var profileResponse = await Http.GetAsync($"/profiles/{result.UserId}");
+                    
+                    if (profileResponse.IsSuccessStatusCode)
+                    {
+                        // User has profile, redirect to listings
+                        successMessage = "Redirecting to listings...";
+                        await Task.Delay(500);
+                        Navigation.NavigateTo("/listings");
+                    }
+                    else if (profileResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
+                    {
+                        // User doesn't have profile, redirect to create profile
+                        successMessage = "Redirecting to create profile...";
+                        await Task.Delay(500);
+                        Navigation.NavigateTo("/profile/create");
+                    }
+                    else
+                    {
+                        // Other error, redirect to create profile as default
+                        successMessage = "Redirecting...";
+                        await Task.Delay(500);
+                        Navigation.NavigateTo("/profile/create");
+                    }
+                }
+                catch
+                {
+                    // If profile check fails, assume no profile and redirect to create
+                    successMessage = "Redirecting to create profile...";
+                    await Task.Delay(500);
+                    Navigation.NavigateTo("/profile/create");
+                }
+            }
+            else
+            {
+                errorMessage = "Invalid email or password.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}
+
+<style>
+    .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 20px;
+    }
+
+    .login-card {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+    }
+
+    h1 {
+        font-size: 28px;
+        font-weight: 600;
+        color: #667eea;
+        margin: 0 0 10px 0;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 400;
+        color: #333;
+        margin: 0 0 30px 0;
+        text-align: center;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 14px;
+        transition: border-color 0.3s;
+        box-sizing: border-box;
+    }
+
+    input:focus {
+        outline: none;
+        border-color: #667eea;
+    }
+
+    .btn-primary {
+        width: 100%;
+        padding: 12px;
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .btn-primary:hover:not(:disabled) {
+        background: #5568d3;
+    }
+
+    .btn-primary:disabled {
+        background: #a0aec0;
+        cursor: not-allowed;
+    }
+
+    .error-message {
+        background: #fed7d7;
+        color: #c53030;
+        padding: 12px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .success-message {
+        background: #c6f6d5;
+        color: #2f855a;
+        padding: 12px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .login-link {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .login-link a {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .login-link a:hover {
+        text-decoration: underline;
+    }
+</style>

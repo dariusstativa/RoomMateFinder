@@ -1,0 +1,279 @@
+﻿@page "/profiles"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+
+<div class="profiles-container">
+    <div class="profiles-header">
+        <h1>Find Roommates</h1>
+        <p class="subtitle">Browse profiles of people looking for roommates</p>
+    </div>
+
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <div class="error-message">@errorMessage</div>
+    }
+
+    @if (isLoading)
+    {
+        <div class="loading">Loading profiles...</div>
+    }
+    else if (profiles == null || !profiles.Any())
+    {
+        <div class="no-profiles">
+            <p>No profiles available yet.</p>
+        </div>
+    }
+    else
+    {
+        <div class="profiles-grid">
+            @foreach (var profile in profiles)
+            {
+                <div class="profile-card" @onclick="@(() => Navigation.NavigateTo($"/profiles/{profile.UserId}"))">
+                    <div class="profile-header">
+                        <div class="avatar">@GetInitials(profile.FullName)</div>
+                        <div class="profile-info">
+                            <h3>@profile.FullName</h3>
+                            <p class="meta">@profile.Age years • @profile.Gender</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-details">
+                        <p class="university">🎓 @profile.University</p>
+                        <p class="bio">@(profile.Bio.Length > 100 ? profile.Bio.Substring(0, 100) + "..." : profile.Bio)</p>
+                    </div>
+
+                    <div class="profile-tags">
+                        <span class="tag">🌙 @profile.SleepSchedule</span>
+                        <span class="tag">✨ @profile.Cleanliness</span>
+                        <span class="tag">🔊 @profile.NoiseTolerance</span>
+                    </div>
+
+                    <div class="profile-footer">
+                        <button class="btn-view" @onclick:stopPropagation="true" @onclick="@(() => Navigation.NavigateTo($"/profiles/{profile.UserId}"))">
+                            View Profile
+                        </button>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    private List<Profile>? profiles;
+    private string errorMessage = string.Empty;
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadProfiles();
+    }
+
+    private async Task LoadProfiles()
+    {
+        isLoading = true;
+        errorMessage = string.Empty;
+
+        try
+        {
+            profiles = await Http.GetFromJsonAsync<List<Profile>>("/profiles");
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading profiles: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private string GetInitials(string fullName)
+    {
+        if (string.IsNullOrWhiteSpace(fullName))
+            return "?";
+
+        var parts = fullName.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        if (parts.Length == 0)
+            return "?";
+        if (parts.Length == 1)
+            return parts[0].Substring(0, 1).ToUpper();
+        
+        return (parts[0].Substring(0, 1) + parts[^1].Substring(0, 1)).ToUpper();
+    }
+}
+
+<style>
+    .profiles-container {
+        min-height: 100vh;
+        background: #f5f7fa;
+        padding: 40px 20px;
+    }
+
+    .profiles-header {
+        max-width: 1200px;
+        margin: 0 auto 40px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 36px;
+        font-weight: 600;
+        color: #333;
+        margin: 0 0 10px 0;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        color: #666;
+        margin: 0;
+    }
+
+    .profiles-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 24px;
+    }
+
+    .profile-card {
+        background: white;
+        padding: 24px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .profile-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .profile-header {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: 600;
+        flex-shrink: 0;
+    }
+
+    .profile-info h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #333;
+        margin: 0 0 4px 0;
+    }
+
+    .meta {
+        font-size: 14px;
+        color: #666;
+        margin: 0;
+    }
+
+    .profile-details {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .university {
+        font-size: 14px;
+        color: #667eea;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    .bio {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .profile-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .tag {
+        display: inline-block;
+        padding: 6px 12px;
+        background: #f0f0f0;
+        border-radius: 16px;
+        font-size: 12px;
+        color: #555;
+    }
+
+    .profile-footer {
+        margin-top: auto;
+        padding-top: 16px;
+        border-top: 1px solid #e0e0e0;
+    }
+
+    .btn-view {
+        width: 100%;
+        padding: 10px;
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .btn-view:hover {
+        background: #5568d3;
+    }
+
+    .loading, .no-profiles {
+        max-width: 1200px;
+        margin: 40px auto;
+        text-align: center;
+        padding: 40px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        color: #666;
+    }
+
+    .error-message {
+        max-width: 1200px;
+        margin: 0 auto 20px;
+        background: #fed7d7;
+        color: #c53030;
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    @@media (max-width: 768px) {
+        .profiles-grid {
+            grid-template-columns: 1fr;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+    }
+</style>
+

@@ -1,0 +1,268 @@
+﻿@page "/listings"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+
+<div class="listings-container">
+    <div class="listings-header">
+        <h1>Room Listings</h1>
+        <button class="btn-create" @onclick="@(() => Navigation.NavigateTo("/listings/create"))">
+            + Create Listing
+        </button>
+    </div>
+
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <div class="error-message">@errorMessage</div>
+    }
+
+    @if (isLoading)
+    {
+        <div class="loading">Loading listings...</div>
+    }
+    else if (listings == null || !listings.Any())
+    {
+        <div class="no-listings">
+            <p>No room listings available yet.</p>
+            <button class="btn-primary" @onclick="@(() => Navigation.NavigateTo("/listings/create"))">
+                Create First Listing
+            </button>
+        </div>
+    }
+    else
+    {
+        <div class="listings-grid">
+            @foreach (var listing in listings)
+            {
+                <div class="listing-card" @onclick="@(() => Navigation.NavigateTo($"/listings/{listing.Id}"))">
+                    <div class="listing-header">
+                        <h3>@listing.Title</h3>
+                        <span class="price">$@listing.Price/month</span>
+                    </div>
+                    <p class="address">📍 @listing.Address</p>
+                    <p class="description">@(listing.Description.Length > 150 ? listing.Description.Substring(0, 150) + "..." : listing.Description)</p>
+                    <div class="listing-footer">
+                        <span class="roommates">👥 @listing.RoommatesCount roommate(s)</span>
+                        <span class="gender">@listing.GenderPreference</span>
+                    </div>
+                    <div class="listing-date">
+                        Posted @FormatDate(listing.CreatedAt)
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    private List<RoomListing>? listings;
+    private string errorMessage = string.Empty;
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadListings();
+    }
+
+    private async Task LoadListings()
+    {
+        isLoading = true;
+        errorMessage = string.Empty;
+
+        try
+        {
+            listings = await Http.GetFromJsonAsync<List<RoomListing>>("/listings");
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading listings: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private string FormatDate(DateTime date)
+    {
+        var timeSpan = DateTime.Now - date;
+        if (timeSpan.TotalDays < 1)
+            return "today";
+        if (timeSpan.TotalDays < 2)
+            return "yesterday";
+        if (timeSpan.TotalDays < 7)
+            return $"{(int)timeSpan.TotalDays} days ago";
+        return date.ToString("MMM dd, yyyy");
+    }
+}
+
+<style>
+    .listings-container {
+        min-height: 100vh;
+        background: #f5f7fa;
+        padding: 40px 20px;
+    }
+
+    .listings-header {
+        max-width: 1200px;
+        margin: 0 auto 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 32px;
+        font-weight: 600;
+        color: #333;
+        margin: 0;
+    }
+
+    .btn-create {
+        padding: 12px 24px;
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .btn-create:hover {
+        background: #5568d3;
+    }
+
+    .listings-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 24px;
+    }
+
+    .listing-card {
+        background: white;
+        padding: 24px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .listing-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .listing-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-bottom: 12px;
+    }
+
+    .listing-header h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #333;
+        margin: 0;
+        flex: 1;
+    }
+
+    .price {
+        font-size: 18px;
+        font-weight: 600;
+        color: #667eea;
+        white-space: nowrap;
+        margin-left: 12px;
+    }
+
+    .address {
+        color: #666;
+        font-size: 14px;
+        margin: 8px 0;
+    }
+
+    .description {
+        color: #555;
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 12px 0;
+    }
+
+    .listing-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid #e0e0e0;
+    }
+
+    .roommates, .gender {
+        font-size: 14px;
+        color: #666;
+    }
+
+    .listing-date {
+        font-size: 12px;
+        color: #999;
+        margin-top: 8px;
+    }
+
+    .loading, .no-listings {
+        max-width: 1200px;
+        margin: 40px auto;
+        text-align: center;
+        padding: 40px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .no-listings p {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .btn-primary {
+        padding: 12px 24px;
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .btn-primary:hover {
+        background: #5568d3;
+    }
+
+    .error-message {
+        max-width: 1200px;
+        margin: 0 auto 20px;
+        background: #fed7d7;
+        color: #c53030;
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    @@media (max-width: 768px) {
+        .listings-header {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 20px;
+        }
+
+        .listings-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+

@@ -1,0 +1,305 @@
+﻿@page "/listings/create"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject RoomMateFinder.Client.Services.AuthService AuthService
+
+<div class="create-listing-container">
+    <div class="create-listing-card">
+        <h1>Create Room Listing</h1>
+        <p class="subtitle">Post your room availability</p>
+
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <div class="error-message">@errorMessage</div>
+        }
+
+        @if (!string.IsNullOrEmpty(successMessage))
+        {
+            <div class="success-message">@successMessage</div>
+        }
+
+        <EditForm Model="@listingRequest" OnValidSubmit="@HandleCreateListing">
+            <div class="form-group">
+                <label>Title *</label>
+                <InputText @bind-Value="listingRequest.Title" placeholder="Cozy room near campus" />
+            </div>
+
+            <div class="form-group">
+                <label>Description *</label>
+                <InputTextArea @bind-Value="listingRequest.Description" 
+                              placeholder="Describe your room, amenities, location..." 
+                              rows="5" />
+            </div>
+
+            <div class="form-group">
+                <label>Address *</label>
+                <InputText @bind-Value="listingRequest.Address" placeholder="123 Main St, City" />
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Price per Month ($) *</label>
+                    <InputNumber @bind-Value="listingRequest.Price" placeholder="500" />
+                </div>
+
+                <div class="form-group">
+                    <label>Number of Roommates *</label>
+                    <InputNumber @bind-Value="listingRequest.RoommatesCount" placeholder="1" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Gender Preference *</label>
+                <InputSelect @bind-Value="listingRequest.GenderPreference">
+                    <option value="Any">Any</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </InputSelect>
+            </div>
+
+            <div class="button-group">
+                <button type="button" class="btn-secondary" @onclick="@(() => Navigation.NavigateTo("/listings"))">
+                    Cancel
+                </button>
+                <button type="submit" class="btn-primary" disabled="@isLoading">
+                    @if (isLoading)
+                    {
+                        <span>Creating...</span>
+                    }
+                    else
+                    {
+                        <span>Create Listing</span>
+                    }
+                </button>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    private CreateListingRequest listingRequest = new();
+    private string errorMessage = string.Empty;
+    private string successMessage = string.Empty;
+    private bool isLoading = false;
+
+    protected override void OnInitialized()
+    {
+        // Check if user is authenticated
+        if (!AuthService.IsAuthenticated)
+        {
+            Navigation.NavigateTo("/login");
+        }
+    }
+
+    private async Task HandleCreateListing()
+    {
+        errorMessage = string.Empty;
+        successMessage = string.Empty;
+
+        // Validate required fields
+        if (string.IsNullOrWhiteSpace(listingRequest.Title))
+        {
+            errorMessage = "Title is required.";
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(listingRequest.Description))
+        {
+            errorMessage = "Description is required.";
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(listingRequest.Address))
+        {
+            errorMessage = "Address is required.";
+            return;
+        }
+
+        if (listingRequest.Price <= 0)
+        {
+            errorMessage = "Price must be greater than 0.";
+            return;
+        }
+
+        if (listingRequest.RoommatesCount <= 0)
+        {
+            errorMessage = "Number of roommates must be at least 1.";
+            return;
+        }
+
+        if (!AuthService.IsAuthenticated)
+        {
+            errorMessage = "User ID is missing. Please login again.";
+            Navigation.NavigateTo("/login");
+            return;
+        }
+
+        isLoading = true;
+
+        try
+        {
+            var response = await Http.PostAsJsonAsync($"/users/{AuthService.UserId}/listings", listingRequest);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var listingId = await response.Content.ReadFromJsonAsync<Guid>();
+                successMessage = "Listing created successfully!";
+                
+                // Redirect after 2 seconds
+                await Task.Delay(2000);
+                Navigation.NavigateTo("/listings");
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                errorMessage = $"Failed to create listing: {errorContent}";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}
+
+<style>
+    .create-listing-container {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 40px 20px;
+    }
+
+    .create-listing-card {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 32px;
+        font-weight: 600;
+        color: #667eea;
+        margin: 0 0 10px 0;
+        text-align: center;
+    }
+
+    .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 14px;
+        transition: border-color 0.3s;
+        box-sizing: border-box;
+        font-family: inherit;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        outline: none;
+        border-color: #667eea;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 12px;
+        margin-top: 24px;
+    }
+
+    .btn-primary, .btn-secondary {
+        flex: 1;
+        padding: 14px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .btn-primary {
+        background: #667eea;
+        color: white;
+    }
+
+    .btn-primary:hover:not(:disabled) {
+        background: #5568d3;
+    }
+
+    .btn-primary:disabled {
+        background: #a0aec0;
+        cursor: not-allowed;
+    }
+
+    .btn-secondary {
+        background: #e0e0e0;
+        color: #555;
+    }
+
+    .btn-secondary:hover {
+        background: #d0d0d0;
+    }
+
+    .error-message {
+        background: #fed7d7;
+        color: #c53030;
+        padding: 12px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .success-message {
+        background: #c6f6d5;
+        color: #2f855a;
+        padding: 12px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    @@media (max-width: 640px) {
+        .form-row {
+            grid-template-columns: 1fr;
+        }
+
+        .create-listing-card {
+            padding: 30px 20px;
+        }
+    }
+</style>

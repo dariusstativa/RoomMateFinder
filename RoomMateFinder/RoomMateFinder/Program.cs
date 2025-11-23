@@ -32,7 +32,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 var cs = builder.Configuration.GetConnectionString("DefaultConnection")
          ?? Environment.GetEnvironmentVariable("POSTGRES_CONNECTION_STRING")
-         ?? "Host=localhost;Port=1326;Database=roommatefinder;Username=postgres;Password=tudor";
+         ?? "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=STUDENT";
+
 
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseNpgsql(cs));
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
@@ -93,10 +94,29 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddAuthorization();
 
 
+// Configure JSON options to handle circular references
+builder.Services.ConfigureHttpJsonOptions(options =>
+{
+    options.SerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+});
+
+// Add CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowBlazor", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 app.UseErrorHandling();
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseCors("AllowBlazor");
+
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
@@ -119,6 +139,7 @@ app.MapPost("/auth/login", async (LoginRequest req, IMediator mediator) =>
 {
     var response = await mediator.Send(new LoginCommand(req));
     return Results.Ok(response);
+
 });
 
 
