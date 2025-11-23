@@ -11,8 +11,13 @@ public static class RegisterEndpoint
             [FromBody] RegisterRequest request,
             IMediator mediator) =>
         {
+<<<<<<< HEAD
             var response = await mediator.Send(new RegisterCommand(request));
             return Results.Ok(response);
+=======
+            var id = await mediator.Send(new RegisterCommand(request));
+            return Results.Created($"/users/{id}", id);
+>>>>>>> CleanFixBranch
         });
     }
 }

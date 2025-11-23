@@ -14,7 +14,11 @@ public static class CreateProfileEndpoint
                 IMediator mediator) =>
             {
                
+<<<<<<< HEAD
                 var userId = Guid.Parse(http.User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
+=======
+                var userId = Guid.Parse(http.User.FindFirst("sub")!.Value);
+>>>>>>> CleanFixBranch
 
                 
                 var id = await mediator.Send(new CreateProfileCommand(userId, request));

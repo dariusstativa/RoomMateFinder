@@ -2,7 +2,10 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using RoomMateFinder.Features.LikeProfile.LikeRequest;
+<<<<<<< HEAD
 using System.Security.Claims;
+=======
+>>>>>>> CleanFixBranch
 
 namespace RoomMateFinder.Features.Matching.LikeProfile;
 
@@ -18,6 +21,7 @@ public static class LikeEndpoint
             {
                 await validator.ValidateAndThrowAsync(request);
 
+<<<<<<< HEAD
                 var subClaim = http.User.FindFirst(ClaimTypes.NameIdentifier);
                 if (subClaim == null)
                 {
@@ -28,6 +32,9 @@ public static class LikeEndpoint
                 }
 
                 var userId = Guid.Parse(subClaim.Value);
+=======
+                var userId = Guid.Parse(http.User.FindFirst("sub")!.Value);
+>>>>>>> CleanFixBranch
 
                 var result = await mediator.Send(new LikeCommand(userId, request));
 

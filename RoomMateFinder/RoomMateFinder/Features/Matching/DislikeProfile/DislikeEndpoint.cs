@@ -1,6 +1,9 @@
 ﻿using MediatR;
 using FluentValidation;
+<<<<<<< HEAD
 using System.Security.Claims;
+=======
+>>>>>>> CleanFixBranch
 
 namespace RoomMateFinder.Features.Matching.DislikeProfile;
 
@@ -16,7 +19,11 @@ public static class DislikeEndpoint
             {
                 await validator.ValidateAndThrowAsync(request);
 
+<<<<<<< HEAD
                 var userId = Guid.Parse(http.User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
+=======
+                var userId = Guid.Parse(http.User.FindFirst("sub")!.Value);
+>>>>>>> CleanFixBranch
 
                 var result = await mediator.Send(new DislikeCommand(userId, request));
 

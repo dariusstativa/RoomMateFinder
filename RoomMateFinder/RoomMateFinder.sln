@@ -2,7 +2,11 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomMateFinder", "RoomMateFinder\RoomMateFinder.csproj", "{352BB0EF-3CE1-4E5A-8BA8-46884FBC49F7}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomMateFinder.Client", "RoomMateFinder.Client\RoomMateFinder.Client.csproj", "{FB2217BA-95DA-43AD-A1D6-F287DE63E842}"
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomMateFinderTests", "RoomMateFinderTests\RoomMateFinderTests.csproj", "{389CA0DD-1269-4467-93B1-04C332935BB6}"
+>>>>>>> CleanFixBranch
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +26,7 @@ Global
 		{352BB0EF-3CE1-4E5A-8BA8-46884FBC49F7}.Debug|x86.Build.0 = Debug|Any CPU
 		{352BB0EF-3CE1-4E5A-8BA8-46884FBC49F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{352BB0EF-3CE1-4E5A-8BA8-46884FBC49F7}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{352BB0EF-3CE1-4E5A-8BA8-46884FBC49F7}.Release|x64.ActiveCfg = Release|Any CPU
 		{352BB0EF-3CE1-4E5A-8BA8-46884FBC49F7}.Release|x64.Build.0 = Release|Any CPU
 		{352BB0EF-3CE1-4E5A-8BA8-46884FBC49F7}.Release|x86.ActiveCfg = Release|Any CPU
@@ -41,5 +46,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+=======
+		{389CA0DD-1269-4467-93B1-04C332935BB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{389CA0DD-1269-4467-93B1-04C332935BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{389CA0DD-1269-4467-93B1-04C332935BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{389CA0DD-1269-4467-93B1-04C332935BB6}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> CleanFixBranch
 	EndGlobalSection
 EndGlobal

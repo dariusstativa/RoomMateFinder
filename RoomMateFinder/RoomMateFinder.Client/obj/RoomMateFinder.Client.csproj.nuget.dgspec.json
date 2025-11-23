@@ -1,27 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Facultate\\.NET\\Proiect\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.Client\\RoomMateFinder.Client.csproj": {}
+    "E:\\jkjk\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.Client\\RoomMateFinder.Client.csproj": {}
   },
   "projects": {
-    "D:\\Facultate\\.NET\\Proiect\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.Client\\RoomMateFinder.Client.csproj": {
+    "E:\\jkjk\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.Client\\RoomMateFinder.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Facultate\\.NET\\Proiect\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.Client\\RoomMateFinder.Client.csproj",
+        "projectUniqueName": "E:\\jkjk\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.Client\\RoomMateFinder.Client.csproj",
         "projectName": "RoomMateFinder.Client",
-        "projectPath": "D:\\Facultate\\.NET\\Proiect\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.Client\\RoomMateFinder.Client.csproj",
-        "packagesPath": "C:\\Users\\HOME\\.nuget\\packages\\",
-        "outputPath": "D:\\Facultate\\.NET\\Proiect\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.Client\\obj\\",
+        "projectPath": "E:\\jkjk\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.Client\\RoomMateFinder.Client.csproj",
+        "packagesPath": "C:\\Users\\Darius\\.nuget\\packages\\",
+        "outputPath": "E:\\jkjk\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.Client\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\HOME\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Darius\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -94,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

@@ -12,9 +12,13 @@ public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<AppDbConte
 
        
         const string connectionString =
+<<<<<<< HEAD
 
             "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=STUDENT";
 
+=======
+            "Host=localhost;Port=5432;Database=roommatefinder;Username=postgres;Password=sirene99";
+>>>>>>> CleanFixBranch
 
         optionsBuilder.UseNpgsql(connectionString);
 

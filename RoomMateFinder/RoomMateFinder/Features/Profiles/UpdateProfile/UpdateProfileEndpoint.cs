@@ -7,6 +7,7 @@ public static class UpdateProfileEndpoint
 {
     public static void MapUpdateProfileEndpoint(this IEndpointRouteBuilder app)
     {
+<<<<<<< HEAD
         app.MapPut("/profiles/{id:guid}", async (HttpContext http, Guid id, UpdateProfileRequest req, IMediator mediator) =>
             {
                 var userId = Guid.Parse(http.User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
@@ -16,6 +17,11 @@ public static class UpdateProfileEndpoint
                 {
                     return Results.Forbid();
                 }
+=======
+        app.MapPut("/profiles", async (HttpContext http, UpdateProfileRequest req, IMediator mediator) =>
+            {
+                var userId = Guid.Parse(http.User.FindFirst("sub")!.Value);
+>>>>>>> CleanFixBranch
 
                 var success = await mediator.Send(new UpdateProfileCommand(userId, req));
 
