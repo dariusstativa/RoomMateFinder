@@ -24,7 +24,7 @@ public class CreateAndGetMyProfileTests : IClassFixture<CustomWebApplicationFact
             Password = password
         });
 
-        Assert.Equal(HttpStatusCode.Created, registerResp.StatusCode);
+        Assert.Equal(HttpStatusCode.OK, registerResp.StatusCode);
 
        
         var loginResp = await _client.PostAsJsonAsync("/auth/login", new

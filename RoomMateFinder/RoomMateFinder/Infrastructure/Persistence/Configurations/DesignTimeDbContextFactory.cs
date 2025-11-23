@@ -7,18 +7,10 @@ public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<AppDbConte
 {
     public AppDbContext CreateDbContext(string[] args)
     {
-       
         var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
 
-       
         const string connectionString =
-<<<<<<< HEAD
-
-            "Host=localhost;Database=RoomMateFinder;Username=postgres;Password=STUDENT";
-
-=======
             "Host=localhost;Port=5432;Database=roommatefinder;Username=postgres;Password=sirene99";
->>>>>>> CleanFixBranch
 
         optionsBuilder.UseNpgsql(connectionString);
 

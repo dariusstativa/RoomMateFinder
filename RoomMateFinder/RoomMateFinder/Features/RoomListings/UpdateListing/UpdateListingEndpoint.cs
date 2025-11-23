@@ -1,8 +1,5 @@
 ﻿using MediatR;
-<<<<<<< HEAD
 using System.Security.Claims;
-=======
->>>>>>> CleanFixBranch
 
 namespace RoomMateFinder.Features.RoomListings.UpdateListing;
 
@@ -16,12 +13,10 @@ public static class UpdateListingEndpoint
                 UpdateListingRequest req,
                 IMediator mediator) =>
             {
-<<<<<<< HEAD
+                // UserId din JWT
                 var userId = Guid.Parse(http.User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
-=======
-                var userId = Guid.Parse(http.User.FindFirst("sub")!.Value);
->>>>>>> CleanFixBranch
 
+                // Trimitem comanda MediatR
                 var ok = await mediator.Send(new UpdateListingCommand(id, userId, req));
 
                 return ok ? Results.NoContent() : Results.NotFound();

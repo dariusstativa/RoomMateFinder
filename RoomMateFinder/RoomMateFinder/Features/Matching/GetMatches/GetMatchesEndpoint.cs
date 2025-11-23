@@ -1,8 +1,5 @@
 ﻿using MediatR;
-<<<<<<< HEAD
 using System.Security.Claims;
-=======
->>>>>>> CleanFixBranch
 
 namespace RoomMateFinder.Features.Matching.GetMatches;
 
@@ -15,11 +12,16 @@ public static class GetMatchesEndpoint
                 IMediator mediator,
                 CancellationToken ct) =>
             {
-<<<<<<< HEAD
-                var userId = Guid.Parse(http.User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
-=======
-                var userId = Guid.Parse(http.User.FindFirst("sub")!.Value);
->>>>>>> CleanFixBranch
+                // Încearcă mai întâi ClaimTypes.NameIdentifier (frontend coleg)
+                // Dacă nu există, folosește fallback "sub" (standard JWT)
+                var userIdClaim =
+                    http.User.FindFirst(ClaimTypes.NameIdentifier) ??
+                    http.User.FindFirst("sub");
+
+                if (userIdClaim is null)
+                    return Results.Unauthorized();
+
+                var userId = Guid.Parse(userIdClaim.Value);
 
                 var matches = await mediator.Send(new GetMatchesQuery(userId), ct);
 

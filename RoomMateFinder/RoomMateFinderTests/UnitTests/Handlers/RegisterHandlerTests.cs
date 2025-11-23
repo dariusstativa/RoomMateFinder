@@ -6,100 +6,100 @@ using Microsoft.EntityFrameworkCore;
 using RoomMateFinder.Domain.Entities;
 using RoomMateFinder.Features.Login.RegisterUser;
 using RoomMateFinder.Infrastructure.Persistence;
+using RoomMateFinder.Features.Login;
 using Xunit;
 
-namespace RoomMateFinderTests.UnitTests.Handlers;
-
-public class RegisterHandlerTests
+namespace RoomMateFinderTests.UnitTests.Handlers
 {
     
-    private static AppDbContext CreateDbContext()
+
+    public class RegisterHandlerTests
     {
-        var options = new DbContextOptionsBuilder<AppDbContext>()
-            .UseInMemoryDatabase(Guid.NewGuid().ToString()) 
-            .Options;
-
-        return new AppDbContext(options);
-    }
-
-    [Fact]
-    public async Task Handle_ValidRequest_CreatesUser_And_Returns_Id()
-    {
-       
-        using var db = CreateDbContext();
-        var validator = new RegisterValidator();
-        var handler = new RegisterHandler(db, validator);
-
-        var command = new RegisterCommand(
-            new RegisterRequest
-            {
-                Email = "test@example.com",
-                Password = "Password123!"
-            });
-
-        
-        var userId = await handler.Handle(command, CancellationToken.None);
-
-       
-        Assert.NotEqual(Guid.Empty, userId);
-
-        var user = await db.Users.FindAsync(userId);
-        Assert.NotNull(user);
-        Assert.Equal("test@example.com", user!.Email);
-        Assert.Equal("Student", user.Role);
-        Assert.False(string.IsNullOrWhiteSpace(user.Salt));
-        Assert.False(string.IsNullOrWhiteSpace(user.PasswordHash));
-        Assert.NotEqual("Password123!", user.PasswordHash);
-    }
-
-    [Fact]
-    public async Task Handle_DuplicateEmail_Throws_Exception()
-    {
-     
-        using var db = CreateDbContext();
-
-        db.Users.Add(new User
+        private static AppDbContext CreateDbContext()
         {
-            Id = Guid.NewGuid(),
-            Email = "duplicate@example.com",
-            PasswordHash = "hash",
-            Salt = "salt",
-            Role = "Student"
-        });
-        await db.SaveChangesAsync();
+            var options = new DbContextOptionsBuilder<AppDbContext>()
+                .UseInMemoryDatabase(Guid.NewGuid().ToString())
+                .Options;
 
-        var validator = new RegisterValidator();
-        var handler = new RegisterHandler(db, validator);
+            return new AppDbContext(options);
+        }
 
-        var command = new RegisterCommand(
-            new RegisterRequest
+        [Fact]
+        public async Task Handle_ValidRequest_CreatesUser_And_Returns_Response()
+        {
+            using var db = CreateDbContext();
+            var validator = new RegisterValidator();
+            var jwt = new FakeJwtTokenGenerator();
+            var handler = new RegisterHandler(db, validator, jwt);
+
+            var command = new RegisterCommand(
+                new RegisterRequest
+                {
+                    Email = "test@example.com",
+                    Password = "Password123!"
+                });
+
+            var response = await handler.Handle(command, CancellationToken.None);
+
+            Assert.NotEqual(Guid.Empty, response.UserId);
+            Assert.NotNull(response.Token);
+
+            var user = await db.Users.FindAsync(response.UserId);
+            Assert.NotNull(user);
+            Assert.Equal("test@example.com", user!.Email);
+            Assert.Equal("Student", user.Role);
+            Assert.False(string.IsNullOrWhiteSpace(user.Salt));
+            Assert.False(string.IsNullOrWhiteSpace(user.PasswordHash));
+            Assert.NotEqual("Password123!", user.PasswordHash);
+        }
+
+        [Fact]
+        public async Task Handle_DuplicateEmail_Throws_Exception()
+        {
+            using var db = CreateDbContext();
+
+            db.Users.Add(new User
             {
+                Id = Guid.NewGuid(),
                 Email = "duplicate@example.com",
-                Password = "Password123!"
+                PasswordHash = "hash",
+                Salt = "salt",
+                Role = "Student"
             });
+            await db.SaveChangesAsync();
 
-        
-        await Assert.ThrowsAsync<Exception>(
-            () => handler.Handle(command, CancellationToken.None));
-    }
+            var validator = new RegisterValidator();
+            var jwt = new FakeJwtTokenGenerator();
+            var handler = new RegisterHandler(db, validator, jwt);
 
-    [Fact]
-    public async Task Handle_InvalidRequest_Throws_ValidationException()
-    {
-        
-        using var db = CreateDbContext();
-        var validator = new RegisterValidator();
-        var handler = new RegisterHandler(db, validator);
+            var command = new RegisterCommand(
+                new RegisterRequest
+                {
+                    Email = "duplicate@example.com",
+                    Password = "Password123!"
+                });
 
-        var command = new RegisterCommand(
-            new RegisterRequest
-            {
-                Email = "",         
-                Password = "123"     
-            });
+            await Assert.ThrowsAsync<Exception>(
+                () => handler.Handle(command, CancellationToken.None));
+        }
 
-        
-        await Assert.ThrowsAsync<ValidationException>(
-            () => handler.Handle(command, CancellationToken.None));
+        [Fact]
+        public async Task Handle_InvalidRequest_Throws_ValidationException()
+        {
+            using var db = CreateDbContext();
+            var validator = new RegisterValidator();
+            var jwt = new FakeJwtTokenGenerator();
+            var handler = new RegisterHandler(db, validator, jwt);
+
+            var command = new RegisterCommand(
+                new RegisterRequest
+                {
+                    Email = "",
+                    Password = "123"
+                });
+
+            await Assert.ThrowsAsync<ValidationException>(
+                () => handler.Handle(command, CancellationToken.None));
+        }
     }
 }

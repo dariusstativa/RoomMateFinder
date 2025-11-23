@@ -5,7 +5,6 @@ using RoomMateFinder.Infrastructure.Persistence;
 using System.Security.Cryptography;
 using System.Text;
 using FluentValidation;
-<<<<<<< HEAD
 using RoomMateFinder.Features.Login.LoginUser;
 
 namespace RoomMateFinder.Features.Login.RegisterUser;
@@ -15,7 +14,11 @@ public class RegisterHandler : IRequestHandler<RegisterCommand, LoginResponse>
     private readonly AppDbContext _db;
     private readonly IValidator<RegisterCommand> _validator;
     private readonly IJwtTokenGenerator _jwtTokenGenerator;
-    public RegisterHandler(AppDbContext db, IValidator<RegisterCommand> validator, IJwtTokenGenerator jwtTokenGenerator)
+
+    public RegisterHandler(
+        AppDbContext db,
+        IValidator<RegisterCommand> validator,
+        IJwtTokenGenerator jwtTokenGenerator)
     {
         _db = db;
         _validator = validator;
@@ -23,41 +26,16 @@ public class RegisterHandler : IRequestHandler<RegisterCommand, LoginResponse>
     }
 
     public async Task<LoginResponse> Handle(RegisterCommand request, CancellationToken cancellationToken)
-=======
-
-namespace RoomMateFinder.Features.Login.RegisterUser;
-
-public class RegisterHandler : IRequestHandler<RegisterCommand, Guid>
-{
-    private readonly AppDbContext _db;
-    private readonly IValidator<RegisterCommand> _validator;
-    public RegisterHandler(AppDbContext db, IValidator<RegisterCommand> validator)
-    {
-        _db = db;
-        _validator = validator;
-    }
-
-    public async Task<Guid> Handle(RegisterCommand request, CancellationToken cancellationToken)
->>>>>>> CleanFixBranch
     {
         var validationResult = _validator.Validate(request);
+
         if (!validationResult.IsValid)
-        {
-            
             throw new ValidationException(validationResult.Errors);
-        }
-        
+
         if (await _db.Users.AnyAsync(x => x.Email == request.Request.Email, cancellationToken))
             throw new Exception("Email already registered.");
 
-<<<<<<< HEAD
         var salt = Convert.ToBase64String(RandomNumberGenerator.GetBytes(16));
-=======
-      
-        var salt = Convert.ToBase64String(RandomNumberGenerator.GetBytes(16));
-
-       
->>>>>>> CleanFixBranch
         var hashedPassword = HashPassword(request.Request.Password, salt);
 
         var user = new User
@@ -72,12 +50,8 @@ public class RegisterHandler : IRequestHandler<RegisterCommand, Guid>
         _db.Users.Add(user);
         await _db.SaveChangesAsync(cancellationToken);
 
-<<<<<<< HEAD
         var token = _jwtTokenGenerator.Generate(user.Id, user.Email);
         return new LoginResponse(user.Id, token);
-=======
-        return user.Id;
->>>>>>> CleanFixBranch
     }
 
     private string HashPassword(string password, string salt)

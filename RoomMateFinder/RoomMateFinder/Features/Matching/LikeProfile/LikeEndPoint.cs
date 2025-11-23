@@ -2,10 +2,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using RoomMateFinder.Features.LikeProfile.LikeRequest;
-<<<<<<< HEAD
 using System.Security.Claims;
-=======
->>>>>>> CleanFixBranch
 
 namespace RoomMateFinder.Features.Matching.LikeProfile;
 
@@ -21,20 +18,27 @@ public static class LikeEndpoint
             {
                 await validator.ValidateAndThrowAsync(request);
 
-<<<<<<< HEAD
-                var subClaim = http.User.FindFirst(ClaimTypes.NameIdentifier);
-                if (subClaim == null)
+                // Prioritate: NameIdentifier (frontend coleg)
+                // Fallback: "sub" (standard JWT)
+                var userIdClaim =
+                    http.User.FindFirst(ClaimTypes.NameIdentifier) ??
+                    http.User.FindFirst("sub");
+
+                if (userIdClaim is null)
                 {
-                    // Log all available claims for debugging
-                    var claims = string.Join(", ", http.User.Claims.Select(c => $"{c.Type}={c.Value}"));
-                    Console.WriteLine($"❌ 'sub' claim not found. Available claims: {claims}");
-                    return Results.BadRequest(new { error = "User ID not found in token. Please log in again." });
+                    // Debugging (SUPER util dacă token-ul nu conține ce trebuie)
+                    var claims = string.Join(", ", 
+                        http.User.Claims.Select(c => $"{c.Type}={c.Value}"));
+
+                    Console.WriteLine($"❌ User ID claim missing. Available claims: {claims}");
+
+                    return Results.BadRequest(new
+                    {
+                        error = "User ID not found in token. Please log in again."
+                    });
                 }
 
-                var userId = Guid.Parse(subClaim.Value);
-=======
-                var userId = Guid.Parse(http.User.FindFirst("sub")!.Value);
->>>>>>> CleanFixBranch
+                var userId = Guid.Parse(userIdClaim.Value);
 
                 var result = await mediator.Send(new LikeCommand(userId, request));
 

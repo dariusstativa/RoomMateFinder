@@ -1,9 +1,6 @@
 using MediatR;
-<<<<<<< HEAD
-using System.Security.Claims;
-=======
 using RoomMateFinder.Features.Profiles;
->>>>>>> CleanFixBranch
+using System.Security.Claims;
 
 namespace RoomMateFinder.Features.Profiles.GetMyProfile;
 
@@ -13,22 +10,31 @@ public static class GetProfileEndpoint
     {
         app.MapGet("/profiles/me", async (HttpContext http, IMediator mediator, CancellationToken ct) =>
             {
-<<<<<<< HEAD
-                var userId = Guid.Parse(http.User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
+                // 1. Claim prioritization: NameIdentifier → sub
+                var userIdClaim =
+                    http.User.FindFirst(ClaimTypes.NameIdentifier) ??
+                    http.User.FindFirst("sub");
 
-                var profile = await mediator.Send(new GetProfileQuery(userId), ct);
+                if (userIdClaim is null)
+                {
+                    var claims = string.Join(", ", http.User.Claims.Select(c => $"{c.Type}={c.Value}"));
+                    Console.WriteLine($"❌ No userId in token. Claims: {claims}");
 
-                return profile is not null
-                    ? Results.Ok(profile)
-                    : Results.NotFound();
-=======
-                var userId = Guid.Parse(http.User.FindFirst("sub")!.Value);
+                    return Results.BadRequest(new
+                    {
+                        error = "User ID not found in token. Please log in again."
+                    });
+                }
 
+                var userId = Guid.Parse(userIdClaim.Value);
+
+                // 2. Retrieve profile
                 var profile = await mediator.Send(new GetProfileQuery(userId), ct);
 
                 if (profile is null)
                     return Results.NotFound();
 
+                // 3. Convert to DTO (important for frontend consistency)
                 var dto = new ProfileDto(
                     profile.Id,
                     profile.UserId,
@@ -46,7 +52,6 @@ public static class GetProfileEndpoint
                 );
 
                 return Results.Ok(dto);
->>>>>>> CleanFixBranch
             })
             .RequireAuthorization();
     }

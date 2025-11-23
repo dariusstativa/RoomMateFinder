@@ -20,7 +20,7 @@ public class LoginTests : IClassFixture<CustomWebApplicationFactory>
 
         var registerPayload = new { email, password };
         var registerResponse = await _client.PostAsJsonAsync("/auth/register", registerPayload);
-        Assert.Equal(HttpStatusCode.Created, registerResponse.StatusCode);
+        Assert.Equal(HttpStatusCode.OK, registerResponse.StatusCode);
 
         
         var loginPayload = new { email, password };
