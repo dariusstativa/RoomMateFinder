@@ -4,7 +4,10 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using RoomMateFinder.Domain.Entities;
 using RoomMateFinder.Features.LikeProfile.LikeRequest;
+<<<<<<< HEAD
 using RoomMateFinder.Features.Matching.Rating;
+=======
+>>>>>>> DariusBranch
 using RoomMateFinder.Infrastructure.Persistence;
 
 namespace RoomMateFinder.Features.Matching.LikeProfile;
@@ -20,6 +23,7 @@ public class LikeHandler : IRequestHandler<LikeCommand, bool>
         _validator = validator;
     }
 
+<<<<<<< HEAD
     public async Task<bool> Handle(LikeCommand request, CancellationToken ct)
     {
         ValidationResult validation = _validator.Validate(request.Request);
@@ -44,12 +48,26 @@ public class LikeHandler : IRequestHandler<LikeCommand, bool>
         var existing = await _db.Likes.FirstOrDefaultAsync(
             l => l.LikerUserId == req.LikerUserId && l.TargetProfileId == req.TargetProfileId,
             ct);
+=======
+    public async Task<bool> Handle(LikeCommand request, CancellationToken cancellationToken)
+    {
+        await _validator.ValidateAndThrowAsync(request.Request, cancellationToken);
+
+        var likerUserId = request.UserId;
+        var targetProfileId = request.Request.TargetProfileId;
+
+        var existing = await _db.Likes.FirstOrDefaultAsync(
+            x => x.LikerUserId == likerUserId && x.TargetProfileId == targetProfileId,
+            cancellationToken
+        );
+>>>>>>> DariusBranch
 
         if (existing != null)
         {
             existing.IsLike = true;
             existing.CreatedAt = DateTime.UtcNow;
 
+<<<<<<< HEAD
             targetUser.Rating = EloCalculator.CalculateNewRating(
                 targetUser.Rating,
                 liker.Rating,
@@ -57,19 +75,28 @@ public class LikeHandler : IRequestHandler<LikeCommand, bool>
             );
 
             await _db.SaveChangesAsync(ct);
+=======
+            await _db.SaveChangesAsync(cancellationToken);
+>>>>>>> DariusBranch
             return true;
         }
 
         var like = new Like
         {
             Id = Guid.NewGuid(),
+<<<<<<< HEAD
             LikerUserId = req.LikerUserId,
             TargetProfileId = req.TargetProfileId,
+=======
+            LikerUserId = likerUserId,
+            TargetProfileId = targetProfileId,
+>>>>>>> DariusBranch
             IsLike = true,
             CreatedAt = DateTime.UtcNow
         };
 
         _db.Likes.Add(like);
+<<<<<<< HEAD
 
         targetUser.Rating = EloCalculator.CalculateNewRating(
             targetUser.Rating,
@@ -81,3 +108,10 @@ public class LikeHandler : IRequestHandler<LikeCommand, bool>
         return true;
     }
 }
+=======
+        await _db.SaveChangesAsync(cancellationToken);
+
+        return true;
+    }
+}
+>>>>>>> DariusBranch

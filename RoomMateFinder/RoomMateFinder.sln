@@ -1,16 +1,38 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomMateFinder", "RoomMateFinder\RoomMateFinder.csproj", "{352BB0EF-3CE1-4E5A-8BA8-46884FBC49F7}"
 EndProject
+
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomMateFinderTests", "RoomMateFinderTests\RoomMateFinderTests.csproj", "{389CA0DD-1269-4467-93B1-04C332935BB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomMateFinder.Client", "RoomMateFinder.Client\RoomMateFinder.Client.csproj", "{69737AF4-6FF9-495D-B8B2-12758B747591}"
+EndProject
+
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{352BB0EF-3CE1-4E5A-8BA8-46884FBC49F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{352BB0EF-3CE1-4E5A-8BA8-46884FBC49F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{352BB0EF-3CE1-4E5A-8BA8-46884FBC49F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{352BB0EF-3CE1-4E5A-8BA8-46884FBC49F7}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
+				GlobalSection(SolutionConfigurationPlatforms) = preSolution
+								Debug|Any CPU = Debug|Any CPU
+								Release|Any CPU = Release|Any CPU
+				EndGlobalSection
+
+				GlobalSection(ProjectConfigurationPlatforms) = postSolution
+								{352BB0EF-3CE1-4E5A-8BA8-46884FBC49F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+								{352BB0EF-3CE1-4E5A-8BA8-46884FBC49F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+								{352BB0EF-3CE1-4E5A-8BA8-46884FBC49F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+								{352BB0EF-3CE1-4E5A-8BA8-46884FBC49F7}.Release|Any CPU.Build.0 = Release|Any CPU
+
+
+								{389CA0DD-1269-4467-93B1-04C332935BB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+								{389CA0DD-1269-4467-93B1-04C332935BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+								{389CA0DD-1269-4467-93B1-04C332935BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+								{389CA0DD-1269-4467-93B1-04C332935BB6}.Release|Any CPU.Build.0 = Release|Any CPU
+					{69737AF4-6FF9-495D-B8B2-12758B747591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+					{69737AF4-6FF9-495D-B8B2-12758B747591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+					{69737AF4-6FF9-495D-B8B2-12758B747591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+					{69737AF4-6FF9-495D-B8B2-12758B747591}.Release|Any CPU.Build.0 = Release|Any CPU
+				EndGlobalSection
+
+				GlobalSection(SolutionProperties) = preSolution
+								HideSolutionNode = FALSE
+				EndGlobalSection
 EndGlobal

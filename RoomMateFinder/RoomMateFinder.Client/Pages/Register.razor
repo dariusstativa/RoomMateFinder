@@ -1,0 +1,242 @@
+﻿@page "/register"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+
+<div class="register-container">
+    <div class="register-card">
+        <h1>RoomMate Finder</h1>
+        <h2>Create Account</h2>
+
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <div class="error-message">@errorMessage</div>
+        }
+
+        @if (!string.IsNullOrEmpty(successMessage))
+        {
+            <div class="success-message">@successMessage</div>
+        }
+
+        <EditForm Model="@registerRequest" OnValidSubmit="@HandleRegister">
+            <div class="form-group">
+                <label>Email</label>
+                <InputText @bind-Value="registerRequest.Email" placeholder="your@email.com" />
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <InputText type="password" @bind-Value="registerRequest.Password" placeholder="••••••••" />
+            </div>
+
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <InputText type="password" @bind-Value="confirmPassword" placeholder="••••••••" />
+            </div>
+
+            <button type="submit" class="btn-primary" disabled="@isLoading">
+                @if (isLoading)
+                {
+                    <span>Creating account...</span>
+                }
+                else
+                {
+                    <span>Register</span>
+                }
+            </button>
+        </EditForm>
+
+        <div class="login-link">
+            Already have an account? <a href="/login">Login here</a>
+        </div>
+    </div>
+</div>
+
+@code {
+    private RegisterRequest registerRequest = new();
+    private string confirmPassword = string.Empty;
+    private string errorMessage = string.Empty;
+    private string successMessage = string.Empty;
+    private bool isLoading = false;
+
+    private async Task HandleRegister()
+    {
+        errorMessage = string.Empty;
+        successMessage = string.Empty;
+
+        // Validate passwords match
+        if (registerRequest.Password != confirmPassword)
+        {
+            errorMessage = "Passwords do not match.";
+            return;
+        }
+
+        // Validate password length
+        if (string.IsNullOrWhiteSpace(registerRequest.Password) || registerRequest.Password.Length < 6)
+        {
+            errorMessage = "Password must be at least 6 characters long.";
+            return;
+        }
+
+        // Validate email
+        if (string.IsNullOrWhiteSpace(registerRequest.Email) || !registerRequest.Email.Contains("@"))
+        {
+            errorMessage = "Please enter a valid email address.";
+            return;
+        }
+
+        isLoading = true;
+
+        try
+        {
+            var response = await Http.PostAsJsonAsync("/auth/register", registerRequest);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var userId = await response.Content.ReadFromJsonAsync<Guid>();
+                successMessage = $"Account created successfully! User ID: {userId}";
+                
+                // Reset form
+                registerRequest = new();
+                confirmPassword = string.Empty;
+
+                // Redirect to login after 2 seconds
+                await Task.Delay(2000);
+                Navigation.NavigateTo("/login");
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                errorMessage = $"Registration failed: {errorContent}";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}
+
+<style>
+    .register-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 20px;
+    }
+
+    .register-card {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+    }
+
+    h1 {
+        font-size: 28px;
+        font-weight: 600;
+        color: #667eea;
+        margin: 0 0 10px 0;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 400;
+        color: #333;
+        margin: 0 0 30px 0;
+        text-align: center;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 14px;
+        transition: border-color 0.3s;
+        box-sizing: border-box;
+    }
+
+    input:focus {
+        outline: none;
+        border-color: #667eea;
+    }
+
+    .btn-primary {
+        width: 100%;
+        padding: 12px;
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .btn-primary:hover:not(:disabled) {
+        background: #5568d3;
+    }
+
+    .btn-primary:disabled {
+        background: #a0aec0;
+        cursor: not-allowed;
+    }
+
+    .error-message {
+        background: #fed7d7;
+        color: #c53030;
+        padding: 12px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .success-message {
+        background: #c6f6d5;
+        color: #2f855a;
+        padding: 12px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .login-link {
+        margin-top: 20px;
+        text-align: center;
+        color: #555;
+        font-size: 14px;
+    }
+
+    .login-link a {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .login-link a:hover {
+        text-decoration: underline;
+    }
+</style>
+

@@ -11,8 +11,14 @@ public static class LoginEndpoint
             [FromBody] LoginRequest request,
             IMediator mediator) =>
         {
+<<<<<<< HEAD
             var userId = await mediator.Send(new LoginCommand(request));
             return Results.Ok(new { UserId = userId });
+=======
+            var response = await mediator.Send(new LoginCommand(request));
+            return Results.Ok(response);
+
+>>>>>>> DariusBranch
         });
     }
 }

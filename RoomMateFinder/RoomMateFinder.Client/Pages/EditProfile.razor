@@ -1,0 +1,383 @@
+﻿@page "/profile/edit"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject RoomMateFinder.Client.Services.AuthService AuthService
+
+<div class="edit-profile-container">
+    <div class="edit-profile-card">
+        <h1>Edit Your Profile</h1>
+        <p class="subtitle">Update your preferences and bio</p>
+
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <div class="error-message">@errorMessage</div>
+        }
+
+        @if (!string.IsNullOrEmpty(successMessage))
+        {
+            <div class="success-message">@successMessage</div>
+        }
+
+        @if (isLoading)
+        {
+            <div class="loading">Loading profile...</div>
+        }
+        else if (profileRequest != null)
+        {
+            <div class="info-box">
+                <p>ℹ️ Basic information (Name, Age, Gender, University) cannot be edited. Only preferences and bio can be updated.</p>
+            </div>
+
+            <EditForm Model="@profileRequest" OnValidSubmit="@HandleUpdateProfile">
+                <div class="form-section">
+                    <h3>About You</h3>
+                    
+                    <div class="form-group">
+                        <label>Bio</label>
+                        <InputTextArea @bind-Value="profileRequest.Bio" 
+                                      placeholder="Tell us about yourself..." 
+                                      rows="5" />
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Living Preferences</h3>
+
+                    <div class="form-group">
+                        <label>Sleep Schedule</label>
+                        <InputSelect @bind-Value="profileRequest.SleepSchedule">
+                            <option value="">Select...</option>
+                            <option value="Early Bird">Early Bird</option>
+                            <option value="Night Owl">Night Owl</option>
+                            <option value="Flexible">Flexible</option>
+                        </InputSelect>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cleanliness</label>
+                        <InputSelect @bind-Value="profileRequest.Cleanliness">
+                            <option value="">Select...</option>
+                            <option value="Very Clean">Very Clean</option>
+                            <option value="Moderately Clean">Moderately Clean</option>
+                            <option value="Relaxed">Relaxed</option>
+                        </InputSelect>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Noise Tolerance</label>
+                        <InputSelect @bind-Value="profileRequest.NoiseTolerance">
+                            <option value="">Select...</option>
+                            <option value="Quiet">Quiet</option>
+                            <option value="Moderate">Moderate</option>
+                            <option value="Loud">Loud</option>
+                        </InputSelect>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Smoking Preference</label>
+                        <InputSelect @bind-Value="profileRequest.SmokingPreference">
+                            <option value="">Select...</option>
+                            <option value="No Smoking">No Smoking</option>
+                            <option value="Outside Only">Outside Only</option>
+                            <option value="Smoking Friendly">Smoking Friendly</option>
+                        </InputSelect>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Pet Preference</label>
+                        <InputSelect @bind-Value="profileRequest.PetPreference">
+                            <option value="">Select...</option>
+                            <option value="No Pets">No Pets</option>
+                            <option value="Cat Friendly">Cat Friendly</option>
+                            <option value="Dog Friendly">Dog Friendly</option>
+                            <option value="All Pets Welcome">All Pets Welcome</option>
+                        </InputSelect>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Study Habits</label>
+                        <InputSelect @bind-Value="profileRequest.StudyHabits">
+                            <option value="">Select...</option>
+                            <option value="Very Studious">Very Studious</option>
+                            <option value="Balanced">Balanced</option>
+                            <option value="Social">Social</option>
+                        </InputSelect>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="button" class="btn-secondary" @onclick="@(() => Navigation.NavigateTo($"/profiles/{AuthService.UserId}"))">
+                        Cancel
+                    </button>
+                    <button type="submit" class="btn-primary" disabled="@isSaving">
+                        @if (isSaving)
+                        {
+                            <span>Saving...</span>
+                        }
+                        else
+                        {
+                            <span>Save Changes</span>
+                        }
+                    </button>
+                </div>
+            </EditForm>
+        }
+    </div>
+</div>
+
+@code {
+    private UpdateProfileRequest? profileRequest;
+    private string errorMessage = string.Empty;
+    private string successMessage = string.Empty;
+    private bool isLoading = true;
+    private bool isSaving = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Check if user is authenticated
+        if (!AuthService.IsAuthenticated)
+        {
+            Navigation.NavigateTo("/login");
+            return;
+        }
+
+        await LoadProfile();
+    }
+
+    private async Task LoadProfile()
+    {
+        isLoading = true;
+        errorMessage = string.Empty;
+
+        try
+        {
+            var profile = await Http.GetFromJsonAsync<Profile>($"/profiles/{AuthService.UserId}");
+            
+            if (profile == null)
+            {
+                errorMessage = "Profile not found.";
+                return;
+            }
+
+            // Populate form with existing data
+            profileRequest = new UpdateProfileRequest
+            {
+                Bio = profile.Bio,
+                SleepSchedule = profile.SleepSchedule,
+                Cleanliness = profile.Cleanliness,
+                NoiseTolerance = profile.NoiseTolerance,
+                SmokingPreference = profile.SmokingPreference,
+                PetPreference = profile.PetPreference,
+                StudyHabits = profile.StudyHabits
+            };
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading profile: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task HandleUpdateProfile()
+    {
+        errorMessage = string.Empty;
+        successMessage = string.Empty;
+        isSaving = true;
+
+        try
+        {
+            var response = await Http.PutAsJsonAsync($"/profiles/{AuthService.UserId}", profileRequest);
+
+            if (response.IsSuccessStatusCode)
+            {
+                successMessage = "Profile updated successfully!";
+                
+                // Redirect after 2 seconds
+                await Task.Delay(2000);
+                Navigation.NavigateTo($"/profiles/{AuthService.UserId}");
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                errorMessage = $"Failed to update profile: {errorContent}";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error: {ex.Message}";
+        }
+        finally
+        {
+            isSaving = false;
+        }
+    }
+}
+
+<style>
+    .edit-profile-container {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 40px 20px;
+    }
+
+    .edit-profile-card {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 32px;
+        font-weight: 600;
+        color: #667eea;
+        margin: 0 0 10px 0;
+        text-align: center;
+    }
+
+    .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    .loading {
+        text-align: center;
+        padding: 40px;
+        color: #666;
+    }
+
+    .info-box {
+        background: #e6f3ff;
+        border-left: 4px solid #667eea;
+        padding: 16px;
+        border-radius: 6px;
+        margin-bottom: 30px;
+    }
+
+    .info-box p {
+        margin: 0;
+        font-size: 14px;
+        color: #555;
+    }
+
+    .form-section {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .form-section:last-of-type {
+        border-bottom: none;
+    }
+
+    .form-section h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #333;
+        margin: 0 0 20px 0;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 14px;
+        transition: border-color 0.3s;
+        box-sizing: border-box;
+        font-family: inherit;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        outline: none;
+        border-color: #667eea;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 12px;
+        margin-top: 24px;
+    }
+
+    .btn-primary, .btn-secondary {
+        flex: 1;
+        padding: 14px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .btn-primary {
+        background: #667eea;
+        color: white;
+    }
+
+    .btn-primary:hover:not(:disabled) {
+        background: #5568d3;
+    }
+
+    .btn-primary:disabled {
+        background: #a0aec0;
+        cursor: not-allowed;
+    }
+
+    .btn-secondary {
+        background: #e0e0e0;
+        color: #555;
+    }
+
+    .btn-secondary:hover {
+        background: #d0d0d0;
+    }
+
+    .error-message {
+        background: #fed7d7;
+        color: #c53030;
+        padding: 12px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .success-message {
+        background: #c6f6d5;
+        color: #2f855a;
+        padding: 12px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    @@media (max-width: 640px) {
+        .edit-profile-card {
+            padding: 30px 20px;
+        }
+    }
+</style>
+

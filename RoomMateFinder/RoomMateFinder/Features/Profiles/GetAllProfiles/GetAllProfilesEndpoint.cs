@@ -8,9 +8,19 @@ public static class GetAllProfilesEndpoint
     public static void MapGetAllProfilesEndpoint(this IEndpointRouteBuilder app)
     {
         app.MapGet("/profiles", async (IMediator mediator, CancellationToken ct) =>
+<<<<<<< HEAD
         {
             var profiles = await mediator.Send(new GetAllProfilesQuery(), ct);
             return Results.Ok(profiles);
         });
     }
 }
+=======
+            {
+                var profiles = await mediator.Send(new GetAllProfilesQuery(), ct);
+                return Results.Ok(profiles);
+            })
+            .RequireAuthorization();
+    }
+}
+>>>>>>> DariusBranch
