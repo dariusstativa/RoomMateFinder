@@ -5,7 +5,7 @@
 namespace RoomMateFinder.Migrations
 {
     /// <inheritdoc />
-    public partial class AddUserRatingAndMatchingChanges : Migration
+    public partial class FixChanges : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

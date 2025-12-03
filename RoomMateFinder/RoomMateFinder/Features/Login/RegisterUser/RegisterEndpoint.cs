@@ -11,13 +11,8 @@ public static class RegisterEndpoint
             [FromBody] RegisterRequest request,
             IMediator mediator) =>
         {
-<<<<<<< HEAD
-            var id = await mediator.Send(new RegisterCommand(request));
-            return Results.Created($"/users/{id}", id);
-=======
             var response = await mediator.Send(new RegisterCommand(request));
             return Results.Ok(response);
->>>>>>> DariusBranch
         });
     }
 }

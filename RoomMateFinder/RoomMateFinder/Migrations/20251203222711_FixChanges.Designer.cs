@@ -12,8 +12,8 @@ using RoomMateFinder.Infrastructure.Persistence;
 namespace RoomMateFinder.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251121091814_AddUserRatingAndMatchingChanges")]
-    partial class AddUserRatingAndMatchingChanges
+    [Migration("20251203222711_FixChanges")]
+    partial class FixChanges
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

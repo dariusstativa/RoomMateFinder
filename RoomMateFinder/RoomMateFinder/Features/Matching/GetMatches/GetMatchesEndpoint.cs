@@ -1,8 +1,5 @@
 ﻿using MediatR;
-<<<<<<< HEAD
-=======
 using System.Security.Claims;
->>>>>>> DariusBranch
 
 namespace RoomMateFinder.Features.Matching.GetMatches;
 
@@ -10,7 +7,6 @@ public static class GetMatchesEndpoint
 {
     public static void MapGetMatchesEndpoint(this IEndpointRouteBuilder app)
     {
-<<<<<<< HEAD
         app.MapGet("/matches/{userId:guid}", async (
             Guid userId,
             IMediator mediator,
@@ -22,7 +18,6 @@ public static class GetMatchesEndpoint
                 ? Results.Ok(matches)
                 : Results.NotFound("No matches found.");
         });
-=======
         app.MapGet("/matches", async (
                 HttpContext http,
                 IMediator mediator,
@@ -46,6 +41,5 @@ public static class GetMatchesEndpoint
                     : Results.NotFound("No matches found.");
             })
             .RequireAuthorization();
->>>>>>> DariusBranch
     }
 }

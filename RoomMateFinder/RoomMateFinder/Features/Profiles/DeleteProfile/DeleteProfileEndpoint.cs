@@ -1,9 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-<<<<<<< HEAD
-=======
 using System.Security.Claims;
->>>>>>> DariusBranch
 
 namespace RoomMateFinder.Features.Profiles.DeleteProfile;
 
@@ -11,16 +8,6 @@ public static class DeleteProfileEndpoint
 {
     public static void MapDeleteProfileEndpoint(this IEndpointRouteBuilder app)
     {
-<<<<<<< HEAD
-        app.MapDelete("/profiles/{userId:guid}", async (
-            Guid userId,
-            IMediator mediator) =>
-        {
-            var result = await mediator.Send(new DeleteProfileCommand(userId));
-
-            return result ? Results.NoContent() : Results.NotFound();
-        });
-=======
         app.MapDelete("/profiles", async (
                 HttpContext http,
                 IMediator mediator) =>
@@ -51,6 +38,5 @@ public static class DeleteProfileEndpoint
                 return result ? Results.NoContent() : Results.NotFound();
             })
             .RequireAuthorization();
->>>>>>> DariusBranch
     }
 }

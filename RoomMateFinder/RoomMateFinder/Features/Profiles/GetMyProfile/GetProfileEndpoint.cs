@@ -1,9 +1,6 @@
 using MediatR;
-<<<<<<< HEAD
-=======
 using RoomMateFinder.Features.Profiles;
 using System.Security.Claims;
->>>>>>> DariusBranch
 
 namespace RoomMateFinder.Features.Profiles.GetMyProfile;
 
@@ -11,19 +8,6 @@ public static class GetProfileEndpoint
 {
     public static void MapGetMyProfileEndpoint(this IEndpointRouteBuilder app)
     {
-<<<<<<< HEAD
-        app.MapGet("/profiles/me", async (IMediator mediator, CancellationToken ct) =>
-        {
-          
-            var userId = Guid.Parse("00000000-0000-0000-0000-000000000001");
-
-            var profile = await mediator.Send(new GetProfileQuery(userId), ct);
-
-            return profile is not null
-                ? Results.Ok(profile)
-                : Results.NotFound();
-        });
-=======
         app.MapGet("/profiles/me", async (HttpContext http, IMediator mediator, CancellationToken ct) =>
             {
                 // 1. Claim prioritization: NameIdentifier → sub
@@ -70,6 +54,5 @@ public static class GetProfileEndpoint
                 return Results.Ok(dto);
             })
             .RequireAuthorization();
->>>>>>> DariusBranch
     }
 }

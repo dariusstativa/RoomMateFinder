@@ -6,15 +6,14 @@ namespace RoomMateFinder.Features.Matching.LikeProfile;
 
 public static class LikeEndpoints
 {
-   
-    public static void MapLikeEndpoints(this IEndpointRouteBuilder app)
+    public static void MapLegacyLikeEndpoint(this IEndpointRouteBuilder app)
     {
         app.MapPost("/like", async (
             LikeRequest req,
             IMediator mediator,
             CancellationToken ct) =>
         {
-            var ok = await mediator.Send(new LikeCommand(req), ct);
+            var ok = await mediator.Send(new LikeCommand(req.LikerUserId, req), ct);
             return ok ? Results.Ok() : Results.BadRequest();
         });
     }

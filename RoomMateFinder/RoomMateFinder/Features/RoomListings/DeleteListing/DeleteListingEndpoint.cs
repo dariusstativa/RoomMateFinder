@@ -1,8 +1,5 @@
 ﻿using MediatR;
-<<<<<<< HEAD
-=======
 using System.Security.Claims;
->>>>>>> DariusBranch
 
 namespace RoomMateFinder.Features.RoomListings.DeleteListing;
 
@@ -10,13 +7,6 @@ public static class DeleteListingEndpoint
 {
     public static void MapDeleteListingEndpoint(this IEndpointRouteBuilder app)
     {
-<<<<<<< HEAD
-        app.MapDelete("/listings/{id:guid}", async (Guid id, IMediator mediator) =>
-        {
-            var ok = await mediator.Send(new DeleteListingCommand(id));
-            return ok ? Results.NoContent() : Results.NotFound();
-        });
-=======
         app.MapDelete("/listings/{id:guid}", async (
                 HttpContext http,
                 Guid id,
@@ -29,6 +19,5 @@ public static class DeleteListingEndpoint
                 return ok ? Results.NoContent() : Results.NotFound();
             })
             .RequireAuthorization();
->>>>>>> DariusBranch
     }
 }

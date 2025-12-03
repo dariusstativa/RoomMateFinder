@@ -2,27 +2,12 @@
 
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-<<<<<<< HEAD
-=======
 using System.Security.Claims;
->>>>>>> DariusBranch
 
 public static class CreateProfileEndpoint
 {
     public static void MapCreateProfileEndpoint(this IEndpointRouteBuilder app)
     {
-<<<<<<< HEAD
-        app.MapPost("/profiles/{userId:guid}", async (
-            Guid userId,
-            [FromBody] CreateProfileRequest request,
-            IMediator mediator) =>
-        {
-            var id = await mediator.Send(new CreateProfileCommand(userId, request));
-            return Results.Created($"/profiles/{id}", id);
-        });
-    }
-}
-=======
         app.MapPost("/profiles", async (
                 HttpContext http,
                 [FromBody] CreateProfileRequest request,
@@ -54,4 +39,3 @@ public static class CreateProfileEndpoint
             .RequireAuthorization();
     }
 }
->>>>>>> DariusBranch
