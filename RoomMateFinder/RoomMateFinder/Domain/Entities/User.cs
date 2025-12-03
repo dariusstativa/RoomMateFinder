@@ -5,13 +5,10 @@ public class User
     public Guid Id { get; set; }
     public string Email { get; set; } = default!;
     public string PasswordHash { get; set; } = default!;
-    public string Role { get; set; } = "Student";  
+    public string Role { get; set; } = "Student";
     public string Salt { get; set; }
-<<<<<<< HEAD
-=======
 
->>>>>>> DariusBranch
-    
-    public int Rating { get; set; } = 1200; 
+    public int Rating { get; set; } = 1200;
+
     public Profile? Profile { get; set; }
 }
