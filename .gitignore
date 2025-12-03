@@ -1,6 +1,5 @@
 bin/
 obj/
-.idea/
 *.cache
 *.user
 *.DS_Store
