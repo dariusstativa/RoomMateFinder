@@ -131,6 +131,9 @@
 
         try
         {
+            // Add authorization header before making request
+            AuthService.AddAuthorizationHeader(Http);
+            
             var response = await Http.DeleteAsync($"/users/{listing!.OwnerId}/listings/{Id}");
             
             if (response.IsSuccessStatusCode)

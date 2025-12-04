@@ -151,7 +151,10 @@
 
         try
         {
-            var profile = await Http.GetFromJsonAsync<Profile>($"/profiles/{AuthService.UserId}");
+            // Add authorization header before making request
+            AuthService.AddAuthorizationHeader(Http);
+            
+            var profile = await Http.GetFromJsonAsync<Profile>("/profiles/me");
             
             if (profile == null)
             {

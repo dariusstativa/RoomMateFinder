@@ -169,6 +169,9 @@
 
         try
         {
+            // Add authorization header before making request
+            AuthService.AddAuthorizationHeader(Http);
+            
             profile = await Http.GetFromJsonAsync<Profile>($"/profiles/{UserId}");
         }
         catch (HttpRequestException ex)
@@ -202,6 +205,9 @@
 
         try
         {
+            // Add authorization header before making request
+            AuthService.AddAuthorizationHeader(Http);
+            
             var request = new
             {
                 LikerUserId = AuthService.UserId,
@@ -240,6 +246,9 @@
 
         try
         {
+            // Add authorization header before making request
+            AuthService.AddAuthorizationHeader(Http);
+            
             var request = new
             {
                 LikerUserId = AuthService.UserId,

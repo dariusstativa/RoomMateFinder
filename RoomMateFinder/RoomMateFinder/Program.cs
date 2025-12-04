@@ -42,7 +42,7 @@ var builder = WebApplication.CreateBuilder(args);
 // ---------------------------------------------------------
 var cs = builder.Configuration.GetConnectionString("DefaultConnection")
          ?? Environment.GetEnvironmentVariable("POSTGRES_CONNECTION_STRING")
-         ?? "Host=localhost;Port=1326;Database=roommatefinder;Username=postgres;Password=tudor";
+         ?? "Host=localhost;Port=5432;Database=roommatefinder;Username=postgres;Password=STUDENT";
 
 if (builder.Environment.IsEnvironment("Testing"))
 {

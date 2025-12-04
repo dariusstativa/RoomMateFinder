@@ -196,6 +196,9 @@
 
         try
         {
+            // Add authorization header before making request
+            AuthService.AddAuthorizationHeader(Http);
+            
             var response = await Http.PutAsJsonAsync($"/listings/{Id}", listingRequest);
 
             if (response.IsSuccessStatusCode)

@@ -99,6 +99,9 @@
 
         try
         {
+            // Add authorization header before making request
+            AuthService.AddAuthorizationHeader(Http);
+            
             var response = await Http.GetAsync("/matches");
             
             if (response.IsSuccessStatusCode)
@@ -415,4 +418,3 @@
         }
     }
 </style>
-

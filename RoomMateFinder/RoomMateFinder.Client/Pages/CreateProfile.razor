@@ -229,7 +229,7 @@
             // Add authorization header before making request
             AuthService.AddAuthorizationHeader(Http);
             
-            var response = await Http.PostAsJsonAsync($"/profiles/{AuthService.UserId}", profileRequest);
+            var response = await Http.PostAsJsonAsync("/profiles", profileRequest);
 
             if (response.IsSuccessStatusCode)
             {
