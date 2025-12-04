@@ -1,0 +1,39 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2dbc2da5_002D0213_002D435e_002Dbb60_002Da8fab4949d83/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SmokeTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::SmokeTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=61549ec4_002D2ad5_002D4176_002Db927_002D7e1d434d9d5f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CreateAndGetMyProfileTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::CreateAndGetMyProfileTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::LoginTests.Login_Should_Return_Token_For_Valid_Credentials&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::SmokeTests.Server_Should_Start&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+    &lt;ProjectFolder&gt;389CA0DD-1269-4467-93B1-04C332935BB6/d:UnitTests/d:Validators&lt;/ProjectFolder&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=96d47ce5_002Db05e_002D405e_002D9770_002D80b27c84f62e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SmokeTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::SmokeTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::LoginTests.Login_Should_Return_Token_For_Valid_Credentials&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::CreateAndGetMyProfileTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d50ab0f3_002Dbe6f_002D480a_002D841b_002D6b5499ec0ada/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CreateAndGetMyProfileTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests" Presentation="&amp;lt;RoomMateFinderTests&amp;gt;" /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fc1a15bb_002Dac43_002D40fd_002D93c5_002D38308746615b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="LoginValidatorTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::RoomMateFinderTests.UnitTests.Handlers.RegisterHandlerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::RoomMateFinderTests.UnitTests.Handlers.CreateProfileHandlerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::RoomMateFinderTests.UnitTests.Handlers.DeleteProfileHandlerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::RoomMateFinderTests.UnitTests.Handlers.GetAllProfilesHandlerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::RoomMateFinderTests.UnitTests.Handlers.UpdateProfileHandlerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::RoomMateFinderTests.UnitTests.Handlers.GetProfileHandlerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::CreateAndGetMyProfileTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::RoomMateFinderTests.UnitTests.Handlers.GetProfileByIdHandlerTests.Handle_WhenProfileExists_Returns_ProfileDto&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	</wpf:ResourceDictionary>

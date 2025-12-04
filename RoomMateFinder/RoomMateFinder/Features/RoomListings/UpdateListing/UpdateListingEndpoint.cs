@@ -13,8 +13,10 @@ public static class UpdateListingEndpoint
                 UpdateListingRequest req,
                 IMediator mediator) =>
             {
+                // UserId din JWT
                 var userId = Guid.Parse(http.User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
 
+                // Trimitem comanda MediatR
                 var ok = await mediator.Send(new UpdateListingCommand(id, userId, req));
 
                 return ok ? Results.NoContent() : Results.NotFound();

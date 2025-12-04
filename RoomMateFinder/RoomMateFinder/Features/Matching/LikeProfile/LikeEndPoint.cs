@@ -1,6 +1,6 @@
-﻿using FluentValidation;
+using FluentValidation;
 using MediatR;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using RoomMateFinder.Features.LikeProfile.LikeRequest;
 using System.Security.Claims;
 
@@ -18,16 +18,24 @@ public static class LikeEndpoint
             {
                 await validator.ValidateAndThrowAsync(request);
 
-                var subClaim = http.User.FindFirst(ClaimTypes.NameIdentifier);
-                if (subClaim == null)
+                var userIdClaim =
+                    http.User.FindFirst(ClaimTypes.NameIdentifier) ??
+                    http.User.FindFirst("sub");
+
+                if (userIdClaim is null)
                 {
-                    // Log all available claims for debugging
-                    var claims = string.Join(", ", http.User.Claims.Select(c => $"{c.Type}={c.Value}"));
-                    Console.WriteLine($"❌ 'sub' claim not found. Available claims: {claims}");
-                    return Results.BadRequest(new { error = "User ID not found in token. Please log in again." });
+                    var claims = string.Join(", ",
+                        http.User.Claims.Select(c => $"{c.Type}={c.Value}"));
+
+                    Console.WriteLine($"❌ User ID claim missing. Available claims: {claims}");
+
+                    return Results.BadRequest(new
+                    {
+                        error = "User ID not found in token. Please log in again."
+                    });
                 }
 
-                var userId = Guid.Parse(subClaim.Value);
+                var userId = Guid.Parse(userIdClaim.Value);
 
                 var result = await mediator.Send(new LikeCommand(userId, request));
 

@@ -14,7 +14,11 @@ public class RegisterHandler : IRequestHandler<RegisterCommand, LoginResponse>
     private readonly AppDbContext _db;
     private readonly IValidator<RegisterCommand> _validator;
     private readonly IJwtTokenGenerator _jwtTokenGenerator;
-    public RegisterHandler(AppDbContext db, IValidator<RegisterCommand> validator, IJwtTokenGenerator jwtTokenGenerator)
+
+    public RegisterHandler(
+        AppDbContext db,
+        IValidator<RegisterCommand> validator,
+        IJwtTokenGenerator jwtTokenGenerator)
     {
         _db = db;
         _validator = validator;
@@ -24,12 +28,10 @@ public class RegisterHandler : IRequestHandler<RegisterCommand, LoginResponse>
     public async Task<LoginResponse> Handle(RegisterCommand request, CancellationToken cancellationToken)
     {
         var validationResult = _validator.Validate(request);
+
         if (!validationResult.IsValid)
-        {
-            
             throw new ValidationException(validationResult.Errors);
-        }
-        
+
         if (await _db.Users.AnyAsync(x => x.Email == request.Request.Email, cancellationToken))
             throw new Exception("Email already registered.");
 

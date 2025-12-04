@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using FluentValidation;
+using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 
 namespace RoomMateFinder.Features.Matching.DislikeProfile;
@@ -16,7 +17,14 @@ public static class DislikeEndpoint
             {
                 await validator.ValidateAndThrowAsync(request);
 
-                var userId = Guid.Parse(http.User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
+                var userIdClaim =
+                    http.User.FindFirst(ClaimTypes.NameIdentifier) ??
+                    http.User.FindFirst("sub");
+
+                if (userIdClaim is null)
+                    return Results.Unauthorized();
+
+                var userId = Guid.Parse(userIdClaim.Value);
 
                 var result = await mediator.Send(new DislikeCommand(userId, request));
 

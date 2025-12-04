@@ -7,12 +7,32 @@ public static class GetMatchesEndpoint
 {
     public static void MapGetMatchesEndpoint(this IEndpointRouteBuilder app)
     {
+        app.MapGet("/matches/{userId:guid}", async (
+            Guid userId,
+            IMediator mediator,
+            CancellationToken ct) =>
+        {
+            var matches = await mediator.Send(new GetMatchesQuery(userId), ct);
+
+            return matches.Count > 0
+                ? Results.Ok(matches)
+                : Results.NotFound("No matches found.");
+        });
         app.MapGet("/matches", async (
                 HttpContext http,
                 IMediator mediator,
                 CancellationToken ct) =>
             {
-                var userId = Guid.Parse(http.User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
+                // Încearcă mai întâi ClaimTypes.NameIdentifier (frontend coleg)
+                // Dacă nu există, folosește fallback "sub" (standard JWT)
+                var userIdClaim =
+                    http.User.FindFirst(ClaimTypes.NameIdentifier) ??
+                    http.User.FindFirst("sub");
+
+                if (userIdClaim is null)
+                    return Results.Unauthorized();
+
+                var userId = Guid.Parse(userIdClaim.Value);
 
                 var matches = await mediator.Send(new GetMatchesQuery(userId), ct);
 
