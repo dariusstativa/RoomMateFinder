@@ -114,6 +114,9 @@
 
         try
         {
+            // Add authorization header before making request
+            AuthService.AddAuthorizationHeader(Http);
+            
             var listing = await Http.GetFromJsonAsync<RoomListing>($"/listings/{Id}");
             
             if (listing == null)
@@ -384,4 +387,3 @@
         }
     }
 </style>
-

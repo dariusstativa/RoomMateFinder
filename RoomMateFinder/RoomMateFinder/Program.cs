@@ -117,6 +117,7 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 app.UseErrorHandling();
+app.UseStaticFiles(); // Servim fișiere statice pentru imagini
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseCors("AllowBlazor");

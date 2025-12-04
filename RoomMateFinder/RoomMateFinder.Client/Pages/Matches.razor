@@ -1,0 +1,418 @@
+﻿@page "/matches"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject RoomMateFinder.Client.Services.AuthService AuthService
+
+<div class="matches-container">
+    <div class="matches-header">
+        <h1>🎉 Your Matches</h1>
+        <p class="subtitle">People who liked you back!</p>
+    </div>
+
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <div class="error-message">@errorMessage</div>
+    }
+
+    @if (isLoading)
+    {
+        <div class="loading">Loading matches...</div>
+    }
+    else if (matches == null || !matches.Any())
+    {
+        <div class="no-matches">
+            <div class="empty-state">
+                <span class="icon">💔</span>
+                <h2>No matches yet</h2>
+                <p>Start liking profiles to find your perfect roommate!</p>
+                <button class="btn-browse" @onclick="@(() => Navigation.NavigateTo("/profiles"))">
+                    Browse Profiles
+                </button>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="matches-count">
+            <p>You have <strong>@matches.Count</strong> match@(matches.Count != 1 ? "es" : "")! 🎊</p>
+        </div>
+
+        <div class="matches-grid">
+            @foreach (var profile in matches)
+            {
+                <div class="match-card" @onclick="@(() => Navigation.NavigateTo($"/profiles/{profile.UserId}"))">
+                    <div class="match-badge">✨ Match!</div>
+                    
+                    <div class="profile-header">
+                        <div class="avatar">@GetInitials(profile.FullName)</div>
+                        <div class="profile-info">
+                            <h3>@profile.FullName</h3>
+                            <p class="meta">@profile.Age years • @profile.Gender</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-details">
+                        <p class="university">🎓 @profile.University</p>
+                        <p class="bio">@(profile.Bio?.Length > 120 ? profile.Bio.Substring(0, 120) + "..." : profile.Bio)</p>
+                    </div>
+
+                    <div class="profile-tags">
+                        <span class="tag">🌙 @profile.SleepSchedule</span>
+                        <span class="tag">✨ @profile.Cleanliness</span>
+                        <span class="tag">🔊 @profile.NoiseTolerance</span>
+                    </div>
+
+                    <div class="match-footer">
+                        <button class="btn-view" @onclick:stopPropagation="true" @onclick="@(() => Navigation.NavigateTo($"/profiles/{profile.UserId}"))">
+                            View Profile
+                        </button>
+                        <button class="btn-message" @onclick:stopPropagation="true">
+                            💬 Message
+                        </button>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    private List<Profile>? matches;
+    private string errorMessage = string.Empty;
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (!AuthService.IsAuthenticated)
+        {
+            Navigation.NavigateTo("/login");
+            return;
+        }
+
+        await LoadMatches();
+    }
+
+    private async Task LoadMatches()
+    {
+        isLoading = true;
+        errorMessage = string.Empty;
+
+        try
+        {
+            var response = await Http.GetAsync("/matches");
+            
+            if (response.IsSuccessStatusCode)
+            {
+                matches = await response.Content.ReadFromJsonAsync<List<Profile>>();
+            }
+            else if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                matches = new List<Profile>();
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                errorMessage = $"Failed to load matches: {errorContent}";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading matches: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private string GetInitials(string fullName)
+    {
+        if (string.IsNullOrWhiteSpace(fullName))
+            return "?";
+
+        var parts = fullName.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        if (parts.Length == 0)
+            return "?";
+        if (parts.Length == 1)
+            return parts[0].Substring(0, 1).ToUpper();
+        
+        return (parts[0].Substring(0, 1) + parts[^1].Substring(0, 1)).ToUpper();
+    }
+}
+
+<style>
+    .matches-container {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 40px 20px;
+    }
+
+    .matches-header {
+        max-width: 1200px;
+        margin: 0 auto 40px;
+        text-align: center;
+        color: white;
+    }
+
+    h1 {
+        font-size: 42px;
+        font-weight: 700;
+        margin: 0 0 10px 0;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .subtitle {
+        font-size: 20px;
+        margin: 0;
+        opacity: 0.95;
+    }
+
+    .matches-count {
+        max-width: 1200px;
+        margin: 0 auto 30px;
+        text-align: center;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .matches-count p {
+        margin: 0;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .matches-count strong {
+        color: #667eea;
+        font-size: 24px;
+    }
+
+    .matches-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 24px;
+    }
+
+    .match-card {
+        background: white;
+        border-radius: 16px;
+        padding: 24px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .match-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+
+    .match-badge {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .profile-header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    .avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: bold;
+        flex-shrink: 0;
+    }
+
+    .profile-info {
+        flex: 1;
+    }
+
+    .profile-info h3 {
+        margin: 0 0 4px 0;
+        font-size: 20px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .meta {
+        margin: 0;
+        font-size: 14px;
+        color: #666;
+    }
+
+    .profile-details {
+        margin-bottom: 16px;
+    }
+
+    .university {
+        margin: 0 0 12px 0;
+        font-size: 15px;
+        font-weight: 500;
+        color: #667eea;
+    }
+
+    .bio {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #555;
+    }
+
+    .profile-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+
+    .tag {
+        background: #f0f4ff;
+        color: #667eea;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .match-footer {
+        display: flex;
+        gap: 12px;
+        padding-top: 16px;
+        border-top: 1px solid #eee;
+    }
+
+    .btn-view, .btn-message {
+        flex: 1;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .btn-view {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+    }
+
+    .btn-view:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-message {
+        background: #f0f4ff;
+        color: #667eea;
+    }
+
+    .btn-message:hover {
+        background: #e0e8ff;
+    }
+
+    .no-matches {
+        max-width: 600px;
+        margin: 60px auto;
+        text-align: center;
+    }
+
+    .empty-state {
+        background: white;
+        padding: 60px 40px;
+        border-radius: 16px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .empty-state .icon {
+        font-size: 80px;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .empty-state h2 {
+        margin: 0 0 12px 0;
+        font-size: 28px;
+        color: #333;
+    }
+
+    .empty-state p {
+        margin: 0 0 30px 0;
+        font-size: 16px;
+        color: #666;
+    }
+
+    .btn-browse {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        padding: 14px 32px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .btn-browse:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    .loading, .error-message {
+        max-width: 600px;
+        margin: 60px auto;
+        text-align: center;
+        padding: 40px;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .loading {
+        font-size: 18px;
+        color: #667eea;
+    }
+
+    .error-message {
+        color: #dc3545;
+        font-size: 16px;
+    }
+
+    @@media (max-width: 768px) {
+        .matches-grid {
+            grid-template-columns: 1fr;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        .match-footer {
+            flex-direction: column;
+        }
+    }
+</style>
+

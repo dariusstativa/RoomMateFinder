@@ -189,6 +189,9 @@
 
         try
         {
+            // Add authorization header before making request
+            AuthService.AddAuthorizationHeader(Http);
+            
             var response = await Http.PutAsJsonAsync($"/profiles/{AuthService.UserId}", profileRequest);
 
             if (response.IsSuccessStatusCode)
@@ -380,4 +383,3 @@
         }
     }
 </style>
-

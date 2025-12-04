@@ -67,19 +67,22 @@
             {
                 var result = await response.Content.ReadFromJsonAsync<LoginResponse>();
                 
-                // Save userId in AuthService
-                AuthService.Login(result!.UserId);
+                // Save userId and token in AuthService
+                await AuthService.LoginAsync(result!.UserId, result.Token);
                 
                 successMessage = $"Login successful! Checking profile...";
                 
                 // Reset form
                 loginRequest = new();
 
-                // Check if user has profile (in separate try-catch to handle profile check errors)
+                // Check if user has profile
                 await Task.Delay(500);
                 
                 try
                 {
+                    // Add authorization header for profile check
+                    AuthService.AddAuthorizationHeader(Http);
+                    
                     var profileResponse = await Http.GetAsync($"/profiles/{result.UserId}");
                     
                     if (profileResponse.IsSuccessStatusCode)

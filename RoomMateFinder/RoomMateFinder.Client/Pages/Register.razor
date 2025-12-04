@@ -1,6 +1,7 @@
 ﻿@page "/register"
 @inject HttpClient Http
 @inject NavigationManager Navigation
+@inject RoomMateFinder.Client.Services.AuthService AuthService
 
 <div class="register-container">
     <div class="register-card">
@@ -92,16 +93,20 @@
 
             if (response.IsSuccessStatusCode)
             {
-                var userId = await response.Content.ReadFromJsonAsync<Guid>();
-                successMessage = $"Account created successfully! User ID: {userId}";
+                var result = await response.Content.ReadFromJsonAsync<RegisterResponse>();
+                
+                // Save userId and token in AuthService
+                await AuthService.LoginAsync(result!.UserId, result.Token);
+                
+                successMessage = "Account created successfully! Redirecting to create profile...";
                 
                 // Reset form
                 registerRequest = new();
                 confirmPassword = string.Empty;
 
-                // Redirect to login after 2 seconds
-                await Task.Delay(2000);
-                Navigation.NavigateTo("/login");
+                // Redirect to create profile after 1 second
+                await Task.Delay(1000);
+                Navigation.NavigateTo("/profile/create");
             }
             else
             {
@@ -239,4 +244,3 @@
         text-decoration: underline;
     }
 </style>
-

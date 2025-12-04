@@ -98,6 +98,9 @@
 
         try
         {
+            // Add authorization header before making request
+            AuthService.AddAuthorizationHeader(Http);
+            
             listing = await Http.GetFromJsonAsync<RoomListing>($"/listings/{Id}");
         }
         catch (HttpRequestException ex)

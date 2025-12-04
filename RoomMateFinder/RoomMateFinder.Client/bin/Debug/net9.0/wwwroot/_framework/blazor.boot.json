@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "RoomMateFinder.Client",
   "resources": {
-    "hash": "sha256-88+MI7m2qgmX8/y0/AFAk2LE8DyNi3k/em/mg2Meh48=",
+    "hash": "sha256-tgbMnLarHH+uO1TuPisu1Mcg5L/GPxS78HdP4FLJ5rs=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Authorization.z6jo10m0rd.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.65wbz7t8mt.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -17,16 +17,21 @@
       "Microsoft.Extensions.Configuration.Json.7a8qwg1fzw.wasm": "Microsoft.Extensions.Configuration.Json.wasm",
       "Microsoft.Extensions.DependencyInjection.qgl6ezuv4d.wasm": "Microsoft.Extensions.DependencyInjection.wasm",
       "Microsoft.Extensions.DependencyInjection.Abstractions.199illpwgv.wasm": "Microsoft.Extensions.DependencyInjection.Abstractions.wasm",
+      "Microsoft.Extensions.Diagnostics.iqqnlfe6ke.wasm": "Microsoft.Extensions.Diagnostics.wasm",
+      "Microsoft.Extensions.Diagnostics.Abstractions.knek7cidjs.wasm": "Microsoft.Extensions.Diagnostics.Abstractions.wasm",
       "Microsoft.Extensions.FileProviders.Abstractions.gyyn78xplr.wasm": "Microsoft.Extensions.FileProviders.Abstractions.wasm",
       "Microsoft.Extensions.FileProviders.Physical.fwg0p8qiey.wasm": "Microsoft.Extensions.FileProviders.Physical.wasm",
       "Microsoft.Extensions.FileSystemGlobbing.wpqn02ct4s.wasm": "Microsoft.Extensions.FileSystemGlobbing.wasm",
+      "Microsoft.Extensions.Http.blhcowgb4y.wasm": "Microsoft.Extensions.Http.wasm",
       "Microsoft.Extensions.Logging.2h3t8m6coa.wasm": "Microsoft.Extensions.Logging.wasm",
       "Microsoft.Extensions.Logging.Abstractions.ni4towxuts.wasm": "Microsoft.Extensions.Logging.Abstractions.wasm",
       "Microsoft.Extensions.Options.2nlpwp09nn.wasm": "Microsoft.Extensions.Options.wasm",
+      "Microsoft.Extensions.Options.ConfigurationExtensions.9d31bya1c5.wasm": "Microsoft.Extensions.Options.ConfigurationExtensions.wasm",
       "Microsoft.Extensions.Primitives.08rjikrqbs.wasm": "Microsoft.Extensions.Primitives.wasm",
       "Microsoft.JSInterop.9ydsnriizw.wasm": "Microsoft.JSInterop.wasm",
       "Microsoft.JSInterop.WebAssembly.v6rnols3v9.wasm": "Microsoft.JSInterop.WebAssembly.wasm",
       "Microsoft.Net.Http.Headers.h9m6k6psjf.wasm": "Microsoft.Net.Http.Headers.wasm",
+      "System.Diagnostics.DiagnosticSource.onf7a771xa.wasm": "System.Diagnostics.DiagnosticSource.wasm",
       "Microsoft.CSharp.j3zkownjjr.wasm": "Microsoft.CSharp.wasm",
       "Microsoft.VisualBasic.Core.qljjwgjnrn.wasm": "Microsoft.VisualBasic.Core.wasm",
       "Microsoft.VisualBasic.ocn5mkr2m2.wasm": "Microsoft.VisualBasic.wasm",
@@ -53,7 +58,6 @@
       "System.Data.jc9hvsoz9b.wasm": "System.Data.wasm",
       "System.Diagnostics.Contracts.m8zapvzysw.wasm": "System.Diagnostics.Contracts.wasm",
       "System.Diagnostics.Debug.3b311sbro1.wasm": "System.Diagnostics.Debug.wasm",
-      "System.Diagnostics.DiagnosticSource.onf7a771xa.wasm": "System.Diagnostics.DiagnosticSource.wasm",
       "System.Diagnostics.FileVersionInfo.3u9sednzu3.wasm": "System.Diagnostics.FileVersionInfo.wasm",
       "System.Diagnostics.Process.pxizkgy5ym.wasm": "System.Diagnostics.Process.wasm",
       "System.Diagnostics.StackTrace.klgx6zaqgg.wasm": "System.Diagnostics.StackTrace.wasm",
@@ -203,8 +207,8 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "RoomMateFinder.Client.83ug07dt0u.wasm": "RoomMateFinder.Client.wasm",
-      "RoomMateFinder.Client.28sq289v3j.pdb": "RoomMateFinder.Client.pdb"
+      "RoomMateFinder.Client.qihaivqijl.wasm": "RoomMateFinder.Client.wasm",
+      "RoomMateFinder.Client.acxcyqraqq.pdb": "RoomMateFinder.Client.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.9ih887ebfz.js": "sha256-oS7IRiQoVt9ThQ7Y2UM3XoeY0JqPD02cg9IvRdufn2w="
@@ -239,16 +243,21 @@
       "Microsoft.Extensions.Configuration.Json.7a8qwg1fzw.wasm": "sha256-kSMn8gMGGuTgiChs+FnxijZLvysMkGjIRfFwgUAlaI8=",
       "Microsoft.Extensions.DependencyInjection.qgl6ezuv4d.wasm": "sha256-1nMKlEbT7mXRUMx9C6chG9R2Vs+jtdE6z86/mRrpGyI=",
       "Microsoft.Extensions.DependencyInjection.Abstractions.199illpwgv.wasm": "sha256-VThzM5k+QRlnvImELRVTdGXjkvTXufzMxH0GZCCwD1o=",
+      "Microsoft.Extensions.Diagnostics.iqqnlfe6ke.wasm": "sha256-Ghjv8T9m5s4wEv9H6EfnLgRvKR8Uhhd5tclX+l7KrTk=",
+      "Microsoft.Extensions.Diagnostics.Abstractions.knek7cidjs.wasm": "sha256-MP6sZgBFYktsuGZXqng0DuVgUfU9596u2ZpdJ6xWJbM=",
       "Microsoft.Extensions.FileProviders.Abstractions.gyyn78xplr.wasm": "sha256-SBignQhR5OehDa078KhZs6MJ37jZaMAXwBOJv/+aPtc=",
       "Microsoft.Extensions.FileProviders.Physical.fwg0p8qiey.wasm": "sha256-j06UStE6FBwEz3CJbgLfbKKSePh0FaT4PK7wtDoUXs0=",
       "Microsoft.Extensions.FileSystemGlobbing.wpqn02ct4s.wasm": "sha256-BC/MCU6S9BBMqOrRwZh0plnIpsYyZKyENCmb6p3Acsk=",
+      "Microsoft.Extensions.Http.blhcowgb4y.wasm": "sha256-8cNBcfPeNtKc+gId6iNATZq8wwES0eWvFeChznBfjEM=",
       "Microsoft.Extensions.Logging.2h3t8m6coa.wasm": "sha256-1jYRjcDI2/MnB5Htgj4yUaHr8gA/poI4oLgWUMZYnV0=",
       "Microsoft.Extensions.Logging.Abstractions.ni4towxuts.wasm": "sha256-H+TpHvK/z4RGb8EfLe1cGb1TwnCKZAmNxt8e3s3CUSM=",
       "Microsoft.Extensions.Options.2nlpwp09nn.wasm": "sha256-zp3zuBmKVlE6HjY0Br1uj3fY9sU7ET4ITzgpnpmj9V0=",
+      "Microsoft.Extensions.Options.ConfigurationExtensions.9d31bya1c5.wasm": "sha256-s6VmqDpIt3Pn0rcxOGt8xSr258MgH1L/TsTMbDyyazE=",
       "Microsoft.Extensions.Primitives.08rjikrqbs.wasm": "sha256-cJ0bTIChHCfvdOf7OUoTnjDep6XHMKViMUTyqAiaD48=",
       "Microsoft.JSInterop.9ydsnriizw.wasm": "sha256-oZgTa/to3sE2tSzwcZQ0GIX1meeIGAYVE7IoJDL4RkI=",
       "Microsoft.JSInterop.WebAssembly.v6rnols3v9.wasm": "sha256-Z/XKvzIKcHVmnvT7y1f4/N5zSNqzNAfjsLaBDIyCkYs=",
       "Microsoft.Net.Http.Headers.h9m6k6psjf.wasm": "sha256-y020mGNqGGrbP8Ur/4OYn85rgzKVpGwifFq1G29JbB0=",
+      "System.Diagnostics.DiagnosticSource.onf7a771xa.wasm": "sha256-/D7/uDNOBAyZLWrMPzw5pzHYAcHYZUjgEzXCkgHTwXg=",
       "Microsoft.CSharp.j3zkownjjr.wasm": "sha256-r7YS8Hp01zUR3LoH5JsS7IrucOta+FnV199bCLii7Pk=",
       "Microsoft.VisualBasic.Core.qljjwgjnrn.wasm": "sha256-/jlp74GLHWhrCfjAmWlVClO68H3wIk+kVx9A/gjByls=",
       "Microsoft.VisualBasic.ocn5mkr2m2.wasm": "sha256-eNtd5fm3g/oUf5hiuJ1DpH74Qzd5eTxbpPOEunY0DZQ=",
@@ -275,7 +284,6 @@
       "System.Data.jc9hvsoz9b.wasm": "sha256-bQe+JUXWGsr3SCnFt55wkmSf5WX0Q9UY7K4jU07ofCs=",
       "System.Diagnostics.Contracts.m8zapvzysw.wasm": "sha256-5hUC2SI169teraWv79xeyHs6BHlwtcmibtRYUQRIAxc=",
       "System.Diagnostics.Debug.3b311sbro1.wasm": "sha256-/8cm9vLcqMIoH+jYe61m7EG6OYpmxv0+bX7tK5RdrKc=",
-      "System.Diagnostics.DiagnosticSource.onf7a771xa.wasm": "sha256-/D7/uDNOBAyZLWrMPzw5pzHYAcHYZUjgEzXCkgHTwXg=",
       "System.Diagnostics.FileVersionInfo.3u9sednzu3.wasm": "sha256-y3I8QP6yhvMEaYVGjaCo3RKJ0fDOq+3L7mol9S+SNJI=",
       "System.Diagnostics.Process.pxizkgy5ym.wasm": "sha256-nX4lOaeHse02SkrNl8GNRYrCBQBEXyrHy3KC0/sqoNw=",
       "System.Diagnostics.StackTrace.klgx6zaqgg.wasm": "sha256-SCRvFZmPh3w+A02sPn1+VGxmWNJJFYidFkMKj92zVj4=",
@@ -416,10 +424,10 @@
       "WindowsBase.vy2l5u79y6.wasm": "sha256-ufB9Mo5joMyUs3DzXWWBFFIZNEVrt6h9N5stYB6Oln4=",
       "mscorlib.xd6mv31d55.wasm": "sha256-1YSLR2eZt3ceALFV//vZUF2AloxVil3VlrW1zZYPSEI=",
       "netstandard.kaml52uspo.wasm": "sha256-HLEwBpLfzKw2/zGSVzHzFJxznCkt/WIjahrziiMrOpA=",
-      "RoomMateFinder.Client.83ug07dt0u.wasm": "sha256-rHcw0N3Ya0DOg9gcxoNmT2IR5WNCcTVuFZDzCjmex5g="
+      "RoomMateFinder.Client.qihaivqijl.wasm": "sha256-MsXNFmaXWB4b6vTnVcrqAseYJA8kEwaDHpvvGsduK1Y="
     },
     "pdb": {
-      "RoomMateFinder.Client.28sq289v3j.pdb": "sha256-njz0eAH1S9KwkQB+s74b1YkaNEQT0bq9l3WGWPY21E0="
+      "RoomMateFinder.Client.acxcyqraqq.pdb": "sha256-ym3MuJdsf7gE4Xpr6vyRcX5mYqLlhdx0zNg1XlD6lZk="
     }
   },
   "cacheBootResources": true,

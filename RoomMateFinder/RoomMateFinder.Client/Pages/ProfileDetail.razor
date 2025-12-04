@@ -194,7 +194,7 @@
 
     private async Task HandleLike()
     {
-        if (isLiking || !AuthService.IsAuthenticated) return;
+        if (isLiking || !AuthService.IsAuthenticated || profile == null) return;
 
         isLiking = true;
         likeMessage = string.Empty;
@@ -205,7 +205,7 @@
             var request = new
             {
                 LikerUserId = AuthService.UserId,
-                TargetProfileId = UserId
+                TargetProfileId = profile.Id
             };
 
             var response = await Http.PostAsJsonAsync("/matching/like", request);
@@ -232,7 +232,7 @@
 
     private async Task HandleDislike()
     {
-        if (isDisliking || !AuthService.IsAuthenticated) return;
+        if (isDisliking || !AuthService.IsAuthenticated || profile == null) return;
 
         isDisliking = true;
         likeMessage = string.Empty;
@@ -243,7 +243,7 @@
             var request = new
             {
                 LikerUserId = AuthService.UserId,
-                TargetProfileId = UserId
+                TargetProfileId = profile.Id
             };
 
             var response = await Http.PostAsJsonAsync("/matching/dislike", request);
