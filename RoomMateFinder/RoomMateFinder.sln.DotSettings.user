@@ -4,7 +4,7 @@
     &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::SmokeTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=61549ec4_002D2ad5_002D4176_002Db927_002D7e1d434d9d5f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CreateAndGetMyProfileTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=61549ec4_002D2ad5_002D4176_002Db927_002D7e1d434d9d5f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CreateAndGetMyProfileTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Or&gt;&#xD;
     &lt;TestAncestor&gt;&#xD;
       &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::CreateAndGetMyProfileTests&lt;/TestId&gt;&#xD;
@@ -24,7 +24,7 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d50ab0f3_002Dbe6f_002D480a_002D841b_002D6b5499ec0ada/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CreateAndGetMyProfileTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Project Location="C:\Users\Darius\Downloads\RoomMateFinder-DariusBranch (2)\RoomMateFinder-DariusBranch\RoomMateFinder\RoomMateFinderTests" Presentation="&amp;lt;RoomMateFinderTests&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fc1a15bb_002Dac43_002D40fd_002D93c5_002D38308746615b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="LoginValidatorTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fc1a15bb_002Dac43_002D40fd_002D93c5_002D38308746615b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="LoginValidatorTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::RoomMateFinderTests.UnitTests.Handlers.RegisterHandlerTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::RoomMateFinderTests.UnitTests.Handlers.CreateProfileHandlerTests&lt;/TestId&gt;&#xD;

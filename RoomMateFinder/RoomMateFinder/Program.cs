@@ -42,7 +42,7 @@ var builder = WebApplication.CreateBuilder(args);
 // ---------------------------------------------------------
 var cs = builder.Configuration.GetConnectionString("DefaultConnection")
          ?? Environment.GetEnvironmentVariable("POSTGRES_CONNECTION_STRING")
-         ?? "Host=localhost;Port=5432;Database=roommatefinder;Username=postgres;Password=3924";
+         ?? "Host=localhost;Port=1326;Database=roommatefinder;Username=postgres;Password=tudor";
 
 if (builder.Environment.IsEnvironment("Testing"))
 {
@@ -158,9 +158,10 @@ builder.Services.AddCors(o =>
          .AllowAnyHeader();
     });
 });
+builder.Services.AddControllers();
 
 var app = builder.Build();
-
+app.MapControllers();
 app.UseErrorHandling();
 app.UseAuthentication();
 app.UseAuthorization();
