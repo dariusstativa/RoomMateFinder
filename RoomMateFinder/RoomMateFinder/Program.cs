@@ -25,7 +25,11 @@ using RoomMateFinder.Features.Profiles.GetAllProfiles;
 using RoomMateFinder.Features.Profiles.GetMyProfile;
 using RoomMateFinder.Features.Profiles.GetProfileById;
 using RoomMateFinder.Features.Profiles.UpdateProfile;
-
+using RoomMateFinder.Features.Reviews.AddReviewListing;
+using RoomMateFinder.Features.Reviews.AddReviewProfile;
+using RoomMateFinder.Features.Reviews.DeleteReview;
+using RoomMateFinder.Features.Reviews.GetReviewListing;
+using RoomMateFinder.Features.Reviews.GetReviwesProfile;
 using RoomMateFinder.Features.RoomListings.CreateListing;
 using RoomMateFinder.Features.RoomListings.DeleteListing;
 using RoomMateFinder.Features.RoomListings.GetAllListings;
@@ -200,6 +204,11 @@ app.MapPost("/auth/login", async (LoginRequest req, IMediator mediator) =>
     var response = await mediator.Send(new LoginCommand(req));
     return Results.Ok(response);
 });
+app.MapAddReviewForListingEndpoint();
+app.MapGetReviewsForListingEndpoint();
+app.MapAddReviewForProfileEndpoint();
+app.MapGetReviewsForProfileEndpoint();
+app.MapDeleteReviewEndpoint();
 
 // ---------------------------------------------------------
 // PROFILE
