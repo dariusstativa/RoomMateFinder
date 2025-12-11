@@ -1,58 +1,190 @@
+###############################################
+#          DOTNET / ASP.NET / BLAZOR          #
+###############################################
+
+# Build artifacts
 bin/
 obj/
 out/
-Build/
-build/
 Debug/
 Release/
-x64/
-x86/
-log/
-*.dll
-*.exe
-*.pdb
-*.mdb
-*.cache
-*.tmp
-*.log
-*.user
-*.userosscache
-*.suo
-*.sln.docstates
-*.nupkg
-*.snupkg
-packages/
-.nuget/
-*.nuget.props
-*.nuget.targets
-dist/
+TestResults/
+*.TestResults/
+
+# Publish
 publish/
+dist/
+artifacts/
+
+# ASP.NET Static Output
 wwwroot/dist/
 wwwroot/build/
 wwwroot/*.gz
 wwwroot/*.br
 wwwroot/*.map
-wwwroot/*.bundle.scp.css
+wwwroot/*bundle.scp.css
 wwwroot/_framework/
 wwwroot/_content/
-wwwroot/css/*.min.css
-wwwroot/js/*.min.js
+
+# Razor / Blazor generated
+*.bundle.scp.css
+*.rz.scp.css
+
+# .NET generated temp files
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+
+###############################################
+#               ENTITY FRAMEWORK               #
+###############################################
+
+# Keep migrations, but ignore designer files
 Migrations/*Designer.cs
+Migrations/*Snapshot.cs
+
+# Local databases
 *.db
 *.sqlite
 *.sqlite3
+*.mdf
+*.ldf
+
+###############################################
+#            FRONTEND / JAVASCRIPT             #
+###############################################
+
+# Node packages
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+bun.lockb
+package-lock.json
+
+# Build artifacts
+*.min.js
+*.min.css
+
+# Vite / Webpack / Parcel
+.vite/
+.cache/
+.cache-loader/
+.parcel-cache/
+build/
+coverage/
+
+###############################################
+#             VISUAL STUDIO / RIDER            #
+###############################################
+
 .vs/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
 *.psess
 *.vsp
 *.vsmdi
+
+# JetBrains Rider / IntelliJ
 .idea/
 *.iml
 *.ipr
 *.iws
-*.sln.DotSettings.user
+*.DotSettings.user
+
+# VS Code
 .vscode/
-node_modules/
-npm-debug.log
-yarn-error.log
-*.DS_Store
+history/
+
+###############################################
+#             LOGS / TEMP / CACHE              #
+###############################################
+
+*.log
+*.tmp
+*.temp
+*.cache
+*.pid
+*.swp
+*.swo
+
+# Crash dumps
+*.dmp
+
+# OS-generated files
 Thumbs.db
+*.DS_Store
+ehthumbs.db
+Desktop.ini
+
+###############################################
+#              SECURITY / SECRETS              #
+###############################################
+
+# User secrets
+secrets.json
+*.secret
+*.secrets
+appsettings.Local.json
+appsettings.Development.Local.json
+
+# Environment variables dumps
+*.env
+*.env.*
+.env.local
+.env.development.local
+
+###############################################
+#      COMPILATION / RUNTIME ARTIFACTS         #
+###############################################
+
+*.dll
+*.exe
+*.pdb
+*.mdb
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# Temp files
+*.bak
+*.old
+*.orig
+*.patch
+
+###############################################
+#              TOOLS / CONTAINERS              #
+###############################################
+
+# Docker
+docker-compose.override.yml
+.docker/
+docker-output/
+
+###############################################
+#          OPTIONAL MASSIVE OPTIMIZERS         #
+###############################################
+
+# Unreal / Unity accidental folders (if someone messes up)
+Library/
+Temp/
+Cache/
+obj*/          # fallback
+Logs/
+
+# Python cache if someone mixes projects
+__pycache__/
+*.pyc
+
+###############################################
+#            GIT INTERNAL SANITY               #
+###############################################
+
+# Prevent accidental nested repos from being committed
+*/.git/
+

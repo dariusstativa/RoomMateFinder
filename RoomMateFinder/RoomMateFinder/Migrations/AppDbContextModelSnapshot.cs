@@ -156,18 +156,28 @@ namespace RoomMateFinder.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<Guid?>("ProfileId")
+                        .HasColumnType("uuid");
+
                     b.Property<int>("Rating")
                         .HasColumnType("integer");
 
                     b.Property<Guid>("ReviewerId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("TargetUserId")
+                    b.Property<Guid?>("RoomListingId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TargetUserId")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ProfileId");
+
                     b.HasIndex("ReviewerId");
+
+                    b.HasIndex("RoomListingId");
 
                     b.HasIndex("TargetUserId");
 
@@ -302,19 +312,32 @@ namespace RoomMateFinder.Migrations
 
             modelBuilder.Entity("RoomMateFinder.Domain.Entities.Review", b =>
                 {
+                    b.HasOne("RoomMateFinder.Domain.Entities.Profile", "Profile")
+                        .WithMany()
+                        .HasForeignKey("ProfileId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("RoomMateFinder.Domain.Entities.User", "Reviewer")
                         .WithMany()
                         .HasForeignKey("ReviewerId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("RoomMateFinder.Domain.Entities.RoomListing", "RoomListing")
+                        .WithMany()
+                        .HasForeignKey("RoomListingId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("RoomMateFinder.Domain.Entities.User", "TargetUser")
                         .WithMany()
                         .HasForeignKey("TargetUserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Profile");
 
                     b.Navigation("Reviewer");
+
+                    b.Navigation("RoomListing");
 
                     b.Navigation("TargetUser");
                 });

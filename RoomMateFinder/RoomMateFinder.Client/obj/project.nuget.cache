@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MefRg8d0yh0=",
+  "dgSpecHash": "eqizMvGRc6U=",
   "success": true,
-  "projectFilePath": "C:\\Users\\radug\\Downloads\\RoomMateFinder-Gociu-start\\RoomMateFinder-Gociu-start\\RoomMateFinder\\RoomMateFinder.Client\\RoomMateFinder.Client.csproj",
+  "projectFilePath": "C:\\git\\.NET\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.Client\\RoomMateFinder.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\radug\\.nuget\\packages\\microsoft.aspnetcore.authorization\\9.0.9\\microsoft.aspnetcore.authorization.9.0.9.nupkg.sha512",
     "C:\\Users\\radug\\.nuget\\packages\\microsoft.aspnetcore.components\\9.0.9\\microsoft.aspnetcore.components.9.0.9.nupkg.sha512",

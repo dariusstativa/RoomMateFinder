@@ -9,15 +9,18 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
+// Login
 using RoomMateFinder.Features.Login;
 using RoomMateFinder.Features.Login.LoginUser;
 using RoomMateFinder.Features.Login.RegisterUser;
 
+// Matching
 using RoomMateFinder.Features.Matching.DislikeProfile;
 using RoomMateFinder.Features.Matching.GetMatches;
 using RoomMateFinder.Features.Matching.LikeProfile;
 using RoomMateFinder.Features.Matching.GetRecommendations;
 
+// Profiles
 using RoomMateFinder.Features.Profiles.CompleteOnboarding;
 using RoomMateFinder.Features.Profiles.CreateProfile;
 using RoomMateFinder.Features.Profiles.DeleteProfile;
@@ -27,20 +30,31 @@ using RoomMateFinder.Features.Profiles.GetProfileById;
 using RoomMateFinder.Features.Profiles.UpdateProfile;
 using RoomMateFinder.Features.Profiles.SearchProfiles;
 
+// Room listings
 using RoomMateFinder.Features.RoomListings.CreateListing;
 using RoomMateFinder.Features.RoomListings.DeleteListing;
 using RoomMateFinder.Features.RoomListings.GetAllListings;
 using RoomMateFinder.Features.RoomListings.GetListingById;
 using RoomMateFinder.Features.RoomListings.UpdateListing;
 
+// Reviews
+using RoomMateFinder.Features.Reviews.AddReviewListing;
+using RoomMateFinder.Features.Reviews.AddReviewProfile;
+using RoomMateFinder.Features.Reviews.DeleteReview;
+using RoomMateFinder.Features.Reviews.GetReviewListing;
+using RoomMateFinder.Features.Reviews.GetReviwesProfile;
+
+// Messages (Controller automatically mapped)
+using RoomMateFinder.Features.Conversations.Messaging;
+
 using RoomMateFinder.Infrastructure.Persistence;
 using RoomMateFinder.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ---------------------------------------------------------
+//
 // DATABASE
-// ---------------------------------------------------------
+//
 var cs = builder.Configuration.GetConnectionString("DefaultConnection")
          ?? Environment.GetEnvironmentVariable("POSTGRES_CONNECTION_STRING")
          ?? "Host=localhost;Port=5432;Database=roommatefinder;Username=postgres;Password=3924";
@@ -56,15 +70,16 @@ else
         opt.UseNpgsql(cs));
 }
 
-// ---------------------------------------------------------
-// MediatR + Validators
-// ---------------------------------------------------------
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+//
+// MediatR + FluentValidation
+//
+builder.Services.AddMediatR(cfg =>
+    cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
-// ---------------------------------------------------------
-// Swagger + JWT lock button
-// ---------------------------------------------------------
+//
+// Swagger + JWT lock
+//
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -96,9 +111,9 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-// ---------------------------------------------------------
+//
 // JWT AUTH
-// ---------------------------------------------------------
+//
 builder.Services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
 
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
@@ -109,7 +124,6 @@ builder.Services
     {
         if (builder.Environment.IsEnvironment("Testing"))
         {
-            // Very relaxed validation in tests
             options.TokenValidationParameters = new TokenValidationParameters
             {
                 ValidateIssuer = false,
@@ -139,41 +153,45 @@ builder.Services
 
 builder.Services.AddAuthorization();
 
-// ---------------------------------------------------------
-// JSON fixes
-// ---------------------------------------------------------
+//
+// JSON
+//
 builder.Services.ConfigureHttpJsonOptions(o =>
 {
-    o.SerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+    o.SerializerOptions.ReferenceHandler =
+        System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
 });
 
-// ---------------------------------------------------------
-// CORS
-// ---------------------------------------------------------
+//
+// CORS pentru Blazor WASM (http://localhost:5218)
+//
 builder.Services.AddCors(o =>
 {
     o.AddPolicy("AllowBlazor", p =>
     {
         p.WithOrigins("http://localhost:5218")
-            .AllowAnyMethod()
-            .AllowAnyHeader()
-            .AllowCredentials();
+         .AllowAnyMethod()
+         .AllowAnyHeader()
+         .AllowCredentials();
     });
 });
 
+//
+// MVC Controllers (include MessagesController)
+//
 builder.Services.AddControllers();
 
 var app = builder.Build();
-app.UseCors("AllowBlazor");  
+
+app.UseCors("AllowBlazor");
 app.MapControllers();
 app.UseErrorHandling();
-app.UseStaticFiles(); 
 app.UseAuthentication();
 app.UseAuthorization();
 
-// ---------------------------------------------------------
-// DATABASE MIGRATIONS (not in tests!)
-// ---------------------------------------------------------
+//
+// MIGRATIONS
+//
 if (!app.Environment.IsEnvironment("Testing"))
 {
     using var scope = app.Services.CreateScope();
@@ -181,18 +199,18 @@ if (!app.Environment.IsEnvironment("Testing"))
     await db.Database.MigrateAsync();
 }
 
-// ---------------------------------------------------------
+//
 // Swagger
-// ---------------------------------------------------------
+//
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-// ---------------------------------------------------------
+//
 // AUTH ENDPOINTS
-// ---------------------------------------------------------
+//
 app.MapPost("/auth/register", async (RegisterRequest req, IMediator mediator) =>
 {
     var response = await mediator.Send(new RegisterCommand(req));
@@ -205,9 +223,18 @@ app.MapPost("/auth/login", async (LoginRequest req, IMediator mediator) =>
     return Results.Ok(response);
 });
 
-// ---------------------------------------------------------
-// PROFILE
-// ---------------------------------------------------------
+//
+// REVIEW ENDPOINTS
+//
+app.MapAddReviewForListingEndpoint();
+app.MapGetReviewsForListingEndpoint();
+app.MapAddReviewForProfileEndpoint();
+app.MapGetReviewsForProfileEndpoint();
+app.MapDeleteReviewEndpoint();
+
+//
+// PROFILE ENDPOINTS
+//
 app.MapCreateProfileEndpoint();
 app.MapUpdateProfileEndpoint();
 app.MapDeleteProfileEndpoint();
@@ -216,17 +243,17 @@ app.MapGetProfileByIdEndpoint();
 app.MapGetAllProfilesEndpoint();
 app.MapSearchProfilesEndpoint();
 
-// ---------------------------------------------------------
-// MATCHING
-// ---------------------------------------------------------
-app.MapLikeEndpoints(); 
-app.MapLegacyLikeEndpoint(); 
+//
+// MATCHING ENDPOINTS
+//
+app.MapLikeEndpoints();
+app.MapLegacyLikeEndpoint();
 app.MapGetMatchesEndpoint();
 app.MapRecommendationsEndpoint();
 
-// ---------------------------------------------------------
-// LISTINGS
-// ---------------------------------------------------------
+//
+// ROOM LISTINGS ENDPOINTS
+//
 app.MapCreateRoomListingEndpoint();
 app.MapUpdateListingEndpoint();
 app.MapDeleteListingEndpoint();

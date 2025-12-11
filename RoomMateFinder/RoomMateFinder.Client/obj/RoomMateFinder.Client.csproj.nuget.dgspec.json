@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\radug\\Downloads\\RoomMateFinder-Gociu-start\\RoomMateFinder-Gociu-start\\RoomMateFinder\\RoomMateFinder.Client\\RoomMateFinder.Client.csproj": {}
+    "C:\\git\\.NET\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.Client\\RoomMateFinder.Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\radug\\Downloads\\RoomMateFinder-Gociu-start\\RoomMateFinder-Gociu-start\\RoomMateFinder\\RoomMateFinder.Client\\RoomMateFinder.Client.csproj": {
+    "C:\\git\\.NET\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.Client\\RoomMateFinder.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\radug\\Downloads\\RoomMateFinder-Gociu-start\\RoomMateFinder-Gociu-start\\RoomMateFinder\\RoomMateFinder.Client\\RoomMateFinder.Client.csproj",
+        "projectUniqueName": "C:\\git\\.NET\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.Client\\RoomMateFinder.Client.csproj",
         "projectName": "RoomMateFinder.Client",
-        "projectPath": "C:\\Users\\radug\\Downloads\\RoomMateFinder-Gociu-start\\RoomMateFinder-Gociu-start\\RoomMateFinder\\RoomMateFinder.Client\\RoomMateFinder.Client.csproj",
+        "projectPath": "C:\\git\\.NET\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.Client\\RoomMateFinder.Client.csproj",
         "packagesPath": "C:\\Users\\radug\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\radug\\Downloads\\RoomMateFinder-Gociu-start\\RoomMateFinder-Gociu-start\\RoomMateFinder\\RoomMateFinder.Client\\obj\\",
+        "outputPath": "C:\\git\\.NET\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder\\RoomMateFinder.Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\radug\\AppData\\Roaming\\NuGet\\NuGet.Config"
