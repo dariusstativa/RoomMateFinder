@@ -13,77 +13,77 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = RoomMateFinder.Client
 build_property.RootNamespace = RoomMateFinder.Client
-build_property.ProjectDir = D:\Facultate\.NET\Proiect\RoomMateFinder\RoomMateFinder\RoomMateFinder.Client\
+build_property.ProjectDir = C:\Users\radug\Downloads\RoomMateFinder-Gociu-start\RoomMateFinder-Gociu-start\RoomMateFinder\RoomMateFinder.Client\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Facultate\.NET\Proiect\RoomMateFinder\RoomMateFinder\RoomMateFinder.Client
+build_property.MSBuildProjectDirectory = C:\Users\radug\Downloads\RoomMateFinder-Gociu-start\RoomMateFinder-Gociu-start\RoomMateFinder\RoomMateFinder.Client
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/Facultate/.NET/Proiect/RoomMateFinder/RoomMateFinder/RoomMateFinder.Client/App.razor]
+[C:/Users/radug/Downloads/RoomMateFinder-Gociu-start/RoomMateFinder-Gociu-start/RoomMateFinder/RoomMateFinder.Client/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Facultate/.NET/Proiect/RoomMateFinder/RoomMateFinder/RoomMateFinder.Client/Pages/CreateListing.razor]
+[C:/Users/radug/Downloads/RoomMateFinder-Gociu-start/RoomMateFinder-Gociu-start/RoomMateFinder/RoomMateFinder.Client/Pages/CreateListing.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlTGlzdGluZy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Facultate/.NET/Proiect/RoomMateFinder/RoomMateFinder/RoomMateFinder.Client/Pages/CreateProfile.razor]
+[C:/Users/radug/Downloads/RoomMateFinder-Gociu-start/RoomMateFinder-Gociu-start/RoomMateFinder/RoomMateFinder.Client/Pages/CreateProfile.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlUHJvZmlsZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Facultate/.NET/Proiect/RoomMateFinder/RoomMateFinder/RoomMateFinder.Client/Pages/EditListing.razor]
+[C:/Users/radug/Downloads/RoomMateFinder-Gociu-start/RoomMateFinder-Gociu-start/RoomMateFinder/RoomMateFinder.Client/Pages/EditListing.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdExpc3RpbmcucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Facultate/.NET/Proiect/RoomMateFinder/RoomMateFinder/RoomMateFinder.Client/Pages/EditProfile.razor]
+[C:/Users/radug/Downloads/RoomMateFinder-Gociu-start/RoomMateFinder-Gociu-start/RoomMateFinder/RoomMateFinder.Client/Pages/EditProfile.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFByb2ZpbGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Facultate/.NET/Proiect/RoomMateFinder/RoomMateFinder/RoomMateFinder.Client/Pages/Home.razor]
+[C:/Users/radug/Downloads/RoomMateFinder-Gociu-start/RoomMateFinder-Gociu-start/RoomMateFinder/RoomMateFinder.Client/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Facultate/.NET/Proiect/RoomMateFinder/RoomMateFinder/RoomMateFinder.Client/Pages/ListingDetail.razor]
+[C:/Users/radug/Downloads/RoomMateFinder-Gociu-start/RoomMateFinder-Gociu-start/RoomMateFinder/RoomMateFinder.Client/Pages/ListingDetail.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdGluZ0RldGFpbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Facultate/.NET/Proiect/RoomMateFinder/RoomMateFinder/RoomMateFinder.Client/Pages/Listings.razor]
+[C:/Users/radug/Downloads/RoomMateFinder-Gociu-start/RoomMateFinder-Gociu-start/RoomMateFinder/RoomMateFinder.Client/Pages/Listings.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdGluZ3MucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Facultate/.NET/Proiect/RoomMateFinder/RoomMateFinder/RoomMateFinder.Client/Pages/Login.razor]
+[C:/Users/radug/Downloads/RoomMateFinder-Gociu-start/RoomMateFinder-Gociu-start/RoomMateFinder/RoomMateFinder.Client/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Facultate/.NET/Proiect/RoomMateFinder/RoomMateFinder/RoomMateFinder.Client/Pages/Matches.razor]
+[C:/Users/radug/Downloads/RoomMateFinder-Gociu-start/RoomMateFinder-Gociu-start/RoomMateFinder/RoomMateFinder.Client/Pages/Matches.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWF0Y2hlcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Facultate/.NET/Proiect/RoomMateFinder/RoomMateFinder/RoomMateFinder.Client/Pages/ProfileDetail.razor]
+[C:/Users/radug/Downloads/RoomMateFinder-Gociu-start/RoomMateFinder-Gociu-start/RoomMateFinder/RoomMateFinder.Client/Pages/ProfileDetail.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZURldGFpbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Facultate/.NET/Proiect/RoomMateFinder/RoomMateFinder/RoomMateFinder.Client/Pages/Profiles.razor]
+[C:/Users/radug/Downloads/RoomMateFinder-Gociu-start/RoomMateFinder-Gociu-start/RoomMateFinder/RoomMateFinder.Client/Pages/Profiles.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Facultate/.NET/Proiect/RoomMateFinder/RoomMateFinder/RoomMateFinder.Client/Pages/Register.razor]
+[C:/Users/radug/Downloads/RoomMateFinder-Gociu-start/RoomMateFinder-Gociu-start/RoomMateFinder/RoomMateFinder.Client/Pages/Register.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Facultate/.NET/Proiect/RoomMateFinder/RoomMateFinder/RoomMateFinder.Client/_Imports.razor]
+[C:/Users/radug/Downloads/RoomMateFinder-Gociu-start/RoomMateFinder-Gociu-start/RoomMateFinder/RoomMateFinder.Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Facultate/.NET/Proiect/RoomMateFinder/RoomMateFinder/RoomMateFinder.Client/Layout/MainLayout.razor]
+[C:/Users/radug/Downloads/RoomMateFinder-Gociu-start/RoomMateFinder-Gociu-start/RoomMateFinder/RoomMateFinder.Client/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-ant90joa27
 
-[D:/Facultate/.NET/Proiect/RoomMateFinder/RoomMateFinder/RoomMateFinder.Client/Layout/NavMenu.razor]
+[C:/Users/radug/Downloads/RoomMateFinder-Gociu-start/RoomMateFinder-Gociu-start/RoomMateFinder/RoomMateFinder.Client/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-eatyfvjgsw

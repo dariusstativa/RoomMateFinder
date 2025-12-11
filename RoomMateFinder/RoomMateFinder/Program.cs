@@ -25,6 +25,7 @@ using RoomMateFinder.Features.Profiles.GetAllProfiles;
 using RoomMateFinder.Features.Profiles.GetMyProfile;
 using RoomMateFinder.Features.Profiles.GetProfileById;
 using RoomMateFinder.Features.Profiles.UpdateProfile;
+using RoomMateFinder.Features.Profiles.SearchProfiles;
 
 using RoomMateFinder.Features.RoomListings.CreateListing;
 using RoomMateFinder.Features.RoomListings.DeleteListing;
@@ -42,7 +43,7 @@ var builder = WebApplication.CreateBuilder(args);
 // ---------------------------------------------------------
 var cs = builder.Configuration.GetConnectionString("DefaultConnection")
          ?? Environment.GetEnvironmentVariable("POSTGRES_CONNECTION_STRING")
-         ?? "Host=localhost;Port=5432;Database=roommatefinder;Username=postgres;Password=STUDENT";
+         ?? "Host=localhost;Port=5432;Database=roommatefinder;Username=postgres;Password=3924";
 
 if (builder.Environment.IsEnvironment("Testing"))
 {
@@ -153,20 +154,22 @@ builder.Services.AddCors(o =>
 {
     o.AddPolicy("AllowBlazor", p =>
     {
-        p.AllowAnyOrigin()
-         .AllowAnyMethod()
-         .AllowAnyHeader();
+        p.WithOrigins("http://localhost:5218")
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowCredentials();
     });
 });
+
 builder.Services.AddControllers();
 
 var app = builder.Build();
+app.UseCors("AllowBlazor");  
 app.MapControllers();
 app.UseErrorHandling();
-app.UseStaticFiles(); // Servim fișiere statice pentru imagini
+app.UseStaticFiles(); 
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseCors("AllowBlazor");
 
 // ---------------------------------------------------------
 // DATABASE MIGRATIONS (not in tests!)
@@ -211,6 +214,7 @@ app.MapDeleteProfileEndpoint();
 app.MapGetMyProfileEndpoint();
 app.MapGetProfileByIdEndpoint();
 app.MapGetAllProfilesEndpoint();
+app.MapSearchProfilesEndpoint();
 
 // ---------------------------------------------------------
 // MATCHING
