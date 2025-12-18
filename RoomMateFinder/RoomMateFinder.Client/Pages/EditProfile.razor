@@ -151,7 +151,10 @@
 
         try
         {
-            var profile = await Http.GetFromJsonAsync<Profile>($"/profiles/{AuthService.UserId}");
+            // Add authorization header before making request
+            AuthService.AddAuthorizationHeader(Http);
+            
+            var profile = await Http.GetFromJsonAsync<Profile>("/profiles/me");
             
             if (profile == null)
             {
@@ -189,6 +192,9 @@
 
         try
         {
+            // Add authorization header before making request
+            AuthService.AddAuthorizationHeader(Http);
+            
             var response = await Http.PutAsJsonAsync($"/profiles/{AuthService.UserId}", profileRequest);
 
             if (response.IsSuccessStatusCode)
@@ -380,4 +386,3 @@
         }
     }
 </style>
-

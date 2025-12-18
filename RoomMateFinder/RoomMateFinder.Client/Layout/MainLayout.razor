@@ -1,16 +1,73 @@
 ﻿@inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+@inject RoomMateFinder.Client.Services.AuthService AuthService
+@implements IDisposable
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
+<div class="app-shell">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">RoomMateFinder</div>
 
-        <article class="content px-4">
-            @Body
-        </article>
+        <nav class="side-nav">
+            <NavLink href="/" Match="NavLinkMatch.All">Home</NavLink>
+
+            @if (_isAuthenticated)
+            {
+                <NavLink href="/profiles">Find Roommates</NavLink>
+                <NavLink href="/matches">Matches</NavLink>
+                <NavLink href="/listings">Room Listings</NavLink>
+                <NavLink href="/my-profile">My Profile</NavLink>
+            }
+        </nav>
+
+        @if (_isAuthenticated)
+        {
+            <div class="sidebar-footer">
+                <button class="logout-btn" @onclick="Logout">
+                    Logout
+                </button>
+            </div>
+        }
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+        <ErrorBoundary>
+            <ChildContent>
+                @Body
+            </ChildContent>
+            <ErrorContent Context="ex">
+                <div style="padding:20px; background:#ffebee; color:#b71c1c;">
+                    <h3>EROARE REALĂ:</h3>
+                    <pre>@ex.ToString()</pre>
+                </div>
+            </ErrorContent>
+        </ErrorBoundary>
+
     </main>
 </div>
+
+@code {
+    private bool _isAuthenticated;
+
+    protected override void OnInitialized()
+    {
+        _isAuthenticated = AuthService.IsAuthenticated;
+        AuthService.OnAuthStateChanged += HandleAuthChanged;
+    }
+
+    private void HandleAuthChanged()
+    {
+        _isAuthenticated = AuthService.IsAuthenticated;
+        InvokeAsync(StateHasChanged);
+    }
+
+    private async Task Logout()
+    {
+        await AuthService.LogoutAsync();
+    }
+
+    public void Dispose()
+    {
+        AuthService.OnAuthStateChanged -= HandleAuthChanged;
+    }
+}

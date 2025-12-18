@@ -10,6 +10,7 @@ public class RoomListing
     public string Address { get; set; } = default!;
     public decimal Price { get; set; }
     public bool IsAvailable { get; set; } = true;
+    public string? ImageUrl { get; set; }
 
    
     public int RoommatesCount { get; set; }

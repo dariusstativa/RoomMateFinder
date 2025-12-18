@@ -9,15 +9,18 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
+// Login
 using RoomMateFinder.Features.Login;
 using RoomMateFinder.Features.Login.LoginUser;
 using RoomMateFinder.Features.Login.RegisterUser;
 
+// Matching
 using RoomMateFinder.Features.Matching.DislikeProfile;
 using RoomMateFinder.Features.Matching.GetMatches;
 using RoomMateFinder.Features.Matching.LikeProfile;
 using RoomMateFinder.Features.Matching.GetRecommendations;
 
+// Profiles
 using RoomMateFinder.Features.Profiles.CompleteOnboarding;
 using RoomMateFinder.Features.Profiles.CreateProfile;
 using RoomMateFinder.Features.Profiles.DeleteProfile;
@@ -25,24 +28,38 @@ using RoomMateFinder.Features.Profiles.GetAllProfiles;
 using RoomMateFinder.Features.Profiles.GetMyProfile;
 using RoomMateFinder.Features.Profiles.GetProfileById;
 using RoomMateFinder.Features.Profiles.UpdateProfile;
+using RoomMateFinder.Features.Profiles.SearchProfiles;
 
+// Room listings
 using RoomMateFinder.Features.RoomListings.CreateListing;
 using RoomMateFinder.Features.RoomListings.DeleteListing;
 using RoomMateFinder.Features.RoomListings.GetAllListings;
 using RoomMateFinder.Features.RoomListings.GetListingById;
 using RoomMateFinder.Features.RoomListings.UpdateListing;
 
+// Reviews
+using RoomMateFinder.Features.Reviews.AddReviewListing;
+using RoomMateFinder.Features.Reviews.AddReviewProfile;
+using RoomMateFinder.Features.Reviews.DeleteReview;
+using RoomMateFinder.Features.Reviews.GetReviewListing;
+using RoomMateFinder.Features.Reviews.GetReviwesProfile;
+
+// Messaging
+using RoomMateFinder.Features.Conversations.Messaging;
+using RoomMateFinder.Features.Conversations; // ✅ ChatHub
+
 using RoomMateFinder.Infrastructure.Persistence;
 using RoomMateFinder.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ---------------------------------------------------------
+//
 // DATABASE
-// ---------------------------------------------------------
-var cs = builder.Configuration.GetConnectionString("DefaultConnection")
-         ?? Environment.GetEnvironmentVariable("POSTGRES_CONNECTION_STRING")
-         ?? "Host=localhost;Port=1326;Database=roommatefinder;Username=postgres;Password=tudor";
+//
+var connectionString =
+    builder.Configuration.GetConnectionString("DefaultConnection")
+    ?? Environment.GetEnvironmentVariable("POSTGRES_CONNECTION_STRING")
+    ?? "Host=localhost;Port=5432;Database=roommatefinder;Username=postgres;Password=sirene99";
 
 if (builder.Environment.IsEnvironment("Testing"))
 {
@@ -52,18 +69,19 @@ if (builder.Environment.IsEnvironment("Testing"))
 else
 {
     builder.Services.AddDbContext<AppDbContext>(opt =>
-        opt.UseNpgsql(cs));
+        opt.UseNpgsql(connectionString));
 }
 
-// ---------------------------------------------------------
-// MediatR + Validators
-// ---------------------------------------------------------
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+//
+// MediatR + FluentValidation
+//
+builder.Services.AddMediatR(cfg =>
+    cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
-// ---------------------------------------------------------
-// Swagger + JWT lock button
-// ---------------------------------------------------------
+//
+// Swagger
+//
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -76,7 +94,7 @@ builder.Services.AddSwaggerGen(c =>
     var jwtScheme = new OpenApiSecurityScheme
     {
         Name = "Authorization",
-        Description = "JWT: Bearer {token}",
+        Description = "JWT Bearer {token}",
         In = ParameterLocation.Header,
         Type = SecuritySchemeType.Http,
         Scheme = "bearer",
@@ -95,9 +113,9 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-// ---------------------------------------------------------
+//
 // JWT AUTH
-// ---------------------------------------------------------
+//
 builder.Services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
 
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
@@ -106,70 +124,74 @@ builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
-        if (builder.Environment.IsEnvironment("Testing"))
-        {
-            // Very relaxed validation in tests
-            options.TokenValidationParameters = new TokenValidationParameters
-            {
-                ValidateIssuer = false,
-                ValidateAudience = false,
-                ValidateIssuerSigningKey = false,
-                ValidateLifetime = false,
-                SignatureValidator = (token, _) => new JwtSecurityToken(token)
-            };
-        }
-        else
-        {
-            var keyString = builder.Configuration["Jwt:Key"];
-            if (string.IsNullOrWhiteSpace(keyString) || keyString.Length < 32)
-                keyString = (keyString ?? "").PadRight(32, '0');
+        var key = builder.Configuration["Jwt:Key"] ?? "";
+        if (key.Length < 32)
+            key = key.PadRight(32, '0');
 
-            options.TokenValidationParameters = new TokenValidationParameters
-            {
-                ValidateIssuer = true,
-                ValidateAudience = true,
-                ValidateIssuerSigningKey = true,
-                ValidIssuer = builder.Configuration["Jwt:Issuer"],
-                ValidAudience = builder.Configuration["Jwt:Audience"],
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keyString))
-            };
-        }
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateIssuerSigningKey = true,
+            ValidateLifetime = true,
+            ClockSkew = TimeSpan.Zero,
+
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(key))
+        };
     });
 
 builder.Services.AddAuthorization();
 
-// ---------------------------------------------------------
-// JSON fixes
-// ---------------------------------------------------------
+//
+// JSON
+//
 builder.Services.ConfigureHttpJsonOptions(o =>
 {
-    o.SerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+    o.SerializerOptions.ReferenceHandler =
+        System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
 });
 
-// ---------------------------------------------------------
-// CORS
-// ---------------------------------------------------------
+//
+// CORS (Blazor + SignalR)
 builder.Services.AddCors(o =>
 {
     o.AddPolicy("AllowBlazor", p =>
     {
-        p.AllowAnyOrigin()
+        p.WithOrigins("http://localhost:5218")
          .AllowAnyMethod()
-         .AllowAnyHeader();
+         .AllowAnyHeader()
+         .AllowCredentials();
     });
 });
+
+//
+// Controllers + SignalR
+//
 builder.Services.AddControllers();
+builder.Services.AddSignalR(); // ✅ SignalR
 
 var app = builder.Build();
-app.MapControllers();
-app.UseErrorHandling();
+
+//
+// Middleware order
+//
+app.UseCors("AllowBlazor");
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseCors("AllowBlazor");
+app.UseErrorHandling();
 
-// ---------------------------------------------------------
-// DATABASE MIGRATIONS (not in tests!)
-// ---------------------------------------------------------
+app.MapControllers();
+
+// ✅ SignalR Hub
+app.MapHub<ChatHub>("/hubs/chat");
+
+//
+// Migrations
+//
 if (!app.Environment.IsEnvironment("Testing"))
 {
     using var scope = app.Services.CreateScope();
@@ -177,18 +199,18 @@ if (!app.Environment.IsEnvironment("Testing"))
     await db.Database.MigrateAsync();
 }
 
-// ---------------------------------------------------------
+//
 // Swagger
-// ---------------------------------------------------------
+//
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-// ---------------------------------------------------------
-// AUTH ENDPOINTS
-// ---------------------------------------------------------
+//
+// Auth endpoints
+//
 app.MapPost("/auth/register", async (RegisterRequest req, IMediator mediator) =>
 {
     var response = await mediator.Send(new RegisterCommand(req));
@@ -201,27 +223,37 @@ app.MapPost("/auth/login", async (LoginRequest req, IMediator mediator) =>
     return Results.Ok(response);
 });
 
-// ---------------------------------------------------------
-// PROFILE
-// ---------------------------------------------------------
+//
+// Reviews
+//
+app.MapAddReviewForListingEndpoint();
+app.MapGetReviewsForListingEndpoint();
+app.MapAddReviewForProfileEndpoint();
+app.MapGetReviewsForProfileEndpoint();
+app.MapDeleteReviewEndpoint();
+
+//
+// Profiles
+//
 app.MapCreateProfileEndpoint();
 app.MapUpdateProfileEndpoint();
 app.MapDeleteProfileEndpoint();
 app.MapGetMyProfileEndpoint();
 app.MapGetProfileByIdEndpoint();
 app.MapGetAllProfilesEndpoint();
+app.MapSearchProfilesEndpoint();
 
-// ---------------------------------------------------------
-// MATCHING
-// ---------------------------------------------------------
-app.MapLikeEndpoints(); 
-app.MapLegacyLikeEndpoint(); 
+//
+// Matching
+//
+app.MapLikeEndpoints();
+app.MapLegacyLikeEndpoint();
 app.MapGetMatchesEndpoint();
 app.MapRecommendationsEndpoint();
 
-// ---------------------------------------------------------
-// LISTINGS
-// ---------------------------------------------------------
+//
+// Listings
+//
 app.MapCreateRoomListingEndpoint();
 app.MapUpdateListingEndpoint();
 app.MapDeleteListingEndpoint();

@@ -1,4 +1,9 @@
-﻿<Router AppAssembly="@typeof(App).Assembly">
+﻿@using Microsoft.AspNetCore.Components.Routing
+@using RoomMateFinder.Client.Layout
+@using RoomMateFinder.Client.Services
+@inject AuthService AuthService
+
+<Router AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
@@ -10,3 +15,12 @@
         </LayoutView>
     </NotFound>
 </Router>
+
+@code
+{
+    protected override async Task OnInitializedAsync()
+    {
+        // Load token + userId from localStorage at app startup
+        await AuthService.InitializeAsync();
+    }
+}

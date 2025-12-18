@@ -42,17 +42,34 @@ public class AppDbContext : DbContext
             .HasForeignKey(m => m.ReceiverId)
             .OnDelete(DeleteBehavior.Restrict);
 
+        // REVIEW RELATIONSHIPS
         modelBuilder.Entity<Review>()
             .HasOne(r => r.Reviewer)
             .WithMany()
             .HasForeignKey(r => r.ReviewerId)
             .OnDelete(DeleteBehavior.Restrict);
 
+// Review pentru User (optional)
         modelBuilder.Entity<Review>()
             .HasOne(r => r.TargetUser)
             .WithMany()
             .HasForeignKey(r => r.TargetUserId)
             .OnDelete(DeleteBehavior.Restrict);
+
+// Review pentru RoomListing
+        modelBuilder.Entity<Review>()
+            .HasOne(r => r.RoomListing)
+            .WithMany()
+            .HasForeignKey(r => r.RoomListingId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+// Review pentru Profile
+        modelBuilder.Entity<Review>()
+            .HasOne(r => r.Profile)
+            .WithMany()
+            .HasForeignKey(r => r.ProfileId)
+            .OnDelete(DeleteBehavior.Cascade);
+
 
         // ---- ADD LIKE RELATIONSHIPS ----
         modelBuilder.Entity<Like>()

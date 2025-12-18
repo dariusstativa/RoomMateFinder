@@ -1,0 +1,71 @@
+@using RoomMateFinder.Client.Models
+@inject HttpClient Http
+@inject RoomMateFinder.Client.Services.AuthService AuthService
+
+<div class="add-review">
+    <h4>Leave a review</h4>
+
+    <select @bind="rating">
+        <option value="1">⭐</option>
+        <option value="2">⭐⭐</option>
+        <option value="3">⭐⭐⭐</option>
+        <option value="4">⭐⭐⭐⭐</option>
+        <option value="5">⭐⭐⭐⭐⭐</option>
+    </select>
+
+    <textarea @bind="comment"
+              placeholder="Write your review..."
+              rows="3">
+    </textarea>
+
+    <button class="btn-primary"
+            @onclick="SubmitReview"
+            disabled="@isSubmitting">
+        Submit
+    </button>
+</div>
+
+@code {
+    [Parameter] public Guid TargetId { get; set; }
+    [Parameter] public ReviewTargetType TargetType { get; set; }
+
+    // 🔥 ASTA LIPSEA
+    [Parameter] public EventCallback OnAdded { get; set; }
+
+    private int rating = 5;
+    private string comment = string.Empty;
+    private bool isSubmitting;
+
+    private async Task SubmitReview()
+    {
+        if (string.IsNullOrWhiteSpace(comment))
+            return;
+
+        isSubmitting = true;
+
+        try
+        {
+            AuthService.AddAuthorizationHeader(Http);
+
+            var url = TargetType == ReviewTargetType.Profile
+                ? $"/profiles/{TargetId}/reviews"
+                : $"/listings/{TargetId}/reviews";
+
+            await Http.PostAsJsonAsync(url, new
+            {
+                Rating = rating,
+                Comment = comment
+            });
+
+            comment = string.Empty;
+            rating = 5;
+
+            // 🔔 notifică părintele
+            await OnAdded.InvokeAsync();
+        }
+        finally
+        {
+            isSubmitting = false;
+        }
+    }
+}

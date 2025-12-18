@@ -1,0 +1,71 @@
+@using RoomMateFinder.Client.Models
+@inject HttpClient Http
+@inject RoomMateFinder.Client.Services.AuthService AuthService
+@inject IJSRuntime JS
+
+<div class="review-summary-card">
+    <div class="summary-left">
+        <span class="star">⭐</span>
+        <span class="average">@Average.ToString("0.0")</span>
+    </div>
+
+    <div class="summary-right">
+        <div class="count">
+            @Count review@(Count == 1 ? "" : "s")
+        </div>
+
+        @if (Count > 0)
+        {
+            <button type="button" class="link-btn" @onclick="ScrollToReviews">
+                See all reviews ↓
+            </button>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter] public Guid TargetId { get; set; }
+    [Parameter] public ReviewTargetType TargetType { get; set; }
+
+    private double Average;
+    private int Count;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        await LoadSummary();
+    }
+
+    private async Task LoadSummary()
+    {
+        try
+        {
+            AuthService.AddAuthorizationHeader(Http);
+
+            var url = TargetType == ReviewTargetType.Profile
+                ? $"/profiles/{TargetId}/reviews"
+                : $"/listings/{TargetId}/reviews";
+
+            var reviews =
+                await Http.GetFromJsonAsync<List<ReviewDto>>(url)
+                ?? new List<ReviewDto>();
+
+            Count = reviews.Count;
+            Average = Count == 0 ? 0 : reviews.Average(r => r.Rating);
+        }
+        catch
+        {
+            Count = 0;
+            Average = 0;
+        }
+
+        StateHasChanged();
+    }
+
+    private async Task ScrollToReviews()
+    {
+        await JS.InvokeVoidAsync(
+            "eval",
+            "document.getElementById('reviews-section')?.scrollIntoView({ behavior: 'smooth' })"
+        );
+    }
+}
