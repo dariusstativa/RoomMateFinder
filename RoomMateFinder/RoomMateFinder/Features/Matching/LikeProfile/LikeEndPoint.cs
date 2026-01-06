@@ -15,8 +15,9 @@ public static class LikeEndpoint
                 LikeRequest request,
                 IMediator mediator,
                 IValidator<LikeRequest> validator) =>
-            {
-                await validator.ValidateAndThrowAsync(request);
+            {Console.WriteLine($"LIKE REQUEST: {request.TargetProfileId}");
+
+                //await validator.ValidateAndThrowAsync(request);
 
                 var userIdClaim =
                     http.User.FindFirst(ClaimTypes.NameIdentifier) ??

@@ -1,4 +1,4 @@
-@page "/chat/{otherUserId:guid}"
+@page "/chat/{conversationId:guid}/{otherUserId:guid}"
 
 @using RoomMateFinder.Client.Models
 @using System.Net.Http.Json
@@ -12,7 +12,7 @@
 
 <div class="chat-page">
     <div class="chat-header">
-        <button class="btn-back" @onclick="@(() => Navigation.NavigateTo("/profiles"))">
+        <button class="btn-back" @onclick="@(() => Navigation.NavigateTo("/matches"))">
             ← Back
         </button>
         <h2>Chat</h2>
@@ -46,6 +46,7 @@
 </div>
 
 @code {
+    [Parameter] public Guid conversationId { get; set; }
     [Parameter] public Guid otherUserId { get; set; }
 
     private List<MessageResponse> messages = new();
@@ -53,17 +54,6 @@
     private string? error;
     private ElementReference messagesDiv;
     private HubConnection? hubConnection;
-
-    private string ConversationId
-    {
-        get
-        {
-            var me = AuthService.UserId ?? throw new InvalidOperationException();
-            return me.CompareTo(otherUserId) < 0
-                ? $"{me}|{otherUserId}"
-                : $"{otherUserId}|{me}";
-        }
-    }
 
     protected override async Task OnInitializedAsync()
     {
@@ -83,8 +73,9 @@
         try
         {
             var http = ClientFactory.CreateClient("RoomMateFinderAPI");
+
             messages = await http.GetFromJsonAsync<List<MessageResponse>>(
-                $"/messages/conversation?otherUserId={otherUserId}"
+                $"/messages/conversation/{conversationId}"
             ) ?? new();
         }
         catch (Exception ex)
@@ -98,7 +89,8 @@
         hubConnection = new HubConnectionBuilder()
             .WithUrl("http://localhost:5044/hubs/chat", options =>
             {
-                options.AccessTokenProvider = () => Task.FromResult(AuthService.Token)!;
+                options.AccessTokenProvider = () =>
+                    Task.FromResult(AuthService.Token)!;
             })
             .WithAutomaticReconnect()
             .Build();
@@ -111,21 +103,21 @@
         });
 
         await hubConnection.StartAsync();
-        await hubConnection.InvokeAsync("JoinConversation", ConversationId);
+        await hubConnection.InvokeAsync("JoinConversation", conversationId);
     }
 
     private async Task SendMessage()
     {
-        if (string.IsNullOrWhiteSpace(newMessage)) return;
-
-        var dto = new SendMessageDto
-        {
-            ReceiverId = otherUserId,
-            Content = newMessage
-        };
+        if (string.IsNullOrWhiteSpace(newMessage))
+            return;
 
         var http = ClientFactory.CreateClient("RoomMateFinderAPI");
-        await http.PostAsJsonAsync("/messages/send", dto);
+
+        await http.PostAsJsonAsync("/messages/send", new
+        {
+            ConversationId = conversationId,
+            Content = newMessage
+        });
 
         newMessage = string.Empty;
     }

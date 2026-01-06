@@ -16,54 +16,53 @@ public class ChatHub : Hub
         _db = db;
     }
 
-    // 🔐 Extrage userId EXACT ca în controller
     private Guid GetUserId()
     {
-        var id = Context.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        var id =
+            Context.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value ??
+            Context.User?.FindFirst("sub")?.Value;
 
         if (string.IsNullOrWhiteSpace(id))
-            throw new HubException("Invalid JWT: missing NameIdentifier claim");
+            throw new HubException("Invalid JWT: missing user id claim");
 
         return Guid.Parse(id);
     }
 
-    // format conversationId: "{guid1}|{guid2}"
-    public async Task JoinConversation(string conversationId)
+
+    public async Task JoinConversation(Guid conversationId)
     {
         var me = GetUserId();
 
-        var parts = conversationId.Split('|', StringSplitOptions.RemoveEmptyEntries);
-        if (parts.Length != 2)
-            throw new HubException("Invalid conversationId format. Use '{guid1}|{guid2}'");
+        var conversation = await _db.Conversations
+            .AsNoTracking()
+            .FirstOrDefaultAsync(c => c.Id == conversationId);
 
-        if (!Guid.TryParse(parts[0], out var u1) ||
-            !Guid.TryParse(parts[1], out var u2))
-            throw new HubException("Invalid conversationId GUIDs");
-
-        if (me != u1 && me != u2)
-            throw new HubException("Not allowed to join this conversation");
-
-        var other = me == u1 ? u2 : u1;
-
-        // verificăm că există mesaje între ei
-        var allowed = await _db.Messages.AnyAsync(m =>
-            (m.SenderId == me && m.ReceiverId == other) ||
-            (m.SenderId == other && m.ReceiverId == me));
-
-        if (!allowed)
+        if (conversation == null)
             throw new HubException("Conversation does not exist");
 
-        await Groups.AddToGroupAsync(Context.ConnectionId, conversationId);
+        
+        if (conversation.User1Id != me && conversation.User2Id != me)
+            throw new HubException("Not allowed to join this conversation");
+
+        await Groups.AddToGroupAsync(
+            Context.ConnectionId,
+            conversationId.ToString()
+        );
     }
 
-    public Task LeaveConversation(string conversationId) =>
-        Groups.RemoveFromGroupAsync(Context.ConnectionId, conversationId);
+    public Task LeaveConversation(Guid conversationId) =>
+        Groups.RemoveFromGroupAsync(
+            Context.ConnectionId,
+            conversationId.ToString()
+        );
 
-    // 🔔 grup personal (pentru notificări viitoare)
     public override async Task OnConnectedAsync()
     {
         var me = GetUserId();
+
+        // grup personal (pentru notificări, opțional)
         await Groups.AddToGroupAsync(Context.ConnectionId, me.ToString());
+
         await base.OnConnectedAsync();
     }
 }

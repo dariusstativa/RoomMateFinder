@@ -44,9 +44,10 @@ using RoomMateFinder.Features.Reviews.DeleteReview;
 using RoomMateFinder.Features.Reviews.GetReviewListing;
 using RoomMateFinder.Features.Reviews.GetReviwesProfile;
 
-// Messaging
-using RoomMateFinder.Features.Conversations.Messaging;
-using RoomMateFinder.Features.Conversations; // ✅ ChatHub
+// Conversations + SignalR
+using RoomMateFinder.Features.Conversations;
+using RoomMateFinder.Features.Messages; // ✅ GetConversationMessagesEndpoint (MapGetConversationMessages)
+using RoomMateFinder.Features.Conversations.Messaging; // ✅ dacă aici ai MapSendMessageEndpoint / alte endpoints
 
 using RoomMateFinder.Infrastructure.Persistence;
 using RoomMateFinder.Middleware;
@@ -118,6 +119,7 @@ builder.Services.AddSwaggerGen(c =>
 //
 builder.Services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
 
+// IMPORTANT: nu remapa claim types automat
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
 builder.Services
@@ -142,6 +144,24 @@ builder.Services
             IssuerSigningKey = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(key))
         };
+
+        // ✅ CRITICAL pentru SignalR WebSockets: token din query string (?access_token=)
+        options.Events = new JwtBearerEvents
+        {
+            OnMessageReceived = context =>
+            {
+                var accessToken = context.Request.Query["access_token"];
+
+                var path = context.HttpContext.Request.Path;
+                if (!string.IsNullOrEmpty(accessToken) &&
+                    path.StartsWithSegments("/hubs/chat"))
+                {
+                    context.Token = accessToken;
+                }
+
+                return Task.CompletedTask;
+            }
+        };
     });
 
 builder.Services.AddAuthorization();
@@ -157,11 +177,12 @@ builder.Services.ConfigureHttpJsonOptions(o =>
 
 //
 // CORS (Blazor + SignalR)
+//
 builder.Services.AddCors(o =>
 {
     o.AddPolicy("AllowBlazor", p =>
     {
-        p.WithOrigins("http://localhost:5218")
+        p.WithOrigins("http://localhost:5218", "https://localhost:5218")
          .AllowAnyMethod()
          .AllowAnyHeader()
          .AllowCredentials();
@@ -172,13 +193,23 @@ builder.Services.AddCors(o =>
 // Controllers + SignalR
 //
 builder.Services.AddControllers();
-builder.Services.AddSignalR(); // ✅ SignalR
+builder.Services.AddSignalR();
 
 var app = builder.Build();
 
 //
-// Middleware order
+// Swagger
 //
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+//
+// Middleware order (safe)
+//
+app.UseRouting();
 app.UseCors("AllowBlazor");
 app.UseAuthentication();
 app.UseAuthorization();
@@ -197,15 +228,6 @@ if (!app.Environment.IsEnvironment("Testing"))
     using var scope = app.Services.CreateScope();
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     await db.Database.MigrateAsync();
-}
-
-//
-// Swagger
-//
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
 }
 
 //
@@ -247,7 +269,10 @@ app.MapSearchProfilesEndpoint();
 // Matching
 //
 app.MapLikeEndpoints();
+
+// ⚠️ recomand să îl scoți când e stabil, ca să nu ai două contracte diferite:
 app.MapLegacyLikeEndpoint();
+
 app.MapGetMatchesEndpoint();
 app.MapRecommendationsEndpoint();
 
@@ -259,6 +284,15 @@ app.MapUpdateListingEndpoint();
 app.MapDeleteListingEndpoint();
 app.MapGetAllListingsEndpoint();
 app.MapGetListingByIdEndpoint();
+
+//
+// Conversations + Messages
+//
+app.MapGetOrCreateConversation();
+
+// ✅ lipsea: load messages by conversationId
+app.MapGetConversationMessages();
+
 
 app.Run();
 

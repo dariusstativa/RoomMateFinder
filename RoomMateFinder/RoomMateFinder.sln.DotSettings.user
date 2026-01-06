@@ -40,6 +40,7 @@
     &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::CreateAndGetMyProfileTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::RoomMateFinderTests.UnitTests.Handlers.GetProfileByIdHandlerTests.Handle_WhenProfileExists_Returns_ProfileDto&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::RoomMateFinderTests.UnitTests.Validators.CreateRoomListingValidatorTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::389CA0DD-1269-4467-93B1-04C332935BB6::net9.0::RoomMateFinderTests.Integration.RoomListings.Flow_CreateThenGetByIdIntegrationTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	</wpf:ResourceDictionary>

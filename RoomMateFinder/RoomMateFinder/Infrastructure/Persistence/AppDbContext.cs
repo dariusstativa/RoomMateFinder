@@ -10,6 +10,7 @@ public class AppDbContext : DbContext
     public DbSet<RoomListing> RoomListings => Set<RoomListing>();
     public DbSet<Message> Messages => Set<Message>();
     public DbSet<Review> Reviews => Set<Review>();
+    public DbSet<Conversation> Conversations { get; set; } = default!;
 
     // Nou:
     public DbSet<Like> Likes => Set<Like>();
@@ -83,6 +84,10 @@ public class AppDbContext : DbContext
             .WithMany()
             .HasForeignKey(l => l.TargetProfileId)
             .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<Conversation>()
+            .HasIndex(c => new { c.User1Id, c.User2Id })
+            .IsUnique();
 
         base.OnModelCreating(modelBuilder);
     }

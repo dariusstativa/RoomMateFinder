@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using RoomMateFinder.Infrastructure.Persistence;
@@ -11,9 +12,11 @@ using RoomMateFinder.Infrastructure.Persistence;
 namespace RoomMateFinder.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251219000757_AddConversationIdToMessages")]
+    partial class AddConversationIdToMessages
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -82,9 +85,6 @@ namespace RoomMateFinder.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<Guid>("ConversationId")
-                        .HasColumnType("uuid");
-
                     b.Property<Guid>("ReceiverId")
                         .HasColumnType("uuid");
 
@@ -95,8 +95,6 @@ namespace RoomMateFinder.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ConversationId");
 
                     b.HasIndex("ReceiverId");
 
@@ -310,12 +308,6 @@ namespace RoomMateFinder.Migrations
 
             modelBuilder.Entity("RoomMateFinder.Domain.Entities.Message", b =>
                 {
-                    b.HasOne("RoomMateFinder.Domain.Entities.Conversation", "Conversation")
-                        .WithMany()
-                        .HasForeignKey("ConversationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("RoomMateFinder.Domain.Entities.User", "Receiver")
                         .WithMany()
                         .HasForeignKey("ReceiverId")
@@ -327,8 +319,6 @@ namespace RoomMateFinder.Migrations
                         .HasForeignKey("SenderId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.Navigation("Conversation");
 
                     b.Navigation("Receiver");
 

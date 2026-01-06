@@ -1,6 +1,6 @@
 ﻿@page "/profiles/{userId:guid}"
 @page "/my-profile"
-
+@using System.Text.Encodings.Web
 @using RoomMateFinder.Client.Models
 @inject HttpClient Http
 @inject NavigationManager Navigation
@@ -80,8 +80,7 @@
                     <div class="info-card actions">
                         <button class="btn-like" @onclick="HandleLike">👍 Like</button>
                         <button class="btn-dislike" @onclick="HandleDislike">👎 Pass</button>
-                        <button class="btn-message"
-                                @onclick="@(() => Navigation.NavigateTo($"/chat/{profile.UserId}"))">
+                        <button class="btn-message" @onclick="OpenChat">
                             💬 Message
                         </button>
                     </div>
@@ -94,7 +93,7 @@
                         TargetType="ReviewTargetType.Profile" />
                 </div>
 
-                <!-- ⭐ REVIEWS LIST (IMDb-style) -->
+                <!-- ⭐ REVIEWS LIST -->
                 <ReviewList
                     @key="profile.Id"
                     TargetId="profile.Id"
@@ -151,10 +150,10 @@
         if (profile == null) return;
 
         AuthService.AddAuthorizationHeader(Http);
+
         await Http.PostAsJsonAsync("/matching/like", new
         {
-            LikerUserId = AuthService.UserId,
-            TargetProfileId = profile.UserId
+            targetProfileId = profile.Id
         });
     }
 
@@ -163,11 +162,36 @@
         if (profile == null) return;
 
         AuthService.AddAuthorizationHeader(Http);
+
         await Http.PostAsJsonAsync("/matching/dislike", new
         {
-            LikerUserId = AuthService.UserId,
-            TargetProfileId = profile.UserId
+            targetProfileId = profile.Id
         });
+    }
+
+    private async Task OpenChat()
+    {
+        if (profile == null) return;
+
+        AuthService.AddAuthorizationHeader(Http);
+
+        var resp = await Http.PostAsync($"/conversations/with/{profile.UserId}", content: null);
+
+        if (!resp.IsSuccessStatusCode)
+        {
+            errorMessage = $"Failed to create/get conversation: {(int)resp.StatusCode} {resp.ReasonPhrase}";
+            return;
+        }
+
+        var conversationId = await resp.Content.ReadFromJsonAsync<Guid>();
+
+        if (conversationId == Guid.Empty)
+        {
+            errorMessage = "Conversation id is empty.";
+            return;
+        }
+
+        Navigation.NavigateTo($"/chat/{conversationId}");
     }
 
     private string GetInitials(string name)

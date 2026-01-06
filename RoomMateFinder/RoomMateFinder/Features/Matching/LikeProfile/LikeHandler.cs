@@ -3,7 +3,6 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using RoomMateFinder.Domain.Entities;
 using RoomMateFinder.Features.LikeProfile.LikeRequest;
-using RoomMateFinder.Features.Matching.Rating;
 using RoomMateFinder.Infrastructure.Persistence;
 
 namespace RoomMateFinder.Features.Matching.LikeProfile;
@@ -21,67 +20,81 @@ public class LikeHandler : IRequestHandler<LikeCommand, bool>
 
     public async Task<bool> Handle(LikeCommand request, CancellationToken cancellationToken)
     {
-        // Validate incoming request
         await _validator.ValidateAndThrowAsync(request.Request, cancellationToken);
 
         var likerUserId = request.UserId;
         var targetProfileId = request.Request.TargetProfileId;
 
-        // Load liker + profile + rating
         var liker = await _db.Users
             .Include(u => u.Profile)
             .FirstOrDefaultAsync(u => u.Id == likerUserId, cancellationToken);
 
-        // Load target profile + linked user
         var targetProfile = await _db.Profiles
             .Include(p => p.User)
             .FirstOrDefaultAsync(p => p.Id == targetProfileId, cancellationToken);
 
-        if (liker == null || targetProfile == null)
+        if (liker == null || targetProfile == null || liker.Profile == null)
             return false;
 
         var targetUser = targetProfile.User;
 
-        // Check existing like/dislike
-        var existing = await _db.Likes.FirstOrDefaultAsync(
-            x => x.LikerUserId == likerUserId && x.TargetProfileId == targetProfileId,
+        // 1️⃣ Creează / actualizează LIKE
+        var existingLike = await _db.Likes.FirstOrDefaultAsync(
+            x => x.LikerUserId == likerUserId &&
+                 x.TargetProfileId == targetProfileId,
             cancellationToken);
 
-        if (existing != null)
+        if (existingLike == null)
         {
-            existing.IsLike = true;
-            existing.CreatedAt = DateTime.UtcNow;
-
-            // Apply ELO rating logic (kept from HEAD)
-            targetUser.Rating = EloCalculator.CalculateNewRating(
-                targetUser.Rating,
-                liker.Rating,
-                isWin: true);
-
-            await _db.SaveChangesAsync(cancellationToken);
-            return true;
+            _db.Likes.Add(new Like
+            {
+                Id = Guid.NewGuid(),
+                LikerUserId = likerUserId,
+                TargetProfileId = targetProfileId,
+                IsLike = true,
+                CreatedAt = DateTime.UtcNow
+            });
+        }
+        else
+        {
+            existingLike.IsLike = true;
+            existingLike.CreatedAt = DateTime.UtcNow;
         }
 
-        // Create new like
-        var like = new Like
+        // 2️⃣ Verifică dacă ESTE MATCH
+        var isMatch = await _db.Likes.AnyAsync(
+            l => l.IsLike &&
+                 l.LikerUserId == targetUser.Id &&
+                 l.TargetProfileId == liker.Profile.Id,
+            cancellationToken);
+
+        // 3️⃣ Creează CONVERSATION doar dacă este MATCH
+        if (isMatch)
         {
-            Id = Guid.NewGuid(),
-            LikerUserId = likerUserId,
-            TargetProfileId = targetProfileId,
-            IsLike = true,
-            CreatedAt = DateTime.UtcNow
-        };
+            var userA = likerUserId;
+            var userB = targetUser.Id;
 
-        _db.Likes.Add(like);
+            // ordine deterministă → evită duplicate
+            var first = userA.CompareTo(userB) < 0 ? userA : userB;
+            var second = userA.CompareTo(userB) < 0 ? userB : userA;
 
-        // Apply rating update
-        targetUser.Rating = EloCalculator.CalculateNewRating(
-            targetUser.Rating,
-            liker.Rating,
-            isWin: true);
+            var conversationExists = await _db.Conversations.AnyAsync(
+                c => c.User1Id == first && c.User2Id == second,
+                cancellationToken);
+
+            if (!conversationExists)
+            {
+                _db.Conversations.Add(new Conversation
+                {
+                    Id = Guid.NewGuid(),
+                    User1Id = first,
+                    User2Id = second,
+                    CreatedAt = DateTime.UtcNow
+                });
+            }
+        }
 
         await _db.SaveChangesAsync(cancellationToken);
-
         return true;
     }
 }
