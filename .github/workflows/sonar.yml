@@ -10,6 +10,10 @@ jobs:
   build:
     runs-on: windows-latest
 
+    defaults:
+      run:
+        working-directory: RoomMateFinder   # 👈 IMPORTANT
+
     steps:
       - uses: actions/checkout@v4
 
@@ -21,9 +25,6 @@ jobs:
       - name: Install SonarScanner
         run: dotnet tool install --global dotnet-sonarscanner
 
-      - name: Restore
-        run: dotnet restore
-
       - name: Begin Sonar analysis
         run: |
           dotnet sonarscanner begin ^
@@ -31,6 +32,9 @@ jobs:
             /o:"dariusstativa" ^
             /d:sonar.host.url="https://sonarcloud.io" ^
             /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+
+      - name: Restore
+        run: dotnet restore
 
       - name: Build
         run: dotnet build --no-restore
