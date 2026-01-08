@@ -1,5 +1,5 @@
 # ---------- BUILD ----------
-FROM mcr.microsoft.com/dotnet/sdk:9.0-preview
+FROM mcr.microsoft.com/dotnet/sdk:9.0-preview AS build
 WORKDIR /src
 
 COPY RoomMateFinder.sln ./
@@ -14,7 +14,7 @@ WORKDIR /src/RoomMateFinder
 RUN dotnet publish -c Release -o /app/publish
 
 # ---------- RUNTIME ----------
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
+FROM mcr.microsoft.com/dotnet/aspnet:9.0-preview
 WORKDIR /app
 
 COPY --from=build /app/publish .
