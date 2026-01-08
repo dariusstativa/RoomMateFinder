@@ -2,15 +2,15 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-COPY *.sln ./
-COPY RoomMateFinder.API/*.csproj ./RoomMateFinder.API/
-COPY RoomMateFinder.Infrastructure/*.csproj ./RoomMateFinder.Infrastructure/
-COPY RoomMateFinder.Features/*.csproj ./RoomMateFinder.Features/
+COPY RoomMateFinder.sln ./
+COPY RoomMateFinder/RoomMateFinder.csproj ./RoomMateFinder/
+COPY RoomMateFinder.Client/RoomMateFinder.Client.csproj ./RoomMateFinder.Client/
+COPY RoomMateFinderTests/RoomMateFinderTests.csproj ./RoomMateFinderTests/
 
 RUN dotnet restore
 
 COPY . .
-WORKDIR /src/RoomMateFinder.API
+WORKDIR /src/RoomMateFinder
 RUN dotnet publish -c Release -o /app/publish
 
 # ---------- RUNTIME ----------
@@ -20,7 +20,6 @@ WORKDIR /app
 COPY --from=build /app/publish .
 
 ENV ASPNETCORE_URLS=http://+:${PORT}
-
 EXPOSE 8080
 
-ENTRYPOINT ["dotnet", "RoomMateFinder.API.dll"]
+ENTRYPOINT ["dotnet", "RoomMateFinder.dll"]
