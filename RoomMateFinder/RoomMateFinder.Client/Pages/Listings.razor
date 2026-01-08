@@ -59,7 +59,7 @@
                             <span class="gender">@listing.GenderPreference</span>
                         </div>
                         <div class="listing-date">
-                            Posted @FormatDate(listing.CreatedAt)
+                            Posted @FormatDate(listing.CreatedAt,_timeProvider)
                         </div>
                     </div>
                 </div>
@@ -106,10 +106,11 @@
             isLoading = false;
         }
     }
-
-    private string FormatDate(DateTime date)
+    private readonly TimeProvider _timeProvider = TimeProvider.System;
+    private static string FormatDate(DateTime date, TimeProvider timeProvider)
     {
-        var timeSpan = DateTime.Now - date;
+        var now = timeProvider.GetLocalNow().DateTime;
+        var timeSpan = now - date;
         if (timeSpan.TotalDays < 1)
             return "today";
         if (timeSpan.TotalDays < 2)

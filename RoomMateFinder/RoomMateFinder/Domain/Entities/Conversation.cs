@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 
 namespace RoomMateFinder.Domain.Entities;
 

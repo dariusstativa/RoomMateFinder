@@ -1,6 +1,6 @@
 ﻿@page "/profiles/{userId:guid}"
 @page "/my-profile"
-@using System.Text.Encodings.Web
+
 @using RoomMateFinder.Client.Models
 @inject HttpClient Http
 @inject NavigationManager Navigation
@@ -89,16 +89,19 @@
                 <!-- ⭐ REVIEW SUMMARY -->
                 <div class="info-card">
                     <ReviewSummary
+                        @key="ratingVersion"
                         TargetId="profile.Id"
-                        TargetType="ReviewTargetType.Profile" />
+                        TargetType="ReviewTargetType.Profile"
+                        OwnerUserId="profile.UserId" />
+
                 </div>
 
                 <!-- ⭐ REVIEWS LIST -->
                 <ReviewList
-                    @key="profile.Id"
                     TargetId="profile.Id"
                     TargetType="ReviewTargetType.Profile"
-                    OwnerUserId="profile.UserId" />
+                    OwnerUserId="profile.UserId"
+                    ReviewsChanged="OnReviewsChanged" />
 
             </section>
         </div>
@@ -111,6 +114,9 @@
     private Profile? profile;
     private bool isLoading = true;
     private string errorMessage = string.Empty;
+
+    // 🔑 forces ReviewSummary to refresh when reviews change
+    private int ratingVersion = 0;
 
     protected override async Task OnInitializedAsync()
     {
@@ -169,13 +175,16 @@
         });
     }
 
+    // ✅ kept as requested
     private async Task OpenChat()
     {
         if (profile == null) return;
 
         AuthService.AddAuthorizationHeader(Http);
 
-        var resp = await Http.PostAsync($"/conversations/with/{profile.UserId}", content: null);
+        var resp = await Http.PostAsync(
+            $"/conversations/with/{profile.UserId}",
+            content: null);
 
         if (!resp.IsSuccessStatusCode)
         {
@@ -192,6 +201,13 @@
         }
 
         Navigation.NavigateTo($"/chat/{conversationId}");
+    }
+
+    // 🔔 called by ReviewList
+    private void OnReviewsChanged()
+    {
+        ratingVersion++;
+        StateHasChanged();
     }
 
     private string GetInitials(string name)

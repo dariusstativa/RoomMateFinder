@@ -1,6 +1,6 @@
 ﻿@page "/listings/{id:guid}"
 
-@using RoomMateFinder.Client.Models
+
 @inject HttpClient Http
 @inject NavigationManager Navigation
 @inject RoomMateFinder.Client.Services.AuthService AuthService
@@ -16,10 +16,12 @@
     {
         <div class="error-container">
             <p>@errorMessage</p>
-            <button class="btn-secondary"
+            <button class="listing-back-btn"
                     @onclick="@(() => Navigation.NavigateTo("/listings"))">
-                Back to Listings
+                <span class="listing-back-icon">←</span>
+                <span>Back to Listings</span>
             </button>
+
         </div>
     }
     else if (listing != null)
@@ -28,10 +30,12 @@
 
             <!-- HEADER -->
             <div class="listing-header">
-                <button class="btn-back"
+                <button class="listing-back-btn"
                         @onclick="@(() => Navigation.NavigateTo("/listings"))">
-                    ← Back to Listings
+                    <span class="listing-back-icon">←</span>
+                    <span>Back to Listings</span>
                 </button>
+
 
                 @if (listing.OwnerId == AuthService.UserId)
                 {
@@ -52,7 +56,7 @@
 
             <div class="listing-meta">
                 <span class="price">$@listing.Price / month</span>
-                <span>• Posted @FormatDate(listing.CreatedAt)</span>
+                <span>• Posted @FormatDate(listing.CreatedAt,_timeProvider)</span>
             </div>
 
             <!-- INFO GRID -->
@@ -97,7 +101,9 @@
             <!-- REVIEWS -->
             <div class="listing-reviews">
                 <ReviewList TargetId="listing.Id"
-                            TargetType="ReviewTargetType.Listing" />
+                             TargetType="ReviewTargetType.Listing"
+                             OwnerUserId="listing.OwnerId" />
+
             </div>
 
         </div>
@@ -149,13 +155,16 @@
         else
             errorMessage = "Failed to delete listing.";
     }
-
-    private string FormatDate(DateTime date)
+    private readonly TimeProvider _timeProvider = TimeProvider.System;
+    private static string FormatDate(DateTime date, TimeProvider timeProvider)
     {
-        var span = DateTime.Now - date;
+        var now = timeProvider.GetLocalNow().DateTime;
+        var span = now - date;
+
         if (span.TotalDays < 1) return "today";
         if (span.TotalDays < 2) return "yesterday";
         if (span.TotalDays < 7) return $"{(int)span.TotalDays} days ago";
         return date.ToString("MMM dd, yyyy");
     }
+
 }

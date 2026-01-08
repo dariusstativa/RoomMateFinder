@@ -31,19 +31,21 @@
 
     <!-- MAIN -->
     <main class="main-content">
-        <ErrorBoundary>
-            <ChildContent>
-                @Body
-            </ChildContent>
-            <ErrorContent Context="ex">
-                <div style="padding:20px; background:#ffebee; color:#b71c1c;">
-                    <h3>EROARE REALĂ:</h3>
-                    <pre>@ex.ToString()</pre>
-                </div>
-            </ErrorContent>
-        </ErrorBoundary>
-
+        <div class="page-content">
+            <ErrorBoundary>
+                <ChildContent>
+                    @Body
+                </ChildContent>
+                <ErrorContent Context="ex">
+                    <div style="padding:20px; background:#ffebee; color:#b71c1c;">
+                        <h3>EROARE REALĂ:</h3>
+                        <pre>@ex.ToString()</pre>
+                    </div>
+                </ErrorContent>
+            </ErrorBoundary>
+        </div>
     </main>
+
 </div>
 
 @code {

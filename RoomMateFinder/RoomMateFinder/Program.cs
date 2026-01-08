@@ -47,7 +47,8 @@ using RoomMateFinder.Features.Reviews.GetReviwesProfile;
 // Conversations + SignalR
 using RoomMateFinder.Features.Conversations;
 using RoomMateFinder.Features.Messages; // ✅ GetConversationMessagesEndpoint (MapGetConversationMessages)
-using RoomMateFinder.Features.Conversations.Messaging; // ✅ dacă aici ai MapSendMessageEndpoint / alte endpoints
+using RoomMateFinder.Features.Conversations.Messaging;
+using RoomMateFinder.Features.Conversations.Messaging.Conversation; // ✅ dacă aici ai MapSendMessageEndpoint / alte endpoints
 
 using RoomMateFinder.Infrastructure.Persistence;
 using RoomMateFinder.Middleware;

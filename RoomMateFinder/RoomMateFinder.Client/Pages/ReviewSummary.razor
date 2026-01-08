@@ -1,7 +1,7 @@
 @using RoomMateFinder.Client.Models
 @inject HttpClient Http
 @inject RoomMateFinder.Client.Services.AuthService AuthService
-@inject IJSRuntime JS
+@inject NavigationManager Navigation
 
 <div class="review-summary-card">
     <div class="summary-left">
@@ -16,7 +16,9 @@
 
         @if (Count > 0)
         {
-            <button type="button" class="link-btn" @onclick="ScrollToReviews">
+            <button type="button"
+                    class="link-btn"
+                    @onclick="GoToAllReviews">
                 See all reviews ↓
             </button>
         }
@@ -24,8 +26,14 @@
 </div>
 
 @code {
+    // ID-ul entității care primește review-uri (ProfileId sau ListingId)
     [Parameter] public Guid TargetId { get; set; }
+
+    // Profile / Listing
     [Parameter] public ReviewTargetType TargetType { get; set; }
+
+    // NECESAR pentru navigarea înapoi corectă
+    [Parameter] public Guid OwnerUserId { get; set; }
 
     private double Average;
     private int Count;
@@ -57,15 +65,21 @@
             Count = 0;
             Average = 0;
         }
-
-        StateHasChanged();
     }
 
-    private async Task ScrollToReviews()
+    private void GoToAllReviews()
     {
-        await JS.InvokeVoidAsync(
-            "eval",
-            "document.getElementById('reviews-section')?.scrollIntoView({ behavior: 'smooth' })"
-        );
+        string route = TargetType switch
+        {
+            ReviewTargetType.Profile =>
+                $"/reviews/profile/{TargetId}/{OwnerUserId}",
+
+            ReviewTargetType.Listing =>
+                $"/reviews/listing/{TargetId}",
+
+            _ => "/"
+        };
+
+        Navigation.NavigateTo(route);
     }
 }

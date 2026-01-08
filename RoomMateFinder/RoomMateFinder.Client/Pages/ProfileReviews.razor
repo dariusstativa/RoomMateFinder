@@ -1,0 +1,99 @@
+﻿@page "/reviews/profile/{ProfileId:guid}/{OwnerUserId:guid}"
+
+@using RoomMateFinder.Client.Models
+@inject HttpClient Http
+@inject RoomMateFinder.Client.Services.AuthService AuthService
+@inject NavigationManager Navigation
+
+<div class="reviews-page">
+
+    <div class="reviews-header">
+        <button class="listing-back-btn"
+                @onclick="@(() => Navigation.NavigateTo($"/profiles/{OwnerUserId}"))">
+            ← Back to profile
+        </button>
+
+        <h2>All reviews</h2>
+    </div>
+
+    @if (isLoading)
+    {
+        <p>Loading reviews...</p>
+    }
+    else if (!reviews.Any())
+    {
+        <p class="no-reviews">No reviews yet.</p>
+    }
+    else
+    {
+        @foreach (var review in reviews)
+        {
+            <div class="review-row">
+                <div class="review-top">
+                    <strong>@review.ReviewerName</strong>
+                    <span class="stars">@RenderStars(review.Rating)</span>
+                </div>
+
+                <p class="comment">@review.Comment</p>
+
+                <div class="review-bottom">
+                    <span>@review.CreatedAt.ToLocalTime().ToShortDateString()</span>
+
+                    @if (review.ReviewerId == AuthService.UserId)
+                    {
+                        <button class="link-danger"
+                                @onclick="@(() => DeleteReview(review.Id))">
+                            Delete
+                        </button>
+                    }
+                </div>
+            </div>
+        }
+    }
+
+    @if (CanAddReview)
+    {
+        <div class="add-review-box">
+            <AddReviewForm TargetId="ProfileId"
+                           TargetType="ReviewTargetType.Profile"
+                           OnAdded="ReloadReviews" />
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter] public Guid ProfileId { get; set; }
+    [Parameter] public Guid OwnerUserId { get; set; }
+
+    private List<ReviewDto> reviews = new();
+    private bool isLoading = true;
+
+    private bool CanAddReview => AuthService.IsAuthenticated;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ReloadReviews();
+    }
+
+    private async Task ReloadReviews()
+    {
+        isLoading = true;
+        AuthService.AddAuthorizationHeader(Http);
+
+        reviews = await Http.GetFromJsonAsync<List<ReviewDto>>(
+            $"/profiles/{ProfileId}/reviews"
+        ) ?? new();
+
+        isLoading = false;
+    }
+
+    private async Task DeleteReview(Guid id)
+    {
+        AuthService.AddAuthorizationHeader(Http);
+        await Http.DeleteAsync($"/reviews/{id}");
+        await ReloadReviews();
+    }
+
+    private string RenderStars(int rating)
+        => new string('⭐', rating);
+}

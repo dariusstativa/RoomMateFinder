@@ -1,5 +1,6 @@
 ﻿@page "/"
 @using Microsoft.AspNetCore.Components.Routing
+
 <div class="page-bleed">
     <div class="hero">
         <div class="hero-overlay"></div>
@@ -36,14 +37,13 @@
     </div>
 </div>
 
-
 @code {
-    protected override async Task OnInitializedAsync()
+
+    protected override void OnInitialized()
     {
         try
         {
-            Console.WriteLine("HOME: OnInitializedAsync start");
-            await Task.CompletedTask;
+            Console.WriteLine("HOME: OnInitialized");
         }
         catch (Exception ex)
         {
@@ -52,7 +52,7 @@
         }
     }
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+    protected override void OnAfterRender(bool firstRender)
     {
         try
         {
