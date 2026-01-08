@@ -4,14 +4,16 @@ WORKDIR /src
 
 COPY RoomMateFinder.sln ./
 COPY RoomMateFinder/RoomMateFinder.csproj ./RoomMateFinder/
-COPY RoomMateFinder.Client/RoomMateFinder.Client.csproj ./RoomMateFinder.Client/
-COPY RoomMateFinderTests/RoomMateFinderTests.csproj ./RoomMateFinderTests/
 
-RUN dotnet restore
+RUN dotnet restore RoomMateFinder/RoomMateFinder.csproj
 
-COPY . .
+COPY RoomMateFinder/ ./RoomMateFinder/
 WORKDIR /src/RoomMateFinder
-RUN dotnet publish -c Release -o /app/publish
+
+RUN dotnet publish RoomMateFinder.csproj \
+    -c Release \
+    -o /app/publish \
+    --no-restore
 
 # ---------- RUNTIME ----------
 FROM mcr.microsoft.com/dotnet/aspnet:9.0-preview
@@ -19,7 +21,7 @@ WORKDIR /app
 
 COPY --from=build /app/publish .
 
-ENV ASPNETCORE_URLS=http://+:${PORT}
+ENV ASPNETCORE_URLS=http://+:8080
 EXPOSE 8080
 
 ENTRYPOINT ["dotnet", "RoomMateFinder.dll"]
