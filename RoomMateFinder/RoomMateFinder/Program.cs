@@ -291,7 +291,7 @@ app.MapGetOrCreateConversation();
 // ✅ lipsea: load messages by conversationId
 app.MapGetConversationMessages();
 
-
+app.MapGet("/", () => Results.Ok("RoomMateFinder API is running"));
 app.Run();
 
 namespace RoomMateFinder
