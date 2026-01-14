@@ -180,22 +180,13 @@ builder.Services.AddCors(o =>
 {
     o.AddPolicy("AllowBlazor", p =>
     {
-        p.WithOrigins("http://localhost:5218", "https://localhost:5218","https://client-wniw.onrender.com/")
+        p.WithOrigins("http://localhost:5218", "https://localhost:5218","https://client-wniw.onrender.com")
          .AllowAnyMethod()
          .AllowAnyHeader()
          .AllowCredentials();
     });
 });
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowClient",
-        policy =>
-        {
-            policy.WithOrigins("https://client-wniw.onrender.com");
-            policy.AllowAnyHeader();
-            policy.AllowAnyMethod();
-        });
-});
+
 //
 // Controllers + SignalR
 //
@@ -221,7 +212,6 @@ app.UseCors("AllowBlazor");
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseErrorHandling();
-app.UseCors("AllowClient");
 app.MapControllers();
 
 // ✅ SignalR Hub
