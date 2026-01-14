@@ -186,7 +186,16 @@ builder.Services.AddCors(o =>
          .AllowCredentials();
     });
 });
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowClient",
+        policy =>
+        {
+            policy.WithOrigins("https://client-wniw.onrender.com");
+            policy.AllowAnyHeader();
+            policy.AllowAnyMethod();
+        });
+});
 //
 // Controllers + SignalR
 //
@@ -212,7 +221,7 @@ app.UseCors("AllowBlazor");
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseErrorHandling();
-
+app.UseCors("AllowClient");
 app.MapControllers();
 
 // ✅ SignalR Hub
