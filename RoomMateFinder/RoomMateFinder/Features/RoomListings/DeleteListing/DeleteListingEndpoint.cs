@@ -3,7 +3,7 @@ using System.Security.Claims;
 
 namespace RoomMateFinder.Features.RoomListings.DeleteListing;
 
-public static class DeleteListingEndpoint
+public static class SDeleteListingEndpoint
 {
     public static void MapDeleteListingEndpoint(this IEndpointRouteBuilder app)
     {

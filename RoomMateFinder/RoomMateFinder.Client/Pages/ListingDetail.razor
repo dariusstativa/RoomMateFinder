@@ -1,6 +1,5 @@
 ﻿@page "/listings/{id:guid}"
 
-
 @inject HttpClient Http
 @inject NavigationManager Navigation
 @inject RoomMateFinder.Client.Services.AuthService AuthService
@@ -18,10 +17,8 @@
             <p>@errorMessage</p>
             <button class="listing-back-btn"
                     @onclick="@(() => Navigation.NavigateTo("/listings"))">
-                <span class="listing-back-icon">←</span>
-                <span>Back to Listings</span>
+                ← Back to Listings
             </button>
-
         </div>
     }
     else if (listing != null)
@@ -32,10 +29,8 @@
             <div class="listing-header">
                 <button class="listing-back-btn"
                         @onclick="@(() => Navigation.NavigateTo("/listings"))">
-                    <span class="listing-back-icon">←</span>
-                    <span>Back to Listings</span>
+                    ← Back to Listings
                 </button>
-
 
                 @if (listing.OwnerId == AuthService.UserId)
                 {
@@ -44,6 +39,7 @@
                                 @onclick="@(() => Navigation.NavigateTo($"/listings/{Id}/edit"))">
                             Edit
                         </button>
+
                         <button class="btn-danger" @onclick="HandleDelete">
                             Delete
                         </button>
@@ -56,12 +52,11 @@
 
             <div class="listing-meta">
                 <span class="price">$@listing.Price / month</span>
-                <span>• Posted @FormatDate(listing.CreatedAt,_timeProvider)</span>
+                <span>• Posted @FormatDate(listing.CreatedAt)</span>
             </div>
 
             <!-- INFO GRID -->
             <div class="listing-info-grid">
-
                 <div class="info-card">
                     <h3>📍 Location</h3>
                     <p>@listing.Address</p>
@@ -81,7 +76,6 @@
                     <h3>🚻 Gender Preference</h3>
                     <p>@listing.GenderPreference</p>
                 </div>
-
             </div>
 
             <!-- CONTACT -->
@@ -92,8 +86,9 @@
                     <p>Contact the owner to learn more about this listing.</p>
 
                     <button class="btn-primary"
-                            @onclick="@(() => Navigation.NavigateTo($"/chat/{listing.OwnerId}"))">
-                        Send Message
+                            disabled="@isMessaging"
+                            @onclick="HandleMessage">
+                        @(isMessaging ? "Opening chat..." : "Send Message")
                     </button>
                 </div>
             }
@@ -101,11 +96,9 @@
             <!-- REVIEWS -->
             <div class="listing-reviews">
                 <ReviewList TargetId="listing.Id"
-                             TargetType="ReviewTargetType.Listing"
-                             OwnerUserId="listing.OwnerId" />
-
+                            TargetType="ReviewTargetType.Listing"
+                            OwnerUserId="listing.OwnerId" />
             </div>
-
         </div>
     }
 </div>
@@ -116,6 +109,7 @@
     private RoomListing? listing;
     private string errorMessage = string.Empty;
     private bool isLoading = true;
+    private bool isMessaging = false;
 
     protected override async Task OnInitializedAsync()
     {
@@ -141,30 +135,65 @@
 
     private async Task HandleDelete()
     {
-        if (!await JSRuntime.InvokeAsync<bool>("confirm",
-                "Are you sure you want to delete this listing?"))
+        if (!await JSRuntime.InvokeAsync<bool>(
+                "confirm", "Are you sure you want to delete this listing?"))
             return;
 
         AuthService.AddAuthorizationHeader(Http);
 
-        var response = await Http.DeleteAsync(
-            $"/users/{listing!.OwnerId}/listings/{Id}");
+        var response = await Http.DeleteAsync($"/listings/{Id}");
 
         if (response.IsSuccessStatusCode)
-            Navigation.NavigateTo("/listings");
+            Navigation.NavigateTo("/my-listings");
         else
             errorMessage = "Failed to delete listing.";
     }
-    private readonly TimeProvider _timeProvider = TimeProvider.System;
-    private static string FormatDate(DateTime date, TimeProvider timeProvider)
+
+    private async Task HandleMessage()
     {
-        var now = timeProvider.GetLocalNow().DateTime;
-        var span = now - date;
+        if (listing is null)
+            return;
+
+        isMessaging = true;
+
+        try
+        {
+            AuthService.AddAuthorizationHeader(Http);
+
+            var response = await Http.PostAsync(
+                $"/conversations/listing/{listing.Id}",
+                content: null
+            );
+
+            if (!response.IsSuccessStatusCode)
+            {
+                errorMessage = "Failed to open conversation.";
+                return;
+            }
+
+            var conversationId =
+                await response.Content.ReadFromJsonAsync<Guid>();
+
+            // ✅ FIX: Navigate with BOTH conversationId AND otherUserId (the listing owner)
+            Navigation.NavigateTo($"/chat/{conversationId}/{listing.OwnerId}");
+        }
+        catch
+        {
+            errorMessage = "Failed to open conversation.";
+        }
+        finally
+        {
+            isMessaging = false;
+        }
+    }
+
+    private static string FormatDate(DateTime date)
+    {
+        var span = DateTime.UtcNow - date;
 
         if (span.TotalDays < 1) return "today";
         if (span.TotalDays < 2) return "yesterday";
         if (span.TotalDays < 7) return $"{(int)span.TotalDays} days ago";
         return date.ToString("MMM dd, yyyy");
     }
-
 }

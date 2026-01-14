@@ -1,0 +1,78 @@
+﻿@page "/my-listings"
+
+@using RoomMateFinder.Client.Models
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject RoomMateFinder.Client.Services.AuthService AuthService
+
+<h1>My Listings</h1>
+
+@if (isLoading)
+{
+    <p>Loading...</p>
+}
+else if (!listings.Any())
+{
+    <p>You have no listings yet.</p>
+
+    <button class="btn-primary"
+            @onclick="@(() => Navigation.NavigateTo("/listings/create"))">
+        + Create Listing
+    </button>
+}
+else
+{
+    <div class="listings-grid">
+        @foreach (var listing in listings)
+        {
+            <div class="listing-card my-listing">
+                <h3>@listing.Title</h3>
+                <p>@listing.Address</p>
+                <strong>$@listing.Price / month</strong>
+
+                <div class="badge">Your listing</div>
+
+                <div class="actions">
+                    <button class="btn-secondary"
+                            @onclick="@(() => Navigation.NavigateTo($"/listings/{listing.Id}"))">
+                        View
+                    </button>
+
+                    <button class="btn-primary"
+                            @onclick="@(() => Navigation.NavigateTo($"/listings/{listing.Id}/edit"))">
+                        Edit
+                    </button>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<RoomListingDto> listings = new();
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (!AuthService.IsAuthenticated)
+        {
+            Navigation.NavigateTo("/login");
+            return;
+        }
+
+        try
+        {
+            AuthService.AddAuthorizationHeader(Http);
+            listings = await Http.GetFromJsonAsync<List<RoomListingDto>>(
+                "/room-listings/mine") ?? new();
+        }
+        catch
+        {
+            listings = new();
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}

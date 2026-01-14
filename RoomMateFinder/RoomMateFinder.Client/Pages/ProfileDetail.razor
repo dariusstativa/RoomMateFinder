@@ -75,17 +75,6 @@
                     <p>@profile.StudyHabits</p>
                 </div>
 
-                @if (profile.UserId != AuthService.UserId)
-                {
-                    <div class="info-card actions">
-                        <button class="btn-like" @onclick="HandleLike">👍 Like</button>
-                        <button class="btn-dislike" @onclick="HandleDislike">👎 Pass</button>
-                        <button class="btn-message" @onclick="OpenChat">
-                            💬 Message
-                        </button>
-                    </div>
-                }
-
                 <!-- ⭐ REVIEW SUMMARY -->
                 <div class="info-card">
                     <ReviewSummary
@@ -93,7 +82,6 @@
                         TargetId="profile.Id"
                         TargetType="ReviewTargetType.Profile"
                         OwnerUserId="profile.UserId" />
-
                 </div>
 
                 <!-- ⭐ REVIEWS LIST -->
@@ -115,7 +103,6 @@
     private bool isLoading = true;
     private string errorMessage = string.Empty;
 
-    // 🔑 forces ReviewSummary to refresh when reviews change
     private int ratingVersion = 0;
 
     protected override async Task OnInitializedAsync()
@@ -151,59 +138,6 @@
         }
     }
 
-    private async Task HandleLike()
-    {
-        if (profile == null) return;
-
-        AuthService.AddAuthorizationHeader(Http);
-
-        await Http.PostAsJsonAsync("/matching/like", new
-        {
-            targetProfileId = profile.Id
-        });
-    }
-
-    private async Task HandleDislike()
-    {
-        if (profile == null) return;
-
-        AuthService.AddAuthorizationHeader(Http);
-
-        await Http.PostAsJsonAsync("/matching/dislike", new
-        {
-            targetProfileId = profile.Id
-        });
-    }
-
-    // ✅ kept as requested
-    private async Task OpenChat()
-    {
-        if (profile == null) return;
-
-        AuthService.AddAuthorizationHeader(Http);
-
-        var resp = await Http.PostAsync(
-            $"/conversations/with/{profile.UserId}",
-            content: null);
-
-        if (!resp.IsSuccessStatusCode)
-        {
-            errorMessage = $"Failed to create/get conversation: {(int)resp.StatusCode} {resp.ReasonPhrase}";
-            return;
-        }
-
-        var conversationId = await resp.Content.ReadFromJsonAsync<Guid>();
-
-        if (conversationId == Guid.Empty)
-        {
-            errorMessage = "Conversation id is empty.";
-            return;
-        }
-
-        Navigation.NavigateTo($"/chat/{conversationId}");
-    }
-
-    // 🔔 called by ReviewList
     private void OnReviewsChanged()
     {
         ratingVersion++;
@@ -212,6 +146,9 @@
 
     private string GetInitials(string name)
     {
+        if (string.IsNullOrWhiteSpace(name))
+            return "?";
+
         var p = name.Split(' ', StringSplitOptions.RemoveEmptyEntries);
         return p.Length == 1
             ? p[0][0].ToString().ToUpper()
