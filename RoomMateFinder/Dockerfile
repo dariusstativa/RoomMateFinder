@@ -16,7 +16,7 @@ RUN dotnet publish RoomMateFinder.csproj \
     --no-restore
 
 # ---------- RUNTIME ----------
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS build
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 
 COPY --from=build /app/publish .
