@@ -29,7 +29,9 @@
         <div class="profiles-grid">
             @foreach (var profile in profiles)
             {
-                <div class="profile-card" @onclick="@(() => Navigation.NavigateTo($"/profiles/{profile.UserId}"))">
+                <div class="profile-card"
+                     @onclick="@(() => Navigation.NavigateTo($"/profiles/{profile.UserId}"))">
+
                     <div class="profile-header">
                         <div class="avatar">@GetInitials(profile.FullName)</div>
                         <div class="profile-info">
@@ -40,7 +42,11 @@
 
                     <div class="profile-details">
                         <p class="university">🎓 @profile.University</p>
-                        <p class="bio">@(profile.Bio.Length > 100 ? profile.Bio.Substring(0, 100) + "..." : profile.Bio)</p>
+                        <p class="bio">
+                            @(profile.Bio.Length > 100
+                                ? profile.Bio.Substring(0, 100) + "..."
+                                : profile.Bio)
+                        </p>
                     </div>
 
                     <div class="profile-tags">
@@ -49,8 +55,23 @@
                         <span class="tag">🔊 @profile.NoiseTolerance</span>
                     </div>
 
+                    <!-- LIKE / PASS -->
+                    <div class="profile-actions" @onclick:stopPropagation="true">
+                        <button class="btn-like"
+                                @onclick="() => LikeAsync(profile.Id)">
+                            👍 Like
+                        </button>
+
+                        <button class="btn-pass"
+                                @onclick="() => PassAsync(profile.Id)">
+                            ❌ Pass
+                        </button>
+                    </div>
+
                     <div class="profile-footer">
-                        <button class="btn-view" @onclick:stopPropagation="true" @onclick="@(() => Navigation.NavigateTo($"/profiles/{profile.UserId}"))">
+                        <button class="btn-view"
+                                @onclick:stopPropagation="true"
+                                @onclick="@(() => Navigation.NavigateTo($"/profiles/{profile.UserId}"))">
                             View Profile
                         </button>
                     </div>
@@ -67,7 +88,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        // Check if user is authenticated
         if (!AuthService.IsAuthenticated)
         {
             Navigation.NavigateTo("/login");
@@ -84,9 +104,7 @@
 
         try
         {
-            // Add authorization header before making request
             AuthService.AddAuthorizationHeader(Http);
-            
             profiles = await Http.GetFromJsonAsync<List<Profile>>("/profiles");
         }
         catch (Exception ex)
@@ -99,20 +117,87 @@
         }
     }
 
+    // POST /like
+    private async Task LikeAsync(Guid targetProfileId)
+    {
+        errorMessage = string.Empty;
+
+        try
+        {
+            var payload = new
+            {
+                LikerUserId = AuthService.UserId,
+                TargetProfileId = targetProfileId
+            };
+
+            var resp = await Http.PostAsJsonAsync("/like", payload);
+
+            if (resp.IsSuccessStatusCode)
+            {
+                RemoveProfile(targetProfileId);
+            }
+            else
+            {
+                errorMessage = $"Like failed: {(int)resp.StatusCode}";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Like failed: {ex.Message}";
+        }
+    }
+
+    // POST /matching/dislike
+    private async Task PassAsync(Guid targetProfileId)
+    {
+        errorMessage = string.Empty;
+
+        try
+        {
+            var payload = new
+            {
+                LikerUserId = AuthService.UserId,
+                TargetProfileId = targetProfileId
+            };
+
+            var resp = await Http.PostAsJsonAsync("/matching/dislike", payload);
+
+            if (resp.IsSuccessStatusCode)
+            {
+                RemoveProfile(targetProfileId);
+            }
+            else
+            {
+                errorMessage = $"Pass failed: {(int)resp.StatusCode}";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Pass failed: {ex.Message}";
+        }
+    }
+
+    private void RemoveProfile(Guid profileId)
+    {
+        var toRemove = profiles?.FirstOrDefault(p => p.Id == profileId);
+        if (toRemove != null)
+        {
+            profiles!.Remove(toRemove);
+        }
+    }
+
     private string GetInitials(string fullName)
     {
         if (string.IsNullOrWhiteSpace(fullName))
             return "?";
 
         var parts = fullName.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-        if (parts.Length == 0)
-            return "?";
-        if (parts.Length == 1)
-            return parts[0].Substring(0, 1).ToUpper();
-        
-        return (parts[0].Substring(0, 1) + parts[^1].Substring(0, 1)).ToUpper();
+        return parts.Length == 1
+            ? parts[0][0].ToString().ToUpper()
+            : $"{parts[0][0]}{parts[^1][0]}".ToUpper();
     }
 }
+
 
 <style>
     .profiles-container {
@@ -276,6 +361,37 @@
         border-radius: 6px;
         font-size: 14px;
     }
+    .profile-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 12px;
+    }
+
+    .btn-like,
+    .btn-pass {
+        flex: 1;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-like {
+        background: #e6f4ea;
+        color: #256029;
+    }
+
+    .btn-pass {
+        background: #fdecec;
+        color: #9b2c2c;
+    }
+
+    .btn-like:hover,
+    .btn-pass:hover {
+        filter: brightness(0.97);
+    }
 
     @@media (max-width: 768px) {
         .profiles-grid {
@@ -286,4 +402,5 @@
             font-size: 28px;
         }
     }
+    
 </style>

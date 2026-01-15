@@ -3,4 +3,5 @@ using RoomMateFinder.Domain.Entities;
 
 namespace RoomMateFinder.Features.Profiles.GetAllProfiles;
 
-public record GetAllProfilesQuery() : IRequest<List<Profile>>;
+public record GetAllProfilesQuery(Guid UserId) 
+    : IRequest<List<Profile>>;

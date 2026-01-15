@@ -47,7 +47,10 @@ using RoomMateFinder.Features.Reviews.GetReviwesProfile;
 // Conversations + SignalR
 using RoomMateFinder.Features.Conversations;
 using RoomMateFinder.Features.Messages; // ✅ GetConversationMessagesEndpoint (MapGetConversationMessages)
-using RoomMateFinder.Features.Conversations.Messaging; // ✅ dacă aici ai MapSendMessageEndpoint / alte endpoints
+using RoomMateFinder.Features.Conversations.Messaging;
+using RoomMateFinder.Features.Conversations.Messaging.Conversation;
+using RoomMateFinder.Features.Messaging.Conversation;
+using RoomMateFinder.Features.RoomListings.GetMyListings; // ✅ dacă aici ai MapSendMessageEndpoint / alte endpoints
 
 using RoomMateFinder.Infrastructure.Persistence;
 using RoomMateFinder.Middleware;
@@ -266,7 +269,7 @@ app.MapSearchProfilesEndpoint();
 // Matching
 //
 app.MapLikeEndpoints();
-
+app.MapDislikeEndpoint();
 // ⚠️ recomand să îl scoți când e stabil, ca să nu ai două contracte diferite:
 app.MapLegacyLikeEndpoint();
 
@@ -281,6 +284,7 @@ app.MapUpdateListingEndpoint();
 app.MapDeleteListingEndpoint();
 app.MapGetAllListingsEndpoint();
 app.MapGetListingByIdEndpoint();
+app.MapIsMatchEndpoint();
 
 //
 // Conversations + Messages
@@ -289,8 +293,10 @@ app.MapGetOrCreateConversation();
 
 // ✅ lipsea: load messages by conversationId
 app.MapGetConversationMessages();
+app.MapGetMyListingsEndpoint();
+app.MapGetOrCreateListingConversation();
+app.MapGetConversations();
 
-app.MapGet("/", () => Results.Ok("RoomMateFinder API is running"));
 app.Run();
 
 namespace RoomMateFinder

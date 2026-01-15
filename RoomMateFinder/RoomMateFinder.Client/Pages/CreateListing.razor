@@ -87,7 +87,7 @@
 </div>
 
 @code {
-    private CreateListingRequest listingRequest = new();
+    private readonly CreateListingRequest listingRequest = new();
     private string errorMessage = string.Empty;
     private string successMessage = string.Empty;
     private bool isLoading = false;

@@ -1,0 +1,140 @@
+﻿@page "/conversations"
+@page "/messages"
+
+@inject IHttpClientFactory ClientFactory
+@inject NavigationManager Navigation
+@inject RoomMateFinder.Client.Services.AuthService AuthService
+
+<div class="conversations-page">
+    <div class="conversations-header">
+        <h1>💬 Messages</h1>
+    </div>
+
+    @if (isLoading)
+    {
+        <div class="loading">Loading conversations...</div>
+    }
+    else if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <div class="error-message">@errorMessage</div>
+    }
+    else if (!conversations.Any())
+    {
+        <div class="empty-state">
+            <p>📭 No conversations yet</p>
+            <p class="empty-subtitle">Start chatting with your matches or message listing owners!</p>
+        </div>
+    }
+    else
+    {
+        <div class="conversations-list">
+            @foreach (var conv in conversations)
+            {
+                <div class="conversation-item" @onclick="@(() => OpenChat(conv))">
+                    <div class="conversation-avatar">
+                        @GetInitials(conv.OtherUserName)
+                    </div>
+                    
+                    <div class="conversation-info">
+                        <div class="conversation-top">
+                            <h3 class="conversation-name">@conv.OtherUserName</h3>
+                            <span class="conversation-time">@FormatTime(conv.LastMessageAt)</span>
+                        </div>
+                        
+                        @if (!string.IsNullOrEmpty(conv.ListingTitle))
+                        {
+                            <p class="conversation-listing">🏠 @conv.ListingTitle</p>
+                        }
+                        
+                        <p class="conversation-preview">
+                            @(conv.LastMessage ?? "No messages yet")
+                        </p>
+                    </div>
+
+                    @if (conv.UnreadCount > 0)
+                    {
+                        <div class="unread-badge">@conv.UnreadCount</div>
+                    }
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    private List<ConversationListItem> conversations = new();
+    private string errorMessage = string.Empty;
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (!AuthService.IsAuthenticated)
+        {
+            Navigation.NavigateTo("/login");
+            return;
+        }
+
+        await LoadConversations();
+    }
+
+    private async Task LoadConversations()
+    {
+        try
+        {
+            var http = ClientFactory.CreateClient("RoomMateFinderAPI");
+            conversations = await http.GetFromJsonAsync<List<ConversationListItem>>("/conversations") 
+                ?? new();
+            
+            conversations = conversations.OrderByDescending(c => c.LastMessageAt).ToList();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "Failed to load conversations.";
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private void OpenChat(ConversationListItem conv)
+    {
+        Navigation.NavigateTo($"/chat/{conv.Id}/{conv.OtherUserId}");
+    }
+
+    private string GetInitials(string name)
+    {
+        if (string.IsNullOrEmpty(name)) return "?";
+        
+        var parts = name.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        if (parts.Length >= 2)
+            return $"{parts[0][0]}{parts[1][0]}".ToUpper();
+        
+        return name[0].ToString().ToUpper();
+    }
+
+    private string FormatTime(DateTime dateTime)
+    {
+        var span = DateTime.UtcNow - dateTime;
+        
+        if (span.TotalMinutes < 1) return "Just now";
+        if (span.TotalHours < 1) return $"{(int)span.TotalMinutes}m ago";
+        if (span.TotalDays < 1) return $"{(int)span.TotalHours}h ago";
+        if (span.TotalDays < 7) return $"{(int)span.TotalDays}d ago";
+        
+        return dateTime.ToString("MMM dd");
+    }
+
+    public class ConversationListItem
+    {
+        public Guid Id { get; set; }
+        public Guid OtherUserId { get; set; }
+        public string OtherUserName { get; set; } = string.Empty;
+        public string? LastMessage { get; set; }
+        public DateTime LastMessageAt { get; set; }
+        public int UnreadCount { get; set; }
+        public Guid? ListingId { get; set; }
+        public string? ListingTitle { get; set; }
+    }
+}

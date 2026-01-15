@@ -1,4 +1,6 @@
 @using RoomMateFinder.Client.Models
+@using System.Net.Http.Json
+
 @inject HttpClient Http
 @inject RoomMateFinder.Client.Services.AuthService AuthService
 
@@ -37,7 +39,7 @@
                     @if (AuthService.UserId == review.ReviewerId)
                     {
                         <button class="link-danger"
-                                @onclick="@(() => DeleteReview(review.Id))">
+                                @onclick="() => DeleteReview(review.Id)">
                             Delete
                         </button>
                     }
@@ -58,28 +60,39 @@
         <div class="add-review-box">
             <AddReviewForm TargetId="TargetId"
                            TargetType="TargetType"
-                           OnAdded="ReloadReviews" />
+                           OnAdded="HandleReviewAdded" />
         </div>
     }
 </div>
 
 @code {
+   
+
     [Parameter] public Guid TargetId { get; set; }
     [Parameter] public ReviewTargetType TargetType { get; set; }
     [Parameter] public Guid OwnerUserId { get; set; }
 
+    
+    [Parameter] public EventCallback ReviewsChanged { get; set; }
+
+   
+
     private List<ReviewDto> reviews = new();
-    private bool isLoading = true;
+    private bool isLoading;
 
     private bool CanAddReview =>
         AuthService.IsAuthenticated &&
         OwnerUserId != Guid.Empty &&
         AuthService.UserId != OwnerUserId;
 
+   
+
     protected override async Task OnParametersSetAsync()
     {
         await ReloadReviews();
     }
+
+   
 
     private async Task ReloadReviews()
     {
@@ -93,22 +106,35 @@
                 ? $"/profiles/{TargetId}/reviews"
                 : $"/listings/{TargetId}/reviews";
 
-            reviews = await Http.GetFromJsonAsync<List<ReviewDto>>(url) ?? new();
+            reviews = await Http.GetFromJsonAsync<List<ReviewDto>>(url)
+                      ?? new();
         }
         finally
         {
             isLoading = false;
-            StateHasChanged();
         }
     }
 
     private async Task DeleteReview(Guid id)
     {
         AuthService.AddAuthorizationHeader(Http);
+
         await Http.DeleteAsync($"/reviews/{id}");
+
         await ReloadReviews();
+
+        
+        await ReviewsChanged.InvokeAsync();
     }
 
-    private string RenderStars(int rating)
+    private async Task HandleReviewAdded()
+    {
+        await ReloadReviews();
+
+        
+        await ReviewsChanged.InvokeAsync();
+    }
+
+    private static string RenderStars(int rating)
         => new string('⭐', rating);
 }

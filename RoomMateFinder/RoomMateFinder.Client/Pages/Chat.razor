@@ -4,6 +4,7 @@
 @using System.Net.Http.Json
 @using Microsoft.AspNetCore.Components.Web
 @using Microsoft.AspNetCore.SignalR.Client
+@using RoomMateFinder.Client.Services
 
 @inject IHttpClientFactory ClientFactory
 @inject NavigationManager Navigation
@@ -12,9 +13,13 @@
 
 <div class="chat-page">
     <div class="chat-header">
-        <button class="btn-back" @onclick="@(() => Navigation.NavigateTo("/matches"))">
-            ← Back
+        <button class="chat-back-btn"
+                @onclick="@(() => Navigation.NavigateTo("/matches"))"
+                aria-label="Back to matches">
+            <span class="chat-back-icon">←</span>
+            <span class="chat-back-text">Back</span>
         </button>
+
         <h2>Chat</h2>
     </div>
 

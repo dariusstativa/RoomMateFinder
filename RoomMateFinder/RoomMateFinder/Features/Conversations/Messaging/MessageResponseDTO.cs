@@ -4,7 +4,7 @@ public class MessageResponse
 {
     public Guid Id { get; set; }
 
-    // 🔑 FOARTE IMPORTANT
+    
     public Guid ConversationId { get; set; }
 
     public Guid SenderId { get; set; }

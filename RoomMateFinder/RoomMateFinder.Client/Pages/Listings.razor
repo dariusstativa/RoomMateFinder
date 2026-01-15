@@ -34,7 +34,14 @@
         <div class="listings-grid">
             @foreach (var listing in listings)
             {
-                <div class="listing-card" @onclick="@(() => Navigation.NavigateTo($"/listings/{listing.Id}"))">
+                <div class="listing-card"
+                     @onclick="@(() => Navigation.NavigateTo($"/listings/{listing.Id}"))">
+
+                    @if (listing.OwnerId == AuthService.UserId)
+                    {
+                        <span class="my-listing-badge">Your listing</span>
+                    }
+
                     @if (!string.IsNullOrEmpty(listing.ImageUrl))
                     {
                         <div class="listing-image">
@@ -47,19 +54,28 @@
                             <span>🏠</span>
                         </div>
                     }
+
                     <div class="listing-content">
                         <div class="listing-header">
                             <h3>@listing.Title</h3>
                             <span class="price">$@listing.Price/month</span>
                         </div>
+
                         <p class="address">📍 @listing.Address</p>
-                        <p class="description">@(listing.Description.Length > 150 ? listing.Description.Substring(0, 150) + "..." : listing.Description)</p>
+
+                        <p class="description">
+                            @(listing.Description.Length > 150
+                                ? listing.Description.Substring(0, 150) + "..."
+                                : listing.Description)
+                        </p>
+
                         <div class="listing-footer">
                             <span class="roommates">👥 @listing.RoommatesCount roommate(s)</span>
                             <span class="gender">@listing.GenderPreference</span>
                         </div>
+
                         <div class="listing-date">
-                            Posted @FormatDate(listing.CreatedAt)
+                            Posted @FormatDate(listing.CreatedAt, _timeProvider)
                         </div>
                     </div>
                 </div>
@@ -75,7 +91,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        // Check if user is authenticated
         if (!AuthService.IsAuthenticated)
         {
             Navigation.NavigateTo("/login");
@@ -92,9 +107,7 @@
 
         try
         {
-            // Add authorization header before making request
             AuthService.AddAuthorizationHeader(Http);
-            
             listings = await Http.GetFromJsonAsync<List<RoomListing>>("/listings");
         }
         catch (Exception ex)
@@ -107,18 +120,20 @@
         }
     }
 
-    private string FormatDate(DateTime date)
+    private readonly TimeProvider _timeProvider = TimeProvider.System;
+
+    private static string FormatDate(DateTime date, TimeProvider timeProvider)
     {
-        var timeSpan = DateTime.Now - date;
-        if (timeSpan.TotalDays < 1)
-            return "today";
-        if (timeSpan.TotalDays < 2)
-            return "yesterday";
-        if (timeSpan.TotalDays < 7)
-            return $"{(int)timeSpan.TotalDays} days ago";
+        var now = timeProvider.GetLocalNow().DateTime;
+        var timeSpan = now - date;
+
+        if (timeSpan.TotalDays < 1) return "today";
+        if (timeSpan.TotalDays < 2) return "yesterday";
+        if (timeSpan.TotalDays < 7) return $"{(int)timeSpan.TotalDays} days ago";
         return date.ToString("MMM dd, yyyy");
     }
 }
+
 
 <style>
     .listings-container {
@@ -347,4 +362,22 @@
             -webkit-line-clamp: 3;
         }
     }
+    .listing-card {
+        position: relative;
+    }
+
+    .my-listing-badge {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        background: #667eea;
+        color: white;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 500;
+        z-index: 2;
+        pointer-events: none;
+    }
+
 </style>

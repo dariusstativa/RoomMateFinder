@@ -2,9 +2,8 @@ using System.Security.Claims;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using RoomMateFinder.Features.Conversations.Messaging;
 using RoomMateFinder.Features.Conversations.Messaging.Message;
-
+namespace RoomMateFinder.Features.Conversations.Messaging;
 [ApiController]
 [Route("messages")]
 [Authorize]

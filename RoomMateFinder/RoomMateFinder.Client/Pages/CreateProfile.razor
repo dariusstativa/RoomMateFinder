@@ -135,7 +135,7 @@
 </div>
 
 @code {
-    private CreateProfileRequest profileRequest = new();
+    private readonly CreateProfileRequest profileRequest = new();
     private string errorMessage = string.Empty;
     private string successMessage = string.Empty;
     private bool isLoading = false;

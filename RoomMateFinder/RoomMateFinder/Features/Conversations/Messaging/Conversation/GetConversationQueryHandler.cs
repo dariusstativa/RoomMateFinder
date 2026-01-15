@@ -1,11 +1,8 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using RoomMateFinder.Features.Conversations.Messaging;
-using RoomMateFinder.Features.Conversations.Messaging.Conversation;
 using RoomMateFinder.Infrastructure.Persistence;
+namespace RoomMateFinder.Features.Conversations.Messaging.Conversation;
 
-namespace RoomMateFinder.Application.Messages.Handlers
-{
     public class GetConversationQueryHandler : IRequestHandler<GetConversationQuery, List<MessageResponse>>
     {
         private readonly AppDbContext _context;
@@ -34,4 +31,3 @@ namespace RoomMateFinder.Application.Messages.Handlers
             }).ToList();
         }
     }
-}
