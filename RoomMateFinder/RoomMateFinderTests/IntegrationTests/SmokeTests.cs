@@ -1,6 +1,8 @@
 ﻿using System.Net;
 using Xunit;
 
+namespace RoomMateFinderTests.IntegrationTests;
+
 public class SmokeTests : IClassFixture<CustomWebApplicationFactory>
 {
     private readonly HttpClient _client;

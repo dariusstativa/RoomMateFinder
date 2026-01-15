@@ -1,144 +1,190 @@
 ﻿@page "/profiles/{userId:guid}"
-@page "/my-profile"
-
-@using RoomMateFinder.Client.Models
 @inject HttpClient Http
 @inject NavigationManager Navigation
 @inject RoomMateFinder.Client.Services.AuthService AuthService
 
-<div class="profile-v2-page">
+<div class="profile-detail-container">
     @if (isLoading)
     {
         <div class="loading">Loading profile...</div>
     }
     else if (!string.IsNullOrEmpty(errorMessage))
     {
-        <div class="error-container">@errorMessage</div>
+        <div class="error-container">
+            <div class="error-message">@errorMessage</div>
+            <button class="btn-secondary" @onclick="@(() => Navigation.NavigateTo("/profiles"))">
+                Back to Profiles
+            </button>
+        </div>
     }
     else if (profile != null)
     {
-        <div class="profile-v2-card">
-
-            <!-- LEFT SUMMARY -->
-            <aside class="profile-left">
-                <div class="avatar-circle">
-                    @GetInitials(profile.FullName)
-                </div>
-
-                <h1>@profile.FullName</h1>
-                <p class="meta">@profile.Age years • @profile.Gender</p>
-                <p class="university">🎓 @profile.University</p>
-
+        <div class="profile-detail-card">
+            <div class="profile-detail-header">
+                <button class="btn-back" @onclick="@(() => Navigation.NavigateTo("/profiles"))">
+                    ← Back to Profiles
+                </button>
                 @if (profile.UserId == AuthService.UserId)
                 {
-                    <button class="btn-primary"
-                            @onclick="@(() => Navigation.NavigateTo("/profile/edit"))">
+                    <button class="btn-edit" @onclick="@(() => Navigation.NavigateTo($"/profile/edit"))">
                         Edit Profile
                     </button>
                 }
-                else
-                {
-                    <button class="btn-secondary"
-                            @onclick="@(() => Navigation.NavigateTo("/profiles"))">
-                        ← Back
-                    </button>
-                }
-            </aside>
+            </div>
 
-            <!-- RIGHT CONTENT -->
-            <section class="profile-right">
+            <div class="profile-hero">
+                <div class="avatar-large">@GetInitials(profile.FullName)</div>
+                <div class="hero-info">
+                    <h1>@profile.FullName</h1>
+                    <p class="meta">@profile.Age years old • @profile.Gender</p>
+                    <p class="university">🎓 @profile.University</p>
+                </div>
+            </div>
 
-                <div class="info-card">
-                    <h3>📝 About Me</h3>
-                    <p>@profile.Bio</p>
+            <div class="profile-content">
+                <div class="section">
+                    <h2>📝 About Me</h2>
+                    <p class="bio">@profile.Bio</p>
                 </div>
 
-                <div class="info-card">
-                    <h3>🏠 Living Preferences</h3>
-                    <ul>
-                        <li><strong>Sleep:</strong> @profile.SleepSchedule</li>
-                        <li><strong>Cleanliness:</strong> @profile.Cleanliness</li>
-                        <li><strong>Noise:</strong> @profile.NoiseTolerance</li>
-                    </ul>
-                </div>
+                <div class="section">
+                    <h2>🏠 Living Preferences</h2>
+                    <div class="preferences-grid">
+                        <div class="preference-item">
+                            <span class="icon">🌙</span>
+                            <div>
+                                <h3>Sleep Schedule</h3>
+                                <p>@profile.SleepSchedule</p>
+                            </div>
+                        </div>
 
-                <div class="info-card">
-                    <h3>🚭 Lifestyle</h3>
-                    <ul>
-                        <li><strong>Smoking:</strong> @profile.SmokingPreference</li>
-                        <li><strong>Pets:</strong> @profile.PetPreference</li>
-                    </ul>
-                </div>
+                        <div class="preference-item">
+                            <span class="icon">✨</span>
+                            <div>
+                                <h3>Cleanliness</h3>
+                                <p>@profile.Cleanliness</p>
+                            </div>
+                        </div>
 
-                <div class="info-card">
-                    <h3>📚 Study Habits</h3>
-                    <p>@profile.StudyHabits</p>
+                        <div class="preference-item">
+                            <span class="icon">🔊</span>
+                            <div>
+                                <h3>Noise Tolerance</h3>
+                                <p>@profile.NoiseTolerance</p>
+                            </div>
+                        </div>
+
+                        <div class="preference-item">
+                            <span class="icon">🚭</span>
+                            <div>
+                                <h3>Smoking</h3>
+                                <p>@profile.SmokingPreference</p>
+                            </div>
+                        </div>
+
+                        <div class="preference-item">
+                            <span class="icon">🐾</span>
+                            <div>
+                                <h3>Pets</h3>
+                                <p>@profile.PetPreference</p>
+                            </div>
+                        </div>
+
+                        <div class="preference-item">
+                            <span class="icon">📚</span>
+                            <div>
+                                <h3>Study Habits</h3>
+                                <p>@profile.StudyHabits</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 @if (profile.UserId != AuthService.UserId)
                 {
-                    <div class="info-card actions">
-                        <button class="btn-like" @onclick="HandleLike">👍 Like</button>
-                        <button class="btn-dislike" @onclick="HandleDislike">👎 Pass</button>
-                        <button class="btn-message"
-                                @onclick="@(() => Navigation.NavigateTo($"/chat/{profile.UserId}"))">
-                            💬 Message
-                        </button>
+                    <div class="action-section">
+                        <h2>💬 Interested?</h2>
+                        <p>Connect with @profile.FullName to see if you're a good match!</p>
+                        
+                        @if (!string.IsNullOrEmpty(likeMessage))
+                        {
+                            <div class="like-message">@likeMessage</div>
+                        }
+                        
+                        @if (!string.IsNullOrEmpty(likeError))
+                        {
+                            <div class="like-error">@likeError</div>
+                        }
+                        
+                        <div class="action-buttons">
+                            <button class="btn-like" @onclick="HandleLike" disabled="@isLiking">
+                                @if (isLiking)
+                                {
+                                    <span>...</span>
+                                }
+                                else
+                                {
+                                    <span>👍 Like</span>
+                                }
+                            </button>
+                            <button class="btn-dislike" @onclick="HandleDislike" disabled="@isDisliking">
+                                @if (isDisliking)
+                                {
+                                    <span>...</span>
+                                }
+                                else
+                                {
+                                    <span>👎 Pass</span>
+                                }
+                            </button>
+                        </div>
                     </div>
                 }
-
-                <!-- ⭐ REVIEW SUMMARY -->
-                <div class="info-card">
-                    <ReviewSummary
-                        TargetId="profile.Id"
-                        TargetType="ReviewTargetType.Profile" />
-                </div>
-
-                <!-- ⭐ REVIEWS LIST (IMDb-style) -->
-                <ReviewList
-                    @key="profile.Id"
-                    TargetId="profile.Id"
-                    TargetType="ReviewTargetType.Profile"
-                    OwnerUserId="profile.UserId" />
-
-            </section>
+            </div>
         </div>
     }
 </div>
 
 @code {
-    [Parameter] public Guid? UserId { get; set; }
+    [Parameter]
+    public Guid UserId { get; set; }
 
     private Profile? profile;
-    private bool isLoading = true;
     private string errorMessage = string.Empty;
+    private bool isLoading = true;
+    private string likeMessage = string.Empty;
+    private string likeError = string.Empty;
+    private bool isLiking = false;
+    private bool isDisliking = false;
 
     protected override async Task OnInitializedAsync()
     {
-        if (UserId == null)
-        {
-            if (!AuthService.IsAuthenticated)
-            {
-                Navigation.NavigateTo("/login");
-                return;
-            }
-
-            UserId = AuthService.UserId;
-        }
-
         await LoadProfile();
     }
 
     private async Task LoadProfile()
     {
+        isLoading = true;
+        errorMessage = string.Empty;
+
         try
         {
-            AuthService.AddAuthorizationHeader(Http);
             profile = await Http.GetFromJsonAsync<Profile>($"/profiles/{UserId}");
         }
-        catch
+        catch (HttpRequestException ex)
         {
-            errorMessage = "Failed to load profile.";
+            if (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                errorMessage = "Profile not found.";
+            }
+            else
+            {
+                errorMessage = $"Error loading profile: {ex.Message}";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error: {ex.Message}";
         }
         finally
         {
@@ -148,33 +194,407 @@
 
     private async Task HandleLike()
     {
-        if (profile == null) return;
+        if (isLiking || !AuthService.IsAuthenticated) return;
 
-        AuthService.AddAuthorizationHeader(Http);
-        await Http.PostAsJsonAsync("/matching/like", new
+        isLiking = true;
+        likeMessage = string.Empty;
+        likeError = string.Empty;
+
+        try
         {
-            LikerUserId = AuthService.UserId,
-            TargetProfileId = profile.UserId
-        });
+            var request = new
+            {
+                LikerUserId = AuthService.UserId,
+                TargetProfileId = UserId
+            };
+
+            var response = await Http.PostAsJsonAsync("/matching/like", request);
+
+            if (response.IsSuccessStatusCode)
+            {
+                likeMessage = "✅ You liked this profile!";
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                likeError = $"Failed to like profile: {errorContent}";
+            }
+        }
+        catch (Exception ex)
+        {
+            likeError = $"Error: {ex.Message}";
+        }
+        finally
+        {
+            isLiking = false;
+        }
     }
 
     private async Task HandleDislike()
     {
-        if (profile == null) return;
+        if (isDisliking || !AuthService.IsAuthenticated) return;
 
-        AuthService.AddAuthorizationHeader(Http);
-        await Http.PostAsJsonAsync("/matching/dislike", new
+        isDisliking = true;
+        likeMessage = string.Empty;
+        likeError = string.Empty;
+
+        try
         {
-            LikerUserId = AuthService.UserId,
-            TargetProfileId = profile.UserId
-        });
+            var request = new
+            {
+                LikerUserId = AuthService.UserId,
+                TargetProfileId = UserId
+            };
+
+            var response = await Http.PostAsJsonAsync("/matching/dislike", request);
+
+            if (response.IsSuccessStatusCode)
+            {
+                likeMessage = "✅ You passed on this profile.";
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                likeError = $"Failed to pass profile: {errorContent}";
+            }
+        }
+        catch (Exception ex)
+        {
+            likeError = $"Error: {ex.Message}";
+        }
+        finally
+        {
+            isDisliking = false;
+        }
     }
 
-    private string GetInitials(string name)
+    private string GetInitials(string fullName)
     {
-        var p = name.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-        return p.Length == 1
-            ? p[0][0].ToString().ToUpper()
-            : $"{p[0][0]}{p[^1][0]}".ToUpper();
+        if (string.IsNullOrWhiteSpace(fullName))
+            return "?";
+
+        var parts = fullName.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        if (parts.Length == 0)
+            return "?";
+        if (parts.Length == 1)
+            return parts[0].Substring(0, 1).ToUpper();
+        
+        return (parts[0].Substring(0, 1) + parts[^1].Substring(0, 1)).ToUpper();
     }
 }
+
+<style>
+    .profile-detail-container {
+        min-height: 100vh;
+        background: #f5f7fa;
+        padding: 40px 20px;
+    }
+
+    .loading, .error-container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 40px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .error-message {
+        color: #c53030;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .profile-detail-card {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .profile-detail-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background: white;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .btn-back, .btn-edit {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .btn-back {
+        background: #e0e0e0;
+        color: #555;
+    }
+
+    .btn-back:hover {
+        background: #d0d0d0;
+    }
+
+    .btn-edit {
+        background: #667eea;
+        color: white;
+    }
+
+    .btn-edit:hover {
+        background: #5568d3;
+    }
+
+    .profile-hero {
+        padding: 40px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .avatar-large {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        font-weight: 600;
+        flex-shrink: 0;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .hero-info h1 {
+        font-size: 32px;
+        font-weight: 600;
+        margin: 0 0 8px 0;
+    }
+
+    .hero-info .meta {
+        font-size: 16px;
+        margin: 0 0 8px 0;
+        opacity: 0.9;
+    }
+
+    .hero-info .university {
+        font-size: 16px;
+        margin: 0;
+        opacity: 0.95;
+    }
+
+    .profile-content {
+        padding: 40px;
+    }
+
+    .section {
+        margin-bottom: 40px;
+    }
+
+    .section h2 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #333;
+        margin: 0 0 20px 0;
+    }
+
+    .bio {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+        margin: 0;
+        white-space: pre-wrap;
+    }
+
+    .preferences-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+    }
+
+    .preference-item {
+        display: flex;
+        gap: 16px;
+        padding: 20px;
+        background: #f5f7fa;
+        border-radius: 8px;
+    }
+
+    .preference-item .icon {
+        font-size: 32px;
+        flex-shrink: 0;
+    }
+
+    .preference-item h3 {
+        font-size: 14px;
+        font-weight: 600;
+        color: #666;
+        margin: 0 0 4px 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .preference-item p {
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+        margin: 0;
+    }
+
+    .action-section {
+        padding: 30px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 12px;
+        text-align: center;
+        color: white;
+    }
+
+    .action-section h2 {
+        font-size: 24px;
+        margin: 0 0 10px 0;
+        color: white;
+    }
+
+    .action-section p {
+        font-size: 16px;
+        margin: 0 0 20px 0;
+        opacity: 0.9;
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .btn-like, .btn-dislike {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .btn-like {
+        background: white;
+        color: #667eea;
+    }
+
+    .btn-like:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-like:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    .btn-dislike {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 2px solid white;
+    }
+
+    .btn-dislike:hover:not(:disabled) {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+    }
+
+    .btn-dislike:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    .btn-message {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 2px solid white;
+    }
+
+    .btn-message:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-secondary {
+        padding: 12px 24px;
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .btn-secondary:hover {
+        background: #5568d3;
+    }
+
+    .like-message, .like-error {
+        margin: 20px 0;
+        padding: 10px;
+        border-radius: 6px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .like-message {
+        background: #d4edda;
+        color: #155724;
+    }
+
+    .like-error {
+        background: #f8d7da;
+        color: #721c24;
+    }
+
+    @@media (max-width: 768px) {
+        .profile-detail-header {
+            padding: 15px 20px;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 10px;
+        }
+
+        .profile-hero {
+            flex-direction: column;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .hero-info h1 {
+            font-size: 24px;
+        }
+
+        .profile-content {
+            padding: 20px;
+        }
+
+        .preferences-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .action-buttons {
+            flex-direction: column;
+        }
+
+        .btn-like, .btn-message {
+            width: 100%;
+        }
+    }
+</style>

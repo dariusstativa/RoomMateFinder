@@ -4,7 +4,7 @@ using MediatR;
 using RoomMateFinder.Features.Conversations.Messaging;
 using RoomMateFinder.Features.Conversations.Messaging.Conversation;
 using RoomMateFinder.Features.Conversations.Messaging.Message;
-using System.Security.Claims;
+
 
 namespace RoomMateFinder.Api.Controllers
 {
@@ -23,11 +23,10 @@ namespace RoomMateFinder.Api.Controllers
         [HttpPost("send")]
         public async Task<IActionResult> Send([FromBody] SendMessageDto dto)
         {
-            
-            var senderId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var senderId = User.FindFirst("sub")?.Value;
 
             if (senderId is null)
-                return Unauthorized("Invalid JWT: missing user identifier");
+                return Unauthorized("Invalid JWT: missing sub claim");
 
             var command = new SendMessageCommand
             {
@@ -41,12 +40,12 @@ namespace RoomMateFinder.Api.Controllers
         }
 
         [HttpGet("conversation")]
-        public async Task<IActionResult> GetConversation([FromQuery] Guid otherUserId)
+        public async Task<IActionResult> GetConversation(Guid otherUserId)
         {
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var userId = User.FindFirst("sub")?.Value;
 
             if (userId is null)
-                return Unauthorized("Invalid JWT: missing user identifier");
+                return Unauthorized("Invalid JWT");
 
             var query = new GetConversationQuery
             {

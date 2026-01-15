@@ -10,7 +10,7 @@ public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<AppDbConte
         var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
 
         const string connectionString =
-            "Host=localhost;Port=5432;Database=roommatefinder;Username=postgres;Password=sirene99";
+            "Host=localhost;Port=5432;Database=roommatefinder;Username=postgres;Password=3924";
 
         optionsBuilder.UseNpgsql(connectionString);
 

@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="f1df9429-03d7-4b59-8319-f67533347acd" name="radug@RADUG 2026-01-15 12:42:32" runUser="RADUG\radug" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-01-15T12:42:32.5147698+02:00" queuing="2026-01-15T12:42:32.5147705+02:00" start="2026-01-15T12:42:31.8561948+02:00" finish="2026-01-15T12:42:33.1372183+02:00" />
+  <TestSettings name="default" id="32dec441-32b6-4dee-bf0c-e5e587812300">
+    <Deployment runDeploymentRoot="radug_RADUG_2026-01-15_12_42_32" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="8395b593-5094-4f28-b447-699cbdaf8c85" testId="45b8b8cf-98e9-59eb-54b0-f2518c1340bc" testName="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_Age_Is_Greater_Than_99" computerName="RADUG" duration="00:00:00.0003343" startTime="2026-01-15T12:42:32.5036207+02:00" endTime="2026-01-15T12:42:32.5036207+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8395b593-5094-4f28-b447-699cbdaf8c85" />
+    <UnitTestResult executionId="37e1665e-f764-46e2-a91b-6271877a3993" testId="63587447-56b1-f954-6f1e-0d139deb344c" testName="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_PetPreference_Is_Empty" computerName="RADUG" duration="00:00:00.0004856" startTime="2026-01-15T12:42:32.5040788+02:00" endTime="2026-01-15T12:42:32.5040788+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="37e1665e-f764-46e2-a91b-6271877a3993" />
+    <UnitTestResult executionId="7131a1f0-6a2b-4dda-988b-40639b740735" testId="aef6e233-eae4-14af-617d-081e65b312fa" testName="CreateAndGetMyProfileTests.Full_Profile_Flow_Should_Work" computerName="RADUG" duration="00:00:00.5860567" startTime="2026-01-15T12:42:33.0396997+02:00" endTime="2026-01-15T12:42:33.0396999+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7131a1f0-6a2b-4dda-988b-40639b740735" />
+    <UnitTestResult executionId="04651ace-0815-474f-ad72-5318a016e101" testId="681ce20e-5c84-46d8-8c4d-d5d3ff985e3c" testName="RoomMateFinderTests.Validators.RegisterValidatorTests.Should_Have_Error_When_Email_Is_Invalid" computerName="RADUG" duration="00:00:00.0003089" startTime="2026-01-15T12:42:32.5033688+02:00" endTime="2026-01-15T12:42:32.5033689+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="04651ace-0815-474f-ad72-5318a016e101" />
+    <UnitTestResult executionId="04537d6d-8d23-404f-bcc0-0371597c0729" testId="12bb1dec-679b-eae1-4633-23f7bc99413a" testName="RoomMateFinderTests.UnitTests.Handlers.DeleteProfileHandlerTests.Handle_ProfileExists_ReturnsTrue_And_DeletesProfile" computerName="RADUG" duration="00:00:00.0362635" startTime="2026-01-15T12:42:33.0034439+02:00" endTime="2026-01-15T12:42:33.0034439+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="04537d6d-8d23-404f-bcc0-0371597c0729" />
+    <UnitTestResult executionId="ea97a0c9-69de-4547-8f32-ecfd91f69b5a" testId="1ff96513-75ea-acab-9ad3-1b30cc0460c1" testName="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests.Should_Have_Error_When_SleepSchedule_Is_Empty" computerName="RADUG" duration="00:00:00.0004024" startTime="2026-01-15T12:42:32.5035246+02:00" endTime="2026-01-15T12:42:32.5035248+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ea97a0c9-69de-4547-8f32-ecfd91f69b5a" />
+    <UnitTestResult executionId="1a31e975-8b93-4c19-9020-94261e93a407" testId="ff8841d6-f020-71aa-0836-a225940a11e8" testName="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_FullName_Is_Empty" computerName="RADUG" duration="00:00:00.0004979" startTime="2026-01-15T12:42:32.5055011+02:00" endTime="2026-01-15T12:42:32.5055011+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1a31e975-8b93-4c19-9020-94261e93a407" />
+    <UnitTestResult executionId="6dfffebf-6abf-4c1d-b0b2-aeafa29fed08" testId="1c79748f-d0a2-009c-1307-d47aeeb88e06" testName="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_NoiseTolerance_Is_Empty" computerName="RADUG" duration="00:00:00.0003075" startTime="2026-01-15T12:42:32.5069941+02:00" endTime="2026-01-15T12:42:32.5069942+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6dfffebf-6abf-4c1d-b0b2-aeafa29fed08" />
+    <UnitTestResult executionId="26016699-fdf8-479b-8213-86355a7f902a" testId="d1d82655-6c52-ba64-850e-2c61caef6ffc" testName="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests.Should_Have_Error_When_NoiseTolerance_Is_Empty" computerName="RADUG" duration="00:00:00.0284413" startTime="2026-01-15T12:42:32.5002365+02:00" endTime="2026-01-15T12:42:32.5002365+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="26016699-fdf8-479b-8213-86355a7f902a" />
+    <UnitTestResult executionId="07be7143-c449-40cf-ac74-a37db70ec261" testId="5c0d5c92-f6f5-70a2-1b37-8e9c03800a4b" testName="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_SmokingPreference_Is_Empty" computerName="RADUG" duration="00:00:00.0003928" startTime="2026-01-15T12:42:32.5075968+02:00" endTime="2026-01-15T12:42:32.5075969+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="07be7143-c449-40cf-ac74-a37db70ec261" />
+    <UnitTestResult executionId="034b1a5e-df56-49b3-ab5e-484d51cd5eef" testId="44a2353e-a80e-b5ed-39c6-ba7d33f7023f" testName="RoomMateFinderTests.Validators.RegisterValidatorTests.Should_Pass_When_Request_Is_Valid" computerName="RADUG" duration="00:00:00.0198407" startTime="2026-01-15T12:42:32.4832853+02:00" endTime="2026-01-15T12:42:32.4832854+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="034b1a5e-df56-49b3-ab5e-484d51cd5eef" />
+    <UnitTestResult executionId="aa3ea2e2-5c18-46f7-8352-93ccb6d9ca6b" testId="fc92e1c5-3e97-c178-fba5-2758790c24b7" testName="SmokeTests.Server_Should_Start" computerName="RADUG" duration="00:00:00.3104428" startTime="2026-01-15T12:42:32.7641110+02:00" endTime="2026-01-15T12:42:32.7641115+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aa3ea2e2-5c18-46f7-8352-93ccb6d9ca6b" />
+    <UnitTestResult executionId="cd7a468d-cc45-4f80-8f44-575741373d82" testId="00640acc-12ba-1de4-64d6-efc3eee65ed0" testName="RoomMateFinderTests.Validators.RegisterValidatorTests.Should_Have_Error_When_Password_Is_Too_Short" computerName="RADUG" duration="00:00:00.0004796" startTime="2026-01-15T12:42:32.5005861+02:00" endTime="2026-01-15T12:42:32.5005862+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cd7a468d-cc45-4f80-8f44-575741373d82" />
+    <UnitTestResult executionId="b0abecc8-1988-4092-8f01-7ee0510fe9ff" testId="8a1160d7-9cf9-6a0c-c74e-58eb9e592b36" testName="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_Age_Is_Zero" computerName="RADUG" duration="00:00:00.0004831" startTime="2026-01-15T12:42:32.5058539+02:00" endTime="2026-01-15T12:42:32.5058541+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b0abecc8-1988-4092-8f01-7ee0510fe9ff" />
+    <UnitTestResult executionId="5515b72b-ab5d-4556-8acd-4aa8325b40a2" testId="46d53892-0e9f-5f2d-bb2f-cff93589f800" testName="LoginTests.Login_Should_Return_Token_For_Valid_Credentials" computerName="RADUG" duration="00:00:00.0110203" startTime="2026-01-15T12:42:33.0255826+02:00" endTime="2026-01-15T12:42:33.0255831+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5515b72b-ab5d-4556-8acd-4aa8325b40a2" />
+    <UnitTestResult executionId="06730511-f0fd-4a4c-b7a9-1f217314ea9a" testId="328178f0-62af-943f-6ccb-ff34b53a071e" testName="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_University_Is_Empty" computerName="RADUG" duration="00:00:00.0282653" startTime="2026-01-15T12:42:32.4912239+02:00" endTime="2026-01-15T12:42:32.4912240+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="06730511-f0fd-4a4c-b7a9-1f217314ea9a" />
+    <UnitTestResult executionId="da77ae78-42be-4ea7-a129-606c302a2657" testId="1455d825-f1b0-f0ef-b7eb-d5b3c1b81cb2" testName="LikeHandlerTests.Handle_ExistingLike_UpdatesLike_AndReturnsTrue" computerName="RADUG" duration="00:00:00.5865910" startTime="2026-01-15T12:42:33.0430418+02:00" endTime="2026-01-15T12:42:33.0430419+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="da77ae78-42be-4ea7-a129-606c302a2657" />
+    <UnitTestResult executionId="ee0c5899-144f-4dde-a7aa-356d4d5d7055" testId="e8cce29b-6eb3-0f6b-6f86-34dce96d461a" testName="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Pass_When_Request_Is_Valid" computerName="RADUG" duration="00:00:00.0001532" startTime="2026-01-15T12:42:32.5072906+02:00" endTime="2026-01-15T12:42:32.5072907+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee0c5899-144f-4dde-a7aa-356d4d5d7055" />
+    <UnitTestResult executionId="2969f278-4b4b-4e0e-bf2d-613fdb613e8d" testId="e6ba2ad4-45a6-0553-2326-b33dafabb351" testName="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests.Should_Have_Error_When_Cleanliness_Is_Empty" computerName="RADUG" duration="00:00:00.0004787" startTime="2026-01-15T12:42:32.5007490+02:00" endTime="2026-01-15T12:42:32.5007490+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2969f278-4b4b-4e0e-bf2d-613fdb613e8d" />
+    <UnitTestResult executionId="81558f60-0e42-4cb8-b866-692f3c4ffa11" testId="a40aff34-27ba-eb93-616e-0471f653eea7" testName="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_Cleanliness_Is_Empty" computerName="RADUG" duration="00:00:00.0002792" startTime="2026-01-15T12:42:32.5088755+02:00" endTime="2026-01-15T12:42:32.5088756+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="81558f60-0e42-4cb8-b866-692f3c4ffa11" />
+    <UnitTestResult executionId="e27cb247-1c31-4f71-ab1f-a103875cdbda" testId="f6929691-37ba-6bce-2368-316a8154abef" testName="RoomMateFinderTests.Validators.LoginValidatorTests.Should_Pass_When_Request_Is_Valid" computerName="RADUG" duration="00:00:00.0197746" startTime="2026-01-15T12:42:32.4780081+02:00" endTime="2026-01-15T12:42:32.4780322+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e27cb247-1c31-4f71-ab1f-a103875cdbda" />
+    <UnitTestResult executionId="c7067a0b-f0c3-4cab-8ced-8bc1dc0fed81" testId="8a27c60e-2cb4-8fac-db32-3212bca60e2a" testName="RoomMateFinderTests.UnitTests.Handlers.DeleteProfileHandlerTests.Handle_ProfileDoesNotExist_ReturnsFalse" computerName="RADUG" duration="00:00:00.4748641" startTime="2026-01-15T12:42:32.9669183+02:00" endTime="2026-01-15T12:42:32.9669184+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c7067a0b-f0c3-4cab-8ced-8bc1dc0fed81" />
+    <UnitTestResult executionId="eb1b3a17-1409-4f9b-a030-d034b2b7a8f6" testId="6a0b8233-b178-053a-5722-fc65177719bc" testName="RoomMateFinderTests.UnitTests.Handlers.CreateProfileHandlerTests.Handle_Invalid_Request_Throws_ValidationException" computerName="RADUG" duration="00:00:00.5062441" startTime="2026-01-15T12:42:32.9626589+02:00" endTime="2026-01-15T12:42:32.9626593+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eb1b3a17-1409-4f9b-a030-d034b2b7a8f6" />
+    <UnitTestResult executionId="7719ab52-2de3-49f8-a563-c23ed29dc90a" testId="ccce08d5-49a3-2070-0ead-4e010cf2aafb" testName="RoomMateFinderTests.UnitTests.Handlers.LoginHandlerTests.Handle_InvalidRequest_Throws_ValidationException" computerName="RADUG" duration="00:00:00.0011631" startTime="2026-01-15T12:42:32.9939859+02:00" endTime="2026-01-15T12:42:32.9939863+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7719ab52-2de3-49f8-a563-c23ed29dc90a" />
+    <UnitTestResult executionId="e24d7188-0a79-405c-bd0f-0eefcf694e84" testId="b7027eeb-12db-10e8-9864-b3e007a16305" testName="RoomMateFinderTests.UnitTests.Handlers.UpdateProfileHandlerTests.Handle_ProfileDoesNotExist_Returns_False" computerName="RADUG" duration="00:00:00.5105031" startTime="2026-01-15T12:42:32.9670515+02:00" endTime="2026-01-15T12:42:32.9670515+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e24d7188-0a79-405c-bd0f-0eefcf694e84" />
+    <UnitTestResult executionId="4db0c6f8-a1a8-4d3a-88f4-720d2c059b8b" testId="501a9464-09f5-188e-d0b2-ccc539627969" testName="LikeEndpointTests.Like_WithUser_ReturnsOk" computerName="RADUG" duration="00:00:00.2233444" startTime="2026-01-15T12:42:32.7015001+02:00" endTime="2026-01-15T12:42:32.7015003+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4db0c6f8-a1a8-4d3a-88f4-720d2c059b8b">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: OK&#xD;
+Actual:   BadRequest</Message>
+          <StackTrace>   at LikeEndpointTests.Like_WithUser_ReturnsOk() in C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\UnitTests\new_tests\LikeEndpointTests.cs:line 66&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ee911978-24b9-4ac0-9f7b-4c3df958f1ff" testId="0387422f-9b69-8848-e7e0-2772ad140153" testName="RoomMateFinderTests.UnitTests.Handlers.LoginHandlerTests.Handle_ValidCredentials_Returns_LoginResponse_With_Jwt" computerName="RADUG" duration="00:00:00.5342400" startTime="2026-01-15T12:42:32.9905195+02:00" endTime="2026-01-15T12:42:32.9905199+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee911978-24b9-4ac0-9f7b-4c3df958f1ff" />
+    <UnitTestResult executionId="72968723-d7f0-4c93-80ee-3bca9fc3138a" testId="54856220-e119-f22d-41a1-bfb2c2b55288" testName="RoomMateFinderTests.UnitTests.Handlers.GetProfileByIdHandlerTests.Handle_WhenNoProfile_Returns_Null" computerName="RADUG" duration="00:00:00.0013357" startTime="2026-01-15T12:42:33.0058537+02:00" endTime="2026-01-15T12:42:33.0058538+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="72968723-d7f0-4c93-80ee-3bca9fc3138a" />
+    <UnitTestResult executionId="2c5f4db4-dfff-477b-a4d2-cf53ac9ef857" testId="d0cc5ec2-c88b-1ae2-4105-b0bd23bf3845" testName="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_SleepSchedule_Is_Empty" computerName="RADUG" duration="00:00:00.0070513" startTime="2026-01-15T12:42:32.5051952+02:00" endTime="2026-01-15T12:42:32.5051953+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2c5f4db4-dfff-477b-a4d2-cf53ac9ef857" />
+    <UnitTestResult executionId="b4fd9b98-056c-4565-86cb-b724a998ff4e" testId="9afff86c-b6b2-0efc-f3ce-af687105c479" testName="RoomMateFinderTests.UnitTests.Handlers.GetProfileHandlerTests.Handle_WhenProfileDoesNotExist_Returns_Null" computerName="RADUG" duration="00:00:00.4808813" startTime="2026-01-15T12:42:32.9726792+02:00" endTime="2026-01-15T12:42:32.9726795+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b4fd9b98-056c-4565-86cb-b724a998ff4e" />
+    <UnitTestResult executionId="6cff5539-8c81-4af7-b472-cb2456bbad9d" testId="ee617d3c-b195-28d0-87c1-a70f9b275ffb" testName="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests.Should_Have_Error_When_PetPreference_Is_Empty" computerName="RADUG" duration="00:00:00.0004561" startTime="2026-01-15T12:42:32.5038804+02:00" endTime="2026-01-15T12:42:32.5038804+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6cff5539-8c81-4af7-b472-cb2456bbad9d" />
+    <UnitTestResult executionId="4370a5c6-5587-4417-b648-85fb10f7665b" testId="58608654-b465-e818-eb07-53d059770996" testName="RoomMateFinderTests.UnitTests.Handlers.GetProfileHandlerTests.Handle_WhenProfileExists_Returns_Profile_With_User_Included" computerName="RADUG" duration="00:00:00.0241813" startTime="2026-01-15T12:42:32.9971219+02:00" endTime="2026-01-15T12:42:32.9971220+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4370a5c6-5587-4417-b648-85fb10f7665b" />
+    <UnitTestResult executionId="e4106d02-5a30-470e-9026-358d2ce8ee2f" testId="dc7c4daf-4af7-211e-5adb-235a99586a95" testName="RoomMateFinderTests.UnitTests.Handlers.GetAllProfilesHandlerTests.Handle_WhenProfilesExist_Returns_All_In_Alphabetical_Order" computerName="RADUG" duration="00:00:00.0356740" startTime="2026-01-15T12:42:33.0019606+02:00" endTime="2026-01-15T12:42:33.0019609+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e4106d02-5a30-470e-9026-358d2ce8ee2f" />
+    <UnitTestResult executionId="47d18781-5819-4d5a-922c-32b40d702506" testId="b09d94e1-f218-632c-4a53-00a87c627680" testName="RoomMateFinderTests.UnitTests.Handlers.RegisterHandlerTests.Handle_DuplicateEmail_Throws_Exception" computerName="RADUG" duration="00:00:00.4869960" startTime="2026-01-15T12:42:32.9787306+02:00" endTime="2026-01-15T12:42:32.9787308+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="47d18781-5819-4d5a-922c-32b40d702506" />
+    <UnitTestResult executionId="82bb75bf-2281-406a-84a2-16e345a302f2" testId="6780ad22-ecea-df6a-4438-cc76bd485f7b" testName="RoomMateFinderTests.UnitTests.Handlers.CreateProfileHandlerTests.Handle_When_User_Already_Has_Profile_Throws_ValidationException" computerName="RADUG" duration="00:00:00.0022305" startTime="2026-01-15T12:42:32.9974249+02:00" endTime="2026-01-15T12:42:32.9974252+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="82bb75bf-2281-406a-84a2-16e345a302f2" />
+    <UnitTestResult executionId="52dcb977-6df4-45c4-be65-45329e7bccf5" testId="a440291d-cb71-c9ac-c83c-498c71681186" testName="RoomMateFinderTests.Validators.LoginValidatorTests.Should_Have_Error_When_Email_Is_Invalid" computerName="RADUG" duration="00:00:00.0004754" startTime="2026-01-15T12:42:32.5006557+02:00" endTime="2026-01-15T12:42:32.5006557+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="52dcb977-6df4-45c4-be65-45329e7bccf5" />
+    <UnitTestResult executionId="84a68599-d73b-4a86-88b7-83318e73fa5e" testId="de34c968-89a5-9452-db9c-d86eda8e3aed" testName="LikeEndpointTests.Like_WithoutUser_ReturnsUnauthorized" computerName="RADUG" duration="00:00:00.0252189" startTime="2026-01-15T12:42:32.7245479+02:00" endTime="2026-01-15T12:42:32.7245481+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="84a68599-d73b-4a86-88b7-83318e73fa5e">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: Unauthorized&#xD;
+Actual:   BadRequest</Message>
+          <StackTrace>   at LikeEndpointTests.Like_WithoutUser_ReturnsUnauthorized() in C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\UnitTests\new_tests\LikeEndpointTests.cs:line 76&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="845faf7d-38f9-4a4f-a9f2-f717f603d267" testId="1bbf1c1f-6864-0add-c497-5a173c3541d4" testName="RoomMateFinderTests.UnitTests.Handlers.UpdateProfileHandlerTests.Handle_ValidRequest_And_ProfileExists_Updates_Profile_And_Returns_True" computerName="RADUG" duration="00:00:00.0362692" startTime="2026-01-15T12:42:33.0032318+02:00" endTime="2026-01-15T12:42:33.0032320+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="845faf7d-38f9-4a4f-a9f2-f717f603d267" />
+    <UnitTestResult executionId="85481600-4af4-42c2-84bb-8e75ce82724b" testId="ac62a775-fda1-0473-80f0-4ade22d57486" testName="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_StudyHabits_Is_Empty" computerName="RADUG" duration="00:00:00.0005079" startTime="2026-01-15T12:42:32.5078418+02:00" endTime="2026-01-15T12:42:32.5078419+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="85481600-4af4-42c2-84bb-8e75ce82724b" />
+    <UnitTestResult executionId="db6721ea-0bcd-445a-bc91-d0addbd38fb0" testId="8adc88dd-6537-ec04-ae15-29aaeeeb2685" testName="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_Age_Is_Less_Than_18" computerName="RADUG" duration="00:00:00.0010714" startTime="2026-01-15T12:42:32.5030585+02:00" endTime="2026-01-15T12:42:32.5030586+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="db6721ea-0bcd-445a-bc91-d0addbd38fb0" />
+    <UnitTestResult executionId="8b13914f-a812-41b2-9d04-fb6b29486ee8" testId="79b5497c-8448-f8b3-2f44-3b7c168961ca" testName="LikeHandlerTests.Handle_NewLike_ReturnsTrue_AndCreatesLike" computerName="RADUG" duration="00:00:00.0064918" startTime="2026-01-15T12:42:33.0496043+02:00" endTime="2026-01-15T12:42:33.0496043+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8b13914f-a812-41b2-9d04-fb6b29486ee8" />
+    <UnitTestResult executionId="f42e9366-dc78-426a-bd21-54183d767473" testId="78c46663-3382-cfa3-8750-e853d18bcc61" testName="LoginTests.Login_Should_Return_500_For_Wrong_Password" computerName="RADUG" duration="00:00:00.5603913" startTime="2026-01-15T12:42:33.0139062+02:00" endTime="2026-01-15T12:42:33.0139065+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f42e9366-dc78-426a-bd21-54183d767473" />
+    <UnitTestResult executionId="205d74ac-2b9f-44eb-ba86-066fdd89511e" testId="512f63e9-ae96-defd-fe04-815db1560d65" testName="RoomMateFinderTests.UnitTests.Handlers.UpdateProfileHandlerTests.Handle_InvalidRequest_Throws_ValidationException" computerName="RADUG" duration="00:00:00.0008312" startTime="2026-01-15T12:42:33.0041232+02:00" endTime="2026-01-15T12:42:33.0041232+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="205d74ac-2b9f-44eb-ba86-066fdd89511e" />
+    <UnitTestResult executionId="e09f4439-e961-462d-b177-b015236645db" testId="a233f2d1-f4d3-0fad-5609-a7e14e9c4f73" testName="DislikeEndpointTests.Dislike_WithoutUser_ReturnsUnauthorized" computerName="RADUG" duration="00:00:00.0261384" startTime="2026-01-15T12:42:32.7237200+02:00" endTime="2026-01-15T12:42:32.7237203+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e09f4439-e961-462d-b177-b015236645db" />
+    <UnitTestResult executionId="a44dc8ab-ff1b-46b9-b787-fe306a18d3d0" testId="f33b8285-395f-e859-765e-f288bc4bf9d0" testName="RoomMateFinderTests.UnitTests.Handlers.CreateProfileHandlerTests.Handle_ValidRequest_Creates_Profile_And_Returns_Id" computerName="RADUG" duration="00:00:00.0323530" startTime="2026-01-15T12:42:32.9951057+02:00" endTime="2026-01-15T12:42:32.9951059+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a44dc8ab-ff1b-46b9-b787-fe306a18d3d0" />
+    <UnitTestResult executionId="92c26c93-8be5-4c1d-89ff-1517f9ebe61e" testId="8825437c-87e8-c116-2cd7-98aa06644fc4" testName="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests.Should_Pass_When_Request_Is_Valid" computerName="RADUG" duration="00:00:00.0066462" startTime="2026-01-15T12:42:32.5049265+02:00" endTime="2026-01-15T12:42:32.5049265+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="92c26c93-8be5-4c1d-89ff-1517f9ebe61e" />
+    <UnitTestResult executionId="1b9ce26c-7d08-4c00-adb0-baec40c0827e" testId="8642fb2f-5c90-9c8c-0ab4-f3e0d6db42f2" testName="RoomMateFinderTests.UnitTests.Handlers.RegisterHandlerTests.Handle_ValidRequest_CreatesUser_And_Returns_Response" computerName="RADUG" duration="00:00:00.0165063" startTime="2026-01-15T12:42:32.9968504+02:00" endTime="2026-01-15T12:42:32.9968506+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1b9ce26c-7d08-4c00-adb0-baec40c0827e" />
+    <UnitTestResult executionId="eeab67e1-b568-442f-8fff-5303dfc13a97" testId="94517785-b258-4e8f-c975-bd725382d7c7" testName="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests.Should_Have_Error_When_SmokingPreference_Is_Empty" computerName="RADUG" duration="00:00:00.0005119" startTime="2026-01-15T12:42:32.5054128+02:00" endTime="2026-01-15T12:42:32.5054129+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eeab67e1-b568-442f-8fff-5303dfc13a97" />
+    <UnitTestResult executionId="02f21036-9aa0-443c-9d2b-83f113fbcc73" testId="86560750-1ea8-fa52-adad-227e861ee7be" testName="ErrorHandlingMiddlewareTests.InvokeAsync_ValidationException_Returns400" computerName="RADUG" duration="00:00:00.0985546" startTime="2026-01-15T12:42:32.5547998+02:00" endTime="2026-01-15T12:42:32.5548000+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="02f21036-9aa0-443c-9d2b-83f113fbcc73" />
+    <UnitTestResult executionId="755f2777-dd66-4211-9b17-41b89c6e156a" testId="cbd6b946-3278-e451-b9cf-3dea588966fa" testName="RoomMateFinderTests.UnitTests.Handlers.LoginHandlerTests.Handle_InvalidPassword_Throws_Exception" computerName="RADUG" duration="00:00:00.0021117" startTime="2026-01-15T12:42:32.9927238+02:00" endTime="2026-01-15T12:42:32.9927240+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="755f2777-dd66-4211-9b17-41b89c6e156a" />
+    <UnitTestResult executionId="5ec18013-c295-4b0f-924b-b11619344884" testId="a58c17bd-afe8-7a1b-7d1b-3f96ea2c5f2e" testName="ErrorHandlingMiddlewareTests.InvokeAsync_GenericException_Returns500" computerName="RADUG" duration="00:00:00.0023668" startTime="2026-01-15T12:42:32.5572405+02:00" endTime="2026-01-15T12:42:32.5572407+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5ec18013-c295-4b0f-924b-b11619344884" />
+    <UnitTestResult executionId="bd31c182-dc1b-4c62-828c-fd027d53fdd9" testId="86eb7dd4-628d-3e6e-83b0-4f1f20db6b50" testName="RoomMateFinderTests.Validators.LoginValidatorTests.Should_Have_Error_When_Password_Is_Empty" computerName="RADUG" duration="00:00:00.0003490" startTime="2026-01-15T12:42:32.5025492+02:00" endTime="2026-01-15T12:42:32.5025493+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bd31c182-dc1b-4c62-828c-fd027d53fdd9" />
+    <UnitTestResult executionId="1030c307-68f2-43f4-bb5e-c7ad0f29eb63" testId="c393552e-c32b-b261-7bac-3c5a7a4f68a2" testName="RoomMateFinderTests.Validators.RegisterValidatorTests.Should_Have_Error_When_Email_Is_Empty" computerName="RADUG" duration="00:00:00.0060436" startTime="2026-01-15T12:42:32.4999697+02:00" endTime="2026-01-15T12:42:32.4999697+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1030c307-68f2-43f4-bb5e-c7ad0f29eb63" />
+    <UnitTestResult executionId="ae7505ed-db43-4043-940d-52f23c8ef33c" testId="975b950c-4db8-6a2e-2c8e-102e96fbfb11" testName="RoomMateFinderTests.UnitTests.Handlers.RegisterHandlerTests.Handle_InvalidRequest_Throws_ValidationException" computerName="RADUG" duration="00:00:00.0013803" startTime="2026-01-15T12:42:32.9802262+02:00" endTime="2026-01-15T12:42:32.9802264+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ae7505ed-db43-4043-940d-52f23c8ef33c" />
+    <UnitTestResult executionId="ed4d71e0-074c-4199-a9ce-5ea1ffa84521" testId="1d04a153-7207-d897-811e-d73905cf5c40" testName="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests.Should_Have_Error_When_StudyHabits_Is_Empty" computerName="RADUG" duration="00:00:00.0003998" startTime="2026-01-15T12:42:32.5027375+02:00" endTime="2026-01-15T12:42:32.5027376+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed4d71e0-074c-4199-a9ce-5ea1ffa84521" />
+    <UnitTestResult executionId="467b8b50-2e51-490e-b77b-3abfddfe147a" testId="7dfeaf0a-e0f9-0ee5-e255-a5097b2da327" testName="RoomMateFinderTests.Validators.RegisterValidatorTests.Should_Have_Error_When_Password_Is_Empty" computerName="RADUG" duration="00:00:00.0003305" startTime="2026-01-15T12:42:32.5011215+02:00" endTime="2026-01-15T12:42:32.5011216+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="467b8b50-2e51-490e-b77b-3abfddfe147a" />
+    <UnitTestResult executionId="36535862-c1d0-48a0-968a-b9a1af3d4d9d" testId="fab142ae-9df8-91ea-8c19-18350b1f0134" testName="DislikeEndpointTests.Dislike_WithUser_ReturnsOk" computerName="RADUG" duration="00:00:00.2232359" startTime="2026-01-15T12:42:32.7008653+02:00" endTime="2026-01-15T12:42:32.7008655+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="36535862-c1d0-48a0-968a-b9a1af3d4d9d">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: OK&#xD;
+Actual:   Unauthorized</Message>
+          <StackTrace>   at DislikeEndpointTests.Dislike_WithUser_ReturnsOk() in C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\UnitTests\new_tests\DislikeEndpointTests.cs:line 64&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9f96bf45-af2b-422d-8b01-80bf886dd359" testId="5d2a5ff9-dc5c-f895-75e4-1735dc3ee1ba" testName="RoomMateFinderTests.UnitTests.Handlers.GetProfileByIdHandlerTests.Handle_WhenProfileExists_Returns_ProfileDto" computerName="RADUG" duration="00:00:00.5480588" startTime="2026-01-15T12:42:33.0044222+02:00" endTime="2026-01-15T12:42:33.0044224+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9f96bf45-af2b-422d-8b01-80bf886dd359" />
+    <UnitTestResult executionId="3f4534ad-c8c3-45fd-bc19-2e186387e4bd" testId="8e66b41a-f352-4d14-eac5-062bd1355e1d" testName="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_FullName_Is_Too_Long" computerName="RADUG" duration="00:00:00.0004840" startTime="2026-01-15T12:42:32.5081470+02:00" endTime="2026-01-15T12:42:32.5081471+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3f4534ad-c8c3-45fd-bc19-2e186387e4bd" />
+    <UnitTestResult executionId="ab6f396d-490b-486a-b187-cd6c7ec6954a" testId="68b399e8-bb2f-cdcf-d33f-747ff5131f5f" testName="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Not_Have_Error_For_Bio_When_Null_Or_Whitespace" computerName="RADUG" duration="00:00:00.0005936" startTime="2026-01-15T12:42:32.5061874+02:00" endTime="2026-01-15T12:42:32.5061875+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ab6f396d-490b-486a-b187-cd6c7ec6954a" />
+    <UnitTestResult executionId="8883b014-db1e-41c1-914b-80c7a853c8b2" testId="3d8f58ea-313f-3d4a-38c3-d09bc0cf17d2" testName="RoomMateFinderTests.Validators.LoginValidatorTests.Should_Have_Error_When_Email_Is_Empty" computerName="RADUG" duration="00:00:00.0060622" startTime="2026-01-15T12:42:32.5001565+02:00" endTime="2026-01-15T12:42:32.5001566+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8883b014-db1e-41c1-914b-80c7a853c8b2" />
+    <UnitTestResult executionId="21ba8b36-9f96-4b7a-a112-9a4a1d411e76" testId="6d5b92e8-6b38-15c6-f61d-9317efd33660" testName="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_Gender_Is_Empty" computerName="RADUG" duration="00:00:00.0004343" startTime="2026-01-15T12:42:32.5083758+02:00" endTime="2026-01-15T12:42:32.5083759+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="21ba8b36-9f96-4b7a-a112-9a4a1d411e76" />
+    <UnitTestResult executionId="6121d576-da4e-4df2-ab68-8f5d48cc7235" testId="7f6c74c0-aa90-2c62-e894-e7d7116ffd78" testName="RoomMateFinderTests.UnitTests.Handlers.GetAllProfilesHandlerTests.Handle_WhenNoProfilesExist_Returns_EmptyList" computerName="RADUG" duration="00:00:00.4703709" startTime="2026-01-15T12:42:32.9661704+02:00" endTime="2026-01-15T12:42:32.9661707+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6121d576-da4e-4df2-ab68-8f5d48cc7235" />
+    <UnitTestResult executionId="0a160adc-448d-4ecd-87f7-86294ac83876" testId="0b228a86-90c9-2638-c9b1-7e71ed19b758" testName="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_Bio_Is_Too_Long" computerName="RADUG" duration="00:00:00.0002831" startTime="2026-01-15T12:42:32.5086151+02:00" endTime="2026-01-15T12:42:32.5086153+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0a160adc-448d-4ecd-87f7-86294ac83876" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_Gender_Is_Empty" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="6d5b92e8-6b38-15c6-f61d-9317efd33660">
+      <Execution id="21ba8b36-9f96-4b7a-a112-9a4a1d411e76" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests" name="Should_Have_Error_When_Gender_Is_Empty" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.Validators.RegisterValidatorTests.Should_Have_Error_When_Password_Is_Empty" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="7dfeaf0a-e0f9-0ee5-e255-a5097b2da327">
+      <Execution id="467b8b50-2e51-490e-b77b-3abfddfe147a" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.Validators.RegisterValidatorTests" name="Should_Have_Error_When_Password_Is_Empty" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.GetProfileByIdHandlerTests.Handle_WhenProfileExists_Returns_ProfileDto" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="5d2a5ff9-dc5c-f895-75e4-1735dc3ee1ba">
+      <Execution id="9f96bf45-af2b-422d-8b01-80bf886dd359" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.GetProfileByIdHandlerTests" name="Handle_WhenProfileExists_Returns_ProfileDto" />
+    </UnitTest>
+    <UnitTest name="LikeHandlerTests.Handle_NewLike_ReturnsTrue_AndCreatesLike" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="79b5497c-8448-f8b3-2f44-3b7c168961ca">
+      <Execution id="8b13914f-a812-41b2-9d04-fb6b29486ee8" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LikeHandlerTests" name="Handle_NewLike_ReturnsTrue_AndCreatesLike" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Pass_When_Request_Is_Valid" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="e8cce29b-6eb3-0f6b-6f86-34dce96d461a">
+      <Execution id="ee0c5899-144f-4dde-a7aa-356d4d5d7055" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests" name="Should_Pass_When_Request_Is_Valid" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_StudyHabits_Is_Empty" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="ac62a775-fda1-0473-80f0-4ade22d57486">
+      <Execution id="85481600-4af4-42c2-84bb-8e75ce82724b" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests" name="Should_Have_Error_When_StudyHabits_Is_Empty" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests.Should_Have_Error_When_PetPreference_Is_Empty" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="ee617d3c-b195-28d0-87c1-a70f9b275ffb">
+      <Execution id="6cff5539-8c81-4af7-b472-cb2456bbad9d" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests" name="Should_Have_Error_When_PetPreference_Is_Empty" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.Validators.LoginValidatorTests.Should_Have_Error_When_Email_Is_Invalid" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="a440291d-cb71-c9ac-c83c-498c71681186">
+      <Execution id="52dcb977-6df4-45c4-be65-45329e7bccf5" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.Validators.LoginValidatorTests" name="Should_Have_Error_When_Email_Is_Invalid" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests.Should_Have_Error_When_SmokingPreference_Is_Empty" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="94517785-b258-4e8f-c975-bd725382d7c7">
+      <Execution id="eeab67e1-b568-442f-8fff-5303dfc13a97" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests" name="Should_Have_Error_When_SmokingPreference_Is_Empty" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.Validators.RegisterValidatorTests.Should_Have_Error_When_Email_Is_Invalid" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="681ce20e-5c84-46d8-8c4d-d5d3ff985e3c">
+      <Execution id="04651ace-0815-474f-ad72-5318a016e101" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.Validators.RegisterValidatorTests" name="Should_Have_Error_When_Email_Is_Invalid" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_FullName_Is_Too_Long" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="8e66b41a-f352-4d14-eac5-062bd1355e1d">
+      <Execution id="3f4534ad-c8c3-45fd-bc19-2e186387e4bd" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests" name="Should_Have_Error_When_FullName_Is_Too_Long" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests.Should_Have_Error_When_SleepSchedule_Is_Empty" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="1ff96513-75ea-acab-9ad3-1b30cc0460c1">
+      <Execution id="ea97a0c9-69de-4547-8f32-ecfd91f69b5a" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests" name="Should_Have_Error_When_SleepSchedule_Is_Empty" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.RegisterHandlerTests.Handle_InvalidRequest_Throws_ValidationException" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="975b950c-4db8-6a2e-2c8e-102e96fbfb11">
+      <Execution id="ae7505ed-db43-4043-940d-52f23c8ef33c" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.RegisterHandlerTests" name="Handle_InvalidRequest_Throws_ValidationException" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests.Should_Pass_When_Request_Is_Valid" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="8825437c-87e8-c116-2cd7-98aa06644fc4">
+      <Execution id="92c26c93-8be5-4c1d-89ff-1517f9ebe61e" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests" name="Should_Pass_When_Request_Is_Valid" />
+    </UnitTest>
+    <UnitTest name="LikeEndpointTests.Like_WithoutUser_ReturnsUnauthorized" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="de34c968-89a5-9452-db9c-d86eda8e3aed">
+      <Execution id="84a68599-d73b-4a86-88b7-83318e73fa5e" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LikeEndpointTests" name="Like_WithoutUser_ReturnsUnauthorized" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.Validators.LoginValidatorTests.Should_Pass_When_Request_Is_Valid" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="f6929691-37ba-6bce-2368-316a8154abef">
+      <Execution id="e27cb247-1c31-4f71-ab1f-a103875cdbda" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.Validators.LoginValidatorTests" name="Should_Pass_When_Request_Is_Valid" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_Age_Is_Zero" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="8a1160d7-9cf9-6a0c-c74e-58eb9e592b36">
+      <Execution id="b0abecc8-1988-4092-8f01-7ee0510fe9ff" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests" name="Should_Have_Error_When_Age_Is_Zero" />
+    </UnitTest>
+    <UnitTest name="ErrorHandlingMiddlewareTests.InvokeAsync_GenericException_Returns500" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="a58c17bd-afe8-7a1b-7d1b-3f96ea2c5f2e">
+      <Execution id="5ec18013-c295-4b0f-924b-b11619344884" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ErrorHandlingMiddlewareTests" name="InvokeAsync_GenericException_Returns500" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.RegisterHandlerTests.Handle_DuplicateEmail_Throws_Exception" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="b09d94e1-f218-632c-4a53-00a87c627680">
+      <Execution id="47d18781-5819-4d5a-922c-32b40d702506" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.RegisterHandlerTests" name="Handle_DuplicateEmail_Throws_Exception" />
+    </UnitTest>
+    <UnitTest name="LoginTests.Login_Should_Return_500_For_Wrong_Password" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="78c46663-3382-cfa3-8750-e853d18bcc61">
+      <Execution id="f42e9366-dc78-426a-bd21-54183d767473" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LoginTests" name="Login_Should_Return_500_For_Wrong_Password" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.CreateProfileHandlerTests.Handle_ValidRequest_Creates_Profile_And_Returns_Id" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="f33b8285-395f-e859-765e-f288bc4bf9d0">
+      <Execution id="a44dc8ab-ff1b-46b9-b787-fe306a18d3d0" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.CreateProfileHandlerTests" name="Handle_ValidRequest_Creates_Profile_And_Returns_Id" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.LoginHandlerTests.Handle_ValidCredentials_Returns_LoginResponse_With_Jwt" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="0387422f-9b69-8848-e7e0-2772ad140153">
+      <Execution id="ee911978-24b9-4ac0-9f7b-4c3df958f1ff" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.LoginHandlerTests" name="Handle_ValidCredentials_Returns_LoginResponse_With_Jwt" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_SleepSchedule_Is_Empty" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="d0cc5ec2-c88b-1ae2-4105-b0bd23bf3845">
+      <Execution id="2c5f4db4-dfff-477b-a4d2-cf53ac9ef857" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests" name="Should_Have_Error_When_SleepSchedule_Is_Empty" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_NoiseTolerance_Is_Empty" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="1c79748f-d0a2-009c-1307-d47aeeb88e06">
+      <Execution id="6dfffebf-6abf-4c1d-b0b2-aeafa29fed08" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests" name="Should_Have_Error_When_NoiseTolerance_Is_Empty" />
+    </UnitTest>
+    <UnitTest name="LikeEndpointTests.Like_WithUser_ReturnsOk" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="501a9464-09f5-188e-d0b2-ccc539627969">
+      <Execution id="4db0c6f8-a1a8-4d3a-88f4-720d2c059b8b" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LikeEndpointTests" name="Like_WithUser_ReturnsOk" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.Validators.RegisterValidatorTests.Should_Have_Error_When_Email_Is_Empty" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="c393552e-c32b-b261-7bac-3c5a7a4f68a2">
+      <Execution id="1030c307-68f2-43f4-bb5e-c7ad0f29eb63" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.Validators.RegisterValidatorTests" name="Should_Have_Error_When_Email_Is_Empty" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_Cleanliness_Is_Empty" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="a40aff34-27ba-eb93-616e-0471f653eea7">
+      <Execution id="81558f60-0e42-4cb8-b866-692f3c4ffa11" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests" name="Should_Have_Error_When_Cleanliness_Is_Empty" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests.Should_Have_Error_When_Cleanliness_Is_Empty" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="e6ba2ad4-45a6-0553-2326-b33dafabb351">
+      <Execution id="2969f278-4b4b-4e0e-bf2d-613fdb613e8d" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests" name="Should_Have_Error_When_Cleanliness_Is_Empty" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.GetProfileHandlerTests.Handle_WhenProfileExists_Returns_Profile_With_User_Included" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="58608654-b465-e818-eb07-53d059770996">
+      <Execution id="4370a5c6-5587-4417-b648-85fb10f7665b" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.GetProfileHandlerTests" name="Handle_WhenProfileExists_Returns_Profile_With_User_Included" />
+    </UnitTest>
+    <UnitTest name="CreateAndGetMyProfileTests.Full_Profile_Flow_Should_Work" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="aef6e233-eae4-14af-617d-081e65b312fa">
+      <Execution id="7131a1f0-6a2b-4dda-988b-40639b740735" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="CreateAndGetMyProfileTests" name="Full_Profile_Flow_Should_Work" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_Bio_Is_Too_Long" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="0b228a86-90c9-2638-c9b1-7e71ed19b758">
+      <Execution id="0a160adc-448d-4ecd-87f7-86294ac83876" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests" name="Should_Have_Error_When_Bio_Is_Too_Long" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.UpdateProfileHandlerTests.Handle_InvalidRequest_Throws_ValidationException" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="512f63e9-ae96-defd-fe04-815db1560d65">
+      <Execution id="205d74ac-2b9f-44eb-ba86-066fdd89511e" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.UpdateProfileHandlerTests" name="Handle_InvalidRequest_Throws_ValidationException" />
+    </UnitTest>
+    <UnitTest name="SmokeTests.Server_Should_Start" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="fc92e1c5-3e97-c178-fba5-2758790c24b7">
+      <Execution id="aa3ea2e2-5c18-46f7-8352-93ccb6d9ca6b" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmokeTests" name="Server_Should_Start" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.CreateProfileHandlerTests.Handle_When_User_Already_Has_Profile_Throws_ValidationException" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="6780ad22-ecea-df6a-4438-cc76bd485f7b">
+      <Execution id="82bb75bf-2281-406a-84a2-16e345a302f2" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.CreateProfileHandlerTests" name="Handle_When_User_Already_Has_Profile_Throws_ValidationException" />
+    </UnitTest>
+    <UnitTest name="ErrorHandlingMiddlewareTests.InvokeAsync_ValidationException_Returns400" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="86560750-1ea8-fa52-adad-227e861ee7be">
+      <Execution id="02f21036-9aa0-443c-9d2b-83f113fbcc73" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ErrorHandlingMiddlewareTests" name="InvokeAsync_ValidationException_Returns400" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.LoginHandlerTests.Handle_InvalidPassword_Throws_Exception" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="cbd6b946-3278-e451-b9cf-3dea588966fa">
+      <Execution id="755f2777-dd66-4211-9b17-41b89c6e156a" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.LoginHandlerTests" name="Handle_InvalidPassword_Throws_Exception" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_Age_Is_Less_Than_18" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="8adc88dd-6537-ec04-ae15-29aaeeeb2685">
+      <Execution id="db6721ea-0bcd-445a-bc91-d0addbd38fb0" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests" name="Should_Have_Error_When_Age_Is_Less_Than_18" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.Validators.LoginValidatorTests.Should_Have_Error_When_Password_Is_Empty" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="86eb7dd4-628d-3e6e-83b0-4f1f20db6b50">
+      <Execution id="bd31c182-dc1b-4c62-828c-fd027d53fdd9" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.Validators.LoginValidatorTests" name="Should_Have_Error_When_Password_Is_Empty" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.UpdateProfileHandlerTests.Handle_ProfileDoesNotExist_Returns_False" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="b7027eeb-12db-10e8-9864-b3e007a16305">
+      <Execution id="e24d7188-0a79-405c-bd0f-0eefcf694e84" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.UpdateProfileHandlerTests" name="Handle_ProfileDoesNotExist_Returns_False" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.GetProfileByIdHandlerTests.Handle_WhenNoProfile_Returns_Null" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="54856220-e119-f22d-41a1-bfb2c2b55288">
+      <Execution id="72968723-d7f0-4c93-80ee-3bca9fc3138a" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.GetProfileByIdHandlerTests" name="Handle_WhenNoProfile_Returns_Null" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.Validators.RegisterValidatorTests.Should_Have_Error_When_Password_Is_Too_Short" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="00640acc-12ba-1de4-64d6-efc3eee65ed0">
+      <Execution id="cd7a468d-cc45-4f80-8f44-575741373d82" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.Validators.RegisterValidatorTests" name="Should_Have_Error_When_Password_Is_Too_Short" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests.Should_Have_Error_When_NoiseTolerance_Is_Empty" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="d1d82655-6c52-ba64-850e-2c61caef6ffc">
+      <Execution id="26016699-fdf8-479b-8213-86355a7f902a" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests" name="Should_Have_Error_When_NoiseTolerance_Is_Empty" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_University_Is_Empty" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="328178f0-62af-943f-6ccb-ff34b53a071e">
+      <Execution id="06730511-f0fd-4a4c-b7a9-1f217314ea9a" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests" name="Should_Have_Error_When_University_Is_Empty" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.LoginHandlerTests.Handle_InvalidRequest_Throws_ValidationException" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="ccce08d5-49a3-2070-0ead-4e010cf2aafb">
+      <Execution id="7719ab52-2de3-49f8-a563-c23ed29dc90a" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.LoginHandlerTests" name="Handle_InvalidRequest_Throws_ValidationException" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_FullName_Is_Empty" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="ff8841d6-f020-71aa-0836-a225940a11e8">
+      <Execution id="1a31e975-8b93-4c19-9020-94261e93a407" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests" name="Should_Have_Error_When_FullName_Is_Empty" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Not_Have_Error_For_Bio_When_Null_Or_Whitespace" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="68b399e8-bb2f-cdcf-d33f-747ff5131f5f">
+      <Execution id="ab6f396d-490b-486a-b187-cd6c7ec6954a" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests" name="Should_Not_Have_Error_For_Bio_When_Null_Or_Whitespace" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.GetAllProfilesHandlerTests.Handle_WhenNoProfilesExist_Returns_EmptyList" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="7f6c74c0-aa90-2c62-e894-e7d7116ffd78">
+      <Execution id="6121d576-da4e-4df2-ab68-8f5d48cc7235" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.GetAllProfilesHandlerTests" name="Handle_WhenNoProfilesExist_Returns_EmptyList" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.CreateProfileHandlerTests.Handle_Invalid_Request_Throws_ValidationException" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="6a0b8233-b178-053a-5722-fc65177719bc">
+      <Execution id="eb1b3a17-1409-4f9b-a030-d034b2b7a8f6" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.CreateProfileHandlerTests" name="Handle_Invalid_Request_Throws_ValidationException" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.Validators.RegisterValidatorTests.Should_Pass_When_Request_Is_Valid" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="44a2353e-a80e-b5ed-39c6-ba7d33f7023f">
+      <Execution id="034b1a5e-df56-49b3-ab5e-484d51cd5eef" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.Validators.RegisterValidatorTests" name="Should_Pass_When_Request_Is_Valid" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.Validators.LoginValidatorTests.Should_Have_Error_When_Email_Is_Empty" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="3d8f58ea-313f-3d4a-38c3-d09bc0cf17d2">
+      <Execution id="8883b014-db1e-41c1-914b-80c7a853c8b2" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.Validators.LoginValidatorTests" name="Should_Have_Error_When_Email_Is_Empty" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_Age_Is_Greater_Than_99" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="45b8b8cf-98e9-59eb-54b0-f2518c1340bc">
+      <Execution id="8395b593-5094-4f28-b447-699cbdaf8c85" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests" name="Should_Have_Error_When_Age_Is_Greater_Than_99" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.UpdateProfileHandlerTests.Handle_ValidRequest_And_ProfileExists_Updates_Profile_And_Returns_True" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="1bbf1c1f-6864-0add-c497-5a173c3541d4">
+      <Execution id="845faf7d-38f9-4a4f-a9f2-f717f603d267" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.UpdateProfileHandlerTests" name="Handle_ValidRequest_And_ProfileExists_Updates_Profile_And_Returns_True" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.RegisterHandlerTests.Handle_ValidRequest_CreatesUser_And_Returns_Response" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="8642fb2f-5c90-9c8c-0ab4-f3e0d6db42f2">
+      <Execution id="1b9ce26c-7d08-4c00-adb0-baec40c0827e" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.RegisterHandlerTests" name="Handle_ValidRequest_CreatesUser_And_Returns_Response" />
+    </UnitTest>
+    <UnitTest name="DislikeEndpointTests.Dislike_WithUser_ReturnsOk" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="fab142ae-9df8-91ea-8c19-18350b1f0134">
+      <Execution id="36535862-c1d0-48a0-968a-b9a1af3d4d9d" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DislikeEndpointTests" name="Dislike_WithUser_ReturnsOk" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.DeleteProfileHandlerTests.Handle_ProfileExists_ReturnsTrue_And_DeletesProfile" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="12bb1dec-679b-eae1-4633-23f7bc99413a">
+      <Execution id="04537d6d-8d23-404f-bcc0-0371597c0729" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.DeleteProfileHandlerTests" name="Handle_ProfileExists_ReturnsTrue_And_DeletesProfile" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.GetAllProfilesHandlerTests.Handle_WhenProfilesExist_Returns_All_In_Alphabetical_Order" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="dc7c4daf-4af7-211e-5adb-235a99586a95">
+      <Execution id="e4106d02-5a30-470e-9026-358d2ce8ee2f" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.GetAllProfilesHandlerTests" name="Handle_WhenProfilesExist_Returns_All_In_Alphabetical_Order" />
+    </UnitTest>
+    <UnitTest name="LikeHandlerTests.Handle_ExistingLike_UpdatesLike_AndReturnsTrue" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="1455d825-f1b0-f0ef-b7eb-d5b3c1b81cb2">
+      <Execution id="da77ae78-42be-4ea7-a129-606c302a2657" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LikeHandlerTests" name="Handle_ExistingLike_UpdatesLike_AndReturnsTrue" />
+    </UnitTest>
+    <UnitTest name="DislikeEndpointTests.Dislike_WithoutUser_ReturnsUnauthorized" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="a233f2d1-f4d3-0fad-5609-a7e14e9c4f73">
+      <Execution id="e09f4439-e961-462d-b177-b015236645db" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DislikeEndpointTests" name="Dislike_WithoutUser_ReturnsUnauthorized" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.GetProfileHandlerTests.Handle_WhenProfileDoesNotExist_Returns_Null" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="9afff86c-b6b2-0efc-f3ce-af687105c479">
+      <Execution id="b4fd9b98-056c-4565-86cb-b724a998ff4e" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.GetProfileHandlerTests" name="Handle_WhenProfileDoesNotExist_Returns_Null" />
+    </UnitTest>
+    <UnitTest name="LoginTests.Login_Should_Return_Token_For_Valid_Credentials" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="46d53892-0e9f-5f2d-bb2f-cff93589f800">
+      <Execution id="5515b72b-ab5d-4556-8acd-4aa8325b40a2" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LoginTests" name="Login_Should_Return_Token_For_Valid_Credentials" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_SmokingPreference_Is_Empty" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="5c0d5c92-f6f5-70a2-1b37-8e9c03800a4b">
+      <Execution id="07be7143-c449-40cf-ac74-a37db70ec261" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests" name="Should_Have_Error_When_SmokingPreference_Is_Empty" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests.Should_Have_Error_When_PetPreference_Is_Empty" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="63587447-56b1-f954-6f1e-0d139deb344c">
+      <Execution id="37e1665e-f764-46e2-a91b-6271877a3993" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.CreateProfileValidatorTests" name="Should_Have_Error_When_PetPreference_Is_Empty" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests.Should_Have_Error_When_StudyHabits_Is_Empty" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="1d04a153-7207-d897-811e-d73905cf5c40">
+      <Execution id="ed4d71e0-074c-4199-a9ce-5ea1ffa84521" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Validators.UpdateProfileValidatorTests" name="Should_Have_Error_When_StudyHabits_Is_Empty" />
+    </UnitTest>
+    <UnitTest name="RoomMateFinderTests.UnitTests.Handlers.DeleteProfileHandlerTests.Handle_ProfileDoesNotExist_ReturnsFalse" storage="c:\users\radug\onedrive\desktop\.net\roommatefinder-gociu-start\roommatefinder\roommatefindertests\bin\debug\net9.0\roommatefindertests.dll" id="8a27c60e-2cb4-8fac-db32-3212bca60e2a">
+      <Execution id="c7067a0b-f0c3-4cab-8ced-8bc1dc0fed81" />
+      <TestMethod codeBase="C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\bin\Debug\net9.0\RoomMateFinderTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RoomMateFinderTests.UnitTests.Handlers.DeleteProfileHandlerTests" name="Handle_ProfileDoesNotExist_ReturnsFalse" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="45b8b8cf-98e9-59eb-54b0-f2518c1340bc" executionId="8395b593-5094-4f28-b447-699cbdaf8c85" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="63587447-56b1-f954-6f1e-0d139deb344c" executionId="37e1665e-f764-46e2-a91b-6271877a3993" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aef6e233-eae4-14af-617d-081e65b312fa" executionId="7131a1f0-6a2b-4dda-988b-40639b740735" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="681ce20e-5c84-46d8-8c4d-d5d3ff985e3c" executionId="04651ace-0815-474f-ad72-5318a016e101" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="12bb1dec-679b-eae1-4633-23f7bc99413a" executionId="04537d6d-8d23-404f-bcc0-0371597c0729" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1ff96513-75ea-acab-9ad3-1b30cc0460c1" executionId="ea97a0c9-69de-4547-8f32-ecfd91f69b5a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ff8841d6-f020-71aa-0836-a225940a11e8" executionId="1a31e975-8b93-4c19-9020-94261e93a407" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1c79748f-d0a2-009c-1307-d47aeeb88e06" executionId="6dfffebf-6abf-4c1d-b0b2-aeafa29fed08" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d1d82655-6c52-ba64-850e-2c61caef6ffc" executionId="26016699-fdf8-479b-8213-86355a7f902a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5c0d5c92-f6f5-70a2-1b37-8e9c03800a4b" executionId="07be7143-c449-40cf-ac74-a37db70ec261" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="44a2353e-a80e-b5ed-39c6-ba7d33f7023f" executionId="034b1a5e-df56-49b3-ab5e-484d51cd5eef" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fc92e1c5-3e97-c178-fba5-2758790c24b7" executionId="aa3ea2e2-5c18-46f7-8352-93ccb6d9ca6b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="00640acc-12ba-1de4-64d6-efc3eee65ed0" executionId="cd7a468d-cc45-4f80-8f44-575741373d82" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8a1160d7-9cf9-6a0c-c74e-58eb9e592b36" executionId="b0abecc8-1988-4092-8f01-7ee0510fe9ff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="46d53892-0e9f-5f2d-bb2f-cff93589f800" executionId="5515b72b-ab5d-4556-8acd-4aa8325b40a2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="328178f0-62af-943f-6ccb-ff34b53a071e" executionId="06730511-f0fd-4a4c-b7a9-1f217314ea9a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1455d825-f1b0-f0ef-b7eb-d5b3c1b81cb2" executionId="da77ae78-42be-4ea7-a129-606c302a2657" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e8cce29b-6eb3-0f6b-6f86-34dce96d461a" executionId="ee0c5899-144f-4dde-a7aa-356d4d5d7055" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e6ba2ad4-45a6-0553-2326-b33dafabb351" executionId="2969f278-4b4b-4e0e-bf2d-613fdb613e8d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a40aff34-27ba-eb93-616e-0471f653eea7" executionId="81558f60-0e42-4cb8-b866-692f3c4ffa11" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f6929691-37ba-6bce-2368-316a8154abef" executionId="e27cb247-1c31-4f71-ab1f-a103875cdbda" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8a27c60e-2cb4-8fac-db32-3212bca60e2a" executionId="c7067a0b-f0c3-4cab-8ced-8bc1dc0fed81" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6a0b8233-b178-053a-5722-fc65177719bc" executionId="eb1b3a17-1409-4f9b-a030-d034b2b7a8f6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ccce08d5-49a3-2070-0ead-4e010cf2aafb" executionId="7719ab52-2de3-49f8-a563-c23ed29dc90a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b7027eeb-12db-10e8-9864-b3e007a16305" executionId="e24d7188-0a79-405c-bd0f-0eefcf694e84" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="501a9464-09f5-188e-d0b2-ccc539627969" executionId="4db0c6f8-a1a8-4d3a-88f4-720d2c059b8b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0387422f-9b69-8848-e7e0-2772ad140153" executionId="ee911978-24b9-4ac0-9f7b-4c3df958f1ff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="54856220-e119-f22d-41a1-bfb2c2b55288" executionId="72968723-d7f0-4c93-80ee-3bca9fc3138a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d0cc5ec2-c88b-1ae2-4105-b0bd23bf3845" executionId="2c5f4db4-dfff-477b-a4d2-cf53ac9ef857" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9afff86c-b6b2-0efc-f3ce-af687105c479" executionId="b4fd9b98-056c-4565-86cb-b724a998ff4e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ee617d3c-b195-28d0-87c1-a70f9b275ffb" executionId="6cff5539-8c81-4af7-b472-cb2456bbad9d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="58608654-b465-e818-eb07-53d059770996" executionId="4370a5c6-5587-4417-b648-85fb10f7665b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dc7c4daf-4af7-211e-5adb-235a99586a95" executionId="e4106d02-5a30-470e-9026-358d2ce8ee2f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b09d94e1-f218-632c-4a53-00a87c627680" executionId="47d18781-5819-4d5a-922c-32b40d702506" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6780ad22-ecea-df6a-4438-cc76bd485f7b" executionId="82bb75bf-2281-406a-84a2-16e345a302f2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a440291d-cb71-c9ac-c83c-498c71681186" executionId="52dcb977-6df4-45c4-be65-45329e7bccf5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="de34c968-89a5-9452-db9c-d86eda8e3aed" executionId="84a68599-d73b-4a86-88b7-83318e73fa5e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1bbf1c1f-6864-0add-c497-5a173c3541d4" executionId="845faf7d-38f9-4a4f-a9f2-f717f603d267" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ac62a775-fda1-0473-80f0-4ade22d57486" executionId="85481600-4af4-42c2-84bb-8e75ce82724b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8adc88dd-6537-ec04-ae15-29aaeeeb2685" executionId="db6721ea-0bcd-445a-bc91-d0addbd38fb0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="79b5497c-8448-f8b3-2f44-3b7c168961ca" executionId="8b13914f-a812-41b2-9d04-fb6b29486ee8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="78c46663-3382-cfa3-8750-e853d18bcc61" executionId="f42e9366-dc78-426a-bd21-54183d767473" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="512f63e9-ae96-defd-fe04-815db1560d65" executionId="205d74ac-2b9f-44eb-ba86-066fdd89511e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a233f2d1-f4d3-0fad-5609-a7e14e9c4f73" executionId="e09f4439-e961-462d-b177-b015236645db" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f33b8285-395f-e859-765e-f288bc4bf9d0" executionId="a44dc8ab-ff1b-46b9-b787-fe306a18d3d0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8825437c-87e8-c116-2cd7-98aa06644fc4" executionId="92c26c93-8be5-4c1d-89ff-1517f9ebe61e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8642fb2f-5c90-9c8c-0ab4-f3e0d6db42f2" executionId="1b9ce26c-7d08-4c00-adb0-baec40c0827e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="94517785-b258-4e8f-c975-bd725382d7c7" executionId="eeab67e1-b568-442f-8fff-5303dfc13a97" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="86560750-1ea8-fa52-adad-227e861ee7be" executionId="02f21036-9aa0-443c-9d2b-83f113fbcc73" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cbd6b946-3278-e451-b9cf-3dea588966fa" executionId="755f2777-dd66-4211-9b17-41b89c6e156a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a58c17bd-afe8-7a1b-7d1b-3f96ea2c5f2e" executionId="5ec18013-c295-4b0f-924b-b11619344884" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="86eb7dd4-628d-3e6e-83b0-4f1f20db6b50" executionId="bd31c182-dc1b-4c62-828c-fd027d53fdd9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c393552e-c32b-b261-7bac-3c5a7a4f68a2" executionId="1030c307-68f2-43f4-bb5e-c7ad0f29eb63" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="975b950c-4db8-6a2e-2c8e-102e96fbfb11" executionId="ae7505ed-db43-4043-940d-52f23c8ef33c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1d04a153-7207-d897-811e-d73905cf5c40" executionId="ed4d71e0-074c-4199-a9ce-5ea1ffa84521" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7dfeaf0a-e0f9-0ee5-e255-a5097b2da327" executionId="467b8b50-2e51-490e-b77b-3abfddfe147a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fab142ae-9df8-91ea-8c19-18350b1f0134" executionId="36535862-c1d0-48a0-968a-b9a1af3d4d9d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5d2a5ff9-dc5c-f895-75e4-1735dc3ee1ba" executionId="9f96bf45-af2b-422d-8b01-80bf886dd359" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8e66b41a-f352-4d14-eac5-062bd1355e1d" executionId="3f4534ad-c8c3-45fd-bc19-2e186387e4bd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="68b399e8-bb2f-cdcf-d33f-747ff5131f5f" executionId="ab6f396d-490b-486a-b187-cd6c7ec6954a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3d8f58ea-313f-3d4a-38c3-d09bc0cf17d2" executionId="8883b014-db1e-41c1-914b-80c7a853c8b2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6d5b92e8-6b38-15c6-f61d-9317efd33660" executionId="21ba8b36-9f96-4b7a-a112-9a4a1d411e76" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7f6c74c0-aa90-2c62-e894-e7d7116ffd78" executionId="6121d576-da4e-4df2-ab68-8f5d48cc7235" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0b228a86-90c9-2638-c9b1-7e71ed19b758" executionId="0a160adc-448d-4ecd-87f7-86294ac83876" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="64" executed="64" passed="61" failed="3" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 9.0.9)&#xD;
+[xUnit.net 00:00:00.05]   Discovering: RoomMateFinderTests&#xD;
+[xUnit.net 00:00:00.08]   Discovered:  RoomMateFinderTests&#xD;
+[xUnit.net 00:00:00.08]   Starting:    RoomMateFinderTests&#xD;
+? User ID claim missing. Available claims: &#xD;
+[xUnit.net 00:00:00.36]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:00.36]       Expected: OK&#xD;
+[xUnit.net 00:00:00.36]       Actual:   Unauthorized&#xD;
+[xUnit.net 00:00:00.36]       Stack Trace:&#xD;
+[xUnit.net 00:00:00.36]         C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\UnitTests\new_tests\DislikeEndpointTests.cs(64,0): at DislikeEndpointTests.Dislike_WithUser_ReturnsOk()&#xD;
+[xUnit.net 00:00:00.36]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:00.36]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:00.36]       Expected: OK&#xD;
+[xUnit.net 00:00:00.36]       Actual:   BadRequest&#xD;
+[xUnit.net 00:00:00.36]       Stack Trace:&#xD;
+[xUnit.net 00:00:00.36]         C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\UnitTests\new_tests\LikeEndpointTests.cs(66,0): at LikeEndpointTests.Like_WithUser_ReturnsOk()&#xD;
+[xUnit.net 00:00:00.36]         --- End of stack trace from previous location ---&#xD;
+? User ID claim missing. Available claims: &#xD;
+[xUnit.net 00:00:00.38]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:00.38]       Expected: Unauthorized&#xD;
+[xUnit.net 00:00:00.38]       Actual:   BadRequest&#xD;
+[xUnit.net 00:00:00.38]       Stack Trace:&#xD;
+[xUnit.net 00:00:00.38]         C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinderTests\UnitTests\new_tests\LikeEndpointTests.cs(76,0): at LikeEndpointTests.Like_WithoutUser_ReturnsUnauthorized()&#xD;
+[xUnit.net 00:00:00.38]         --- End of stack trace from previous location ---&#xD;
+info: TestAuthHandler[7]&#xD;
+      Test was not authenticated. Failure message: Missing auth header&#xD;
+info: TestAuthHandler[7]&#xD;
+      Test was not authenticated. Failure message: Missing auth header&#xD;
+info: TestAuthHandler[7]&#xD;
+      Test was not authenticated. Failure message: Missing auth header&#xD;
+warn: LuckyPennySoftware.MediatR.License[0]&#xD;
+      You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.&#xD;
+warn: LuckyPennySoftware.MediatR.License[0]&#xD;
+      You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: TestAuthHandler[7]&#xD;
+      Test was not authenticated. Failure message: Missing auth header&#xD;
+info: TestAuthHandler[7]&#xD;
+      Test was not authenticated. Failure message: Missing auth header&#xD;
+fail: RoomMateFinder.Middleware.ErrorHandlingMiddleware[0]&#xD;
+      Unhandled exception&#xD;
+      System.Exception: Invalid email or password.&#xD;
+         at RoomMateFinder.Features.Login.LoginUser.LoginHandler.Handle(LoginCommand request, CancellationToken cancellationToken) in C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinder\Features\Login\LoginUser\LoginHandler.cs:line 37&#xD;
+         at Program.&lt;&gt;c.&lt;&lt;&lt;Main&gt;$&gt;b__0_8&gt;d.MoveNext() in C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinder\Program.cs:line 204&#xD;
+      --- End of stack trace from previous location ---&#xD;
+         at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)&#xD;
+         at Microsoft.AspNetCore.Http.RequestDelegateFactory.&lt;&gt;c__DisplayClass101_2.&lt;&lt;HandleRequestBodyAndCompileRequestDelegateForJson&gt;b__2&gt;d.MoveNext()&#xD;
+      --- End of stack trace from previous location ---&#xD;
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)&#xD;
+         at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)&#xD;
+         at RoomMateFinder.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\radug\OneDrive\Desktop\.net\RoomMateFinder-Gociu-Start\RoomMateFinder\RoomMateFinder\Middleware\ErrorHandlingMiddleware.cs:line 25&#xD;
+info: TestAuthHandler[7]&#xD;
+      Test was not authenticated. Failure message: Missing auth header&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: TestAuthHandler[7]&#xD;
+      Test was not authenticated. Failure message: Missing auth header&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+[xUnit.net 00:00:00.71]   Finished:    RoomMateFinderTests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="RADUG" outcome="Warning" timestamp="2026-01-15T12:42:32.2600485+02:00">
+        <Text>Data collection : Unable to find a datacollector with friendly name 'XPlat Code Coverage'.</Text>
+      </RunInfo>
+      <RunInfo computerName="RADUG" outcome="Warning" timestamp="2026-01-15T12:42:32.2604597+02:00">
+        <Text>Data collection : Could not find data collector 'XPlat Code Coverage'</Text>
+      </RunInfo>
+      <RunInfo computerName="RADUG" outcome="Error" timestamp="2026-01-15T12:42:32.6989926+02:00">
+        <Text>[xUnit.net 00:00:00.35]     DislikeEndpointTests.Dislike_WithUser_ReturnsOk [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="RADUG" outcome="Error" timestamp="2026-01-15T12:42:32.7014713+02:00">
+        <Text>[xUnit.net 00:00:00.36]     LikeEndpointTests.Like_WithUser_ReturnsOk [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="RADUG" outcome="Error" timestamp="2026-01-15T12:42:32.7245021+02:00">
+        <Text>[xUnit.net 00:00:00.38]     LikeEndpointTests.Like_WithoutUser_ReturnsUnauthorized [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

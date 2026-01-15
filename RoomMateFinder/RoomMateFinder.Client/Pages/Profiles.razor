@@ -1,7 +1,6 @@
 ﻿@page "/profiles"
 @inject HttpClient Http
 @inject NavigationManager Navigation
-@inject RoomMateFinder.Client.Services.AuthService AuthService
 
 <div class="profiles-container">
     <div class="profiles-header">
@@ -67,13 +66,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        // Check if user is authenticated
-        if (!AuthService.IsAuthenticated)
-        {
-            Navigation.NavigateTo("/login");
-            return;
-        }
-
         await LoadProfiles();
     }
 
@@ -84,9 +76,6 @@
 
         try
         {
-            // Add authorization header before making request
-            AuthService.AddAuthorizationHeader(Http);
-            
             profiles = await Http.GetFromJsonAsync<List<Profile>>("/profiles");
         }
         catch (Exception ex)
@@ -287,3 +276,4 @@
         }
     }
 </style>
+

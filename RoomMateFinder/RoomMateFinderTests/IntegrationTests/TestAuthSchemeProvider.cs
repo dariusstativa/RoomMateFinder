@@ -1,6 +1,7 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
+﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.Options;
+
+namespace RoomMateFinderTests.IntegrationTests;
 
 public class TestAuthSchemeProvider : AuthenticationSchemeProvider
 {
@@ -8,17 +9,4 @@ public class TestAuthSchemeProvider : AuthenticationSchemeProvider
         : base(options)
     {
     }
-
-    public override Task<AuthenticationScheme?> GetDefaultAuthenticateSchemeAsync()
-    {
-        var scheme = new AuthenticationScheme(
-            "Test",          
-            "Test Scheme",    
-            typeof(TestAuthHandler));  
-
-        return Task.FromResult<AuthenticationScheme?>(scheme);
-    }
-
-    public override Task<AuthenticationScheme?> GetDefaultChallengeSchemeAsync()
-        => GetDefaultAuthenticateSchemeAsync();
 }

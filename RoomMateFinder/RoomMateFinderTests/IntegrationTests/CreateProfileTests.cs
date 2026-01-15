@@ -1,6 +1,7 @@
 ﻿using System.Net;
 using System.Net.Http.Json;
 using Xunit;
+using RoomMateFinderTests.IntegrationTests;
 
 public class CreateAndGetMyProfileTests : IClassFixture<CustomWebApplicationFactory>
 {

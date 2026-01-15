@@ -1,13 +1,10 @@
 ﻿@page "/listings/{id:guid}"
-
-@using RoomMateFinder.Client.Models
 @inject HttpClient Http
 @inject NavigationManager Navigation
 @inject RoomMateFinder.Client.Services.AuthService AuthService
 @inject IJSRuntime JSRuntime
 
-<div class="listing-page">
-
+<div class="listing-detail-container">
     @if (isLoading)
     {
         <div class="loading">Loading listing details...</div>
@@ -15,97 +12,75 @@
     else if (!string.IsNullOrEmpty(errorMessage))
     {
         <div class="error-container">
-            <p>@errorMessage</p>
-            <button class="btn-secondary"
-                    @onclick="@(() => Navigation.NavigateTo("/listings"))">
+            <div class="error-message">@errorMessage</div>
+            <button class="btn-secondary" @onclick="@(() => Navigation.NavigateTo("/listings"))">
                 Back to Listings
             </button>
         </div>
     }
     else if (listing != null)
     {
-        <div class="listing-card">
-
-            <!-- HEADER -->
+        <div class="listing-detail-card">
             <div class="listing-header">
-                <button class="btn-back"
-                        @onclick="@(() => Navigation.NavigateTo("/listings"))">
+                <button class="btn-back" @onclick="@(() => Navigation.NavigateTo("/listings"))">
                     ← Back to Listings
                 </button>
-
                 @if (listing.OwnerId == AuthService.UserId)
                 {
                     <div class="owner-actions">
-                        <button class="btn-secondary"
-                                @onclick="@(() => Navigation.NavigateTo($"/listings/{Id}/edit"))">
+                        <button class="btn-edit" @onclick="@(() => Navigation.NavigateTo($"/listings/{Id}/edit"))">
                             Edit
                         </button>
-                        <button class="btn-danger" @onclick="HandleDelete">
+                        <button class="btn-delete" @onclick="HandleDelete">
                             Delete
                         </button>
                     </div>
                 }
             </div>
 
-            <!-- TITLE -->
-            <h1 class="listing-title">@listing.Title</h1>
-
+            <h1>@listing.Title</h1>
+            
             <div class="listing-meta">
-                <span class="price">$@listing.Price / month</span>
-                <span>• Posted @FormatDate(listing.CreatedAt)</span>
+                <span class="price">$@listing.Price/month</span>
+                <span class="date">Posted @FormatDate(listing.CreatedAt)</span>
             </div>
 
-            <!-- INFO GRID -->
-            <div class="listing-info-grid">
-
-                <div class="info-card">
-                    <h3>📍 Location</h3>
+            <div class="listing-content">
+                <div class="info-section">
+                    <h2>📍 Location</h2>
                     <p>@listing.Address</p>
                 </div>
 
-                <div class="info-card">
-                    <h3>📝 Description</h3>
-                    <p>@listing.Description</p>
+                <div class="info-section">
+                    <h2>📝 Description</h2>
+                    <p class="description">@listing.Description</p>
                 </div>
 
-                <div class="info-card">
-                    <h3>👥 Roommates</h3>
-                    <p>@listing.RoommatesCount</p>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3>👥 Roommates</h3>
+                        <p>@listing.RoommatesCount</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>🚻 Gender Preference</h3>
+                        <p>@listing.GenderPreference</p>
+                    </div>
                 </div>
 
-                <div class="info-card">
-                    <h3>🚻 Gender Preference</h3>
-                    <p>@listing.GenderPreference</p>
-                </div>
-
-            </div>
-
-            <!-- CONTACT -->
-            @if (listing.OwnerId != AuthService.UserId)
-            {
-                <div class="contact-card">
-                    <h3>💬 Interested?</h3>
+                <div class="contact-section">
+                    <h2>💬 Interested?</h2>
                     <p>Contact the owner to learn more about this listing.</p>
-
-                    <button class="btn-primary"
-                            @onclick="@(() => Navigation.NavigateTo($"/chat/{listing.OwnerId}"))">
-                        Send Message
-                    </button>
+                    <button class="btn-primary">Send Message</button>
                 </div>
-            }
-
-            <!-- REVIEWS -->
-            <div class="listing-reviews">
-                <ReviewList TargetId="listing.Id"
-                            TargetType="ReviewTargetType.Listing" />
             </div>
-
         </div>
     }
 </div>
 
 @code {
-    [Parameter] public Guid Id { get; set; }
+    [Parameter]
+    public Guid Id { get; set; }
 
     private RoomListing? listing;
     private string errorMessage = string.Empty;
@@ -118,14 +93,27 @@
 
     private async Task LoadListing()
     {
+        isLoading = true;
+        errorMessage = string.Empty;
+
         try
         {
-            AuthService.AddAuthorizationHeader(Http);
             listing = await Http.GetFromJsonAsync<RoomListing>($"/listings/{Id}");
         }
-        catch
+        catch (HttpRequestException ex)
         {
-            errorMessage = "Failed to load listing.";
+            if (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                errorMessage = "Listing not found.";
+            }
+            else
+            {
+                errorMessage = $"Error loading listing: {ex.Message}";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error: {ex.Message}";
         }
         finally
         {
@@ -135,27 +123,277 @@
 
     private async Task HandleDelete()
     {
-        if (!await JSRuntime.InvokeAsync<bool>("confirm",
-                "Are you sure you want to delete this listing?"))
+        if (!await JSRuntime.InvokeAsync<bool>("confirm", "Are you sure you want to delete this listing?"))
             return;
 
-        AuthService.AddAuthorizationHeader(Http);
-
-        var response = await Http.DeleteAsync(
-            $"/users/{listing!.OwnerId}/listings/{Id}");
-
-        if (response.IsSuccessStatusCode)
-            Navigation.NavigateTo("/listings");
-        else
-            errorMessage = "Failed to delete listing.";
+        try
+        {
+            var response = await Http.DeleteAsync($"/users/{listing!.OwnerId}/listings/{Id}");
+            
+            if (response.IsSuccessStatusCode)
+            {
+                Navigation.NavigateTo("/listings");
+            }
+            else
+            {
+                errorMessage = "Failed to delete listing.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error deleting listing: {ex.Message}";
+        }
     }
 
     private string FormatDate(DateTime date)
     {
-        var span = DateTime.Now - date;
-        if (span.TotalDays < 1) return "today";
-        if (span.TotalDays < 2) return "yesterday";
-        if (span.TotalDays < 7) return $"{(int)span.TotalDays} days ago";
+        var timeSpan = DateTime.Now - date;
+        if (timeSpan.TotalDays < 1)
+            return "today";
+        if (timeSpan.TotalDays < 2)
+            return "yesterday";
+        if (timeSpan.TotalDays < 7)
+            return $"{(int)timeSpan.TotalDays} days ago";
         return date.ToString("MMM dd, yyyy");
     }
 }
+
+<style>
+    .listing-detail-container {
+        min-height: 100vh;
+        background: #f5f7fa;
+        padding: 40px 20px;
+    }
+
+    .loading, .error-container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 40px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .error-message {
+        color: #c53030;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .listing-detail-card {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+    }
+
+    .listing-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .btn-back {
+        padding: 10px 20px;
+        background: #e0e0e0;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .btn-back:hover {
+        background: #d0d0d0;
+    }
+
+    .owner-actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    .btn-edit, .btn-delete {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .btn-edit {
+        background: #667eea;
+        color: white;
+    }
+
+    .btn-edit:hover {
+        background: #5568d3;
+    }
+
+    .btn-delete {
+        background: #f56565;
+        color: white;
+    }
+
+    .btn-delete:hover {
+        background: #e53e3e;
+    }
+
+    h1 {
+        font-size: 36px;
+        font-weight: 600;
+        color: #333;
+        margin: 0 0 20px 0;
+    }
+
+    .listing-meta {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .price {
+        font-size: 24px;
+        font-weight: 600;
+        color: #667eea;
+    }
+
+    .date {
+        font-size: 14px;
+        color: #999;
+    }
+
+    .listing-content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .info-section {
+        margin-bottom: 20px;
+    }
+
+    .info-section h2 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #333;
+        margin: 0 0 15px 0;
+    }
+
+    .info-section p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .description {
+        white-space: pre-wrap;
+    }
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        background: #f5f7fa;
+        border-radius: 8px;
+    }
+
+    .info-item h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #666;
+        margin: 0 0 8px 0;
+    }
+
+    .info-item p {
+        font-size: 18px;
+        font-weight: 500;
+        color: #333;
+        margin: 0;
+    }
+
+    .contact-section {
+        padding: 30px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 12px;
+        text-align: center;
+        color: white;
+    }
+
+    .contact-section h2 {
+        font-size: 24px;
+        margin: 0 0 10px 0;
+    }
+
+    .contact-section p {
+        font-size: 16px;
+        margin: 0 0 20px 0;
+        opacity: 0.9;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .btn-primary {
+        background: white;
+        color: #667eea;
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-secondary {
+        background: #667eea;
+        color: white;
+    }
+
+    .btn-secondary:hover {
+        background: #5568d3;
+    }
+
+    @@media (max-width: 768px) {
+        .listing-detail-card {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        .listing-header {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 15px;
+        }
+
+        .owner-actions {
+            justify-content: stretch;
+        }
+
+        .btn-edit, .btn-delete {
+            flex: 1;
+        }
+
+        .info-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

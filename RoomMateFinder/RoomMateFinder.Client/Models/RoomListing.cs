@@ -10,6 +10,6 @@ public class RoomListing
     public decimal Price { get; set; }
     public int RoommatesCount { get; set; }
     public string GenderPreference { get; set; } = string.Empty;
-    public string? ImageUrl { get; set; }
     public DateTime CreatedAt { get; set; }
 }
+

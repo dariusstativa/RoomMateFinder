@@ -19,6 +19,6 @@ public class GetProfileByIdHandler : IRequestHandler<GetProfileByIdQuery, Profil
         return await _db.Profiles
             .Include(p => p.User)  // poți păstra include, nu deranjează frontend-ul
             .AsNoTracking()
-            .FirstOrDefaultAsync(p => p.UserId == request.ProfileId, ct);
+            .FirstOrDefaultAsync(p => p.Id == request.ProfileId, ct);
     }
 }
