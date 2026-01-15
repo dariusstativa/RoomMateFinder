@@ -1,0 +1,32 @@
+# ---------- BUILD ----------
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+# Copiem soluția (opțional, dar păstrăm stilul)
+COPY RoomMateFinder.sln ./
+
+# Copiem csproj-ul clientului
+COPY RoomMateFinder.Client/RoomMateFinder.Client.csproj ./RoomMateFinder.Client/
+
+# Restore doar pentru client
+RUN dotnet restore RoomMateFinder.Client/RoomMateFinder.Client.csproj
+
+# Copiem restul fișierelor clientului
+COPY RoomMateFinder.Client/ ./RoomMateFinder.Client/
+
+# Publicăm Blazor WASM
+WORKDIR /src/RoomMateFinder.Client
+RUN dotnet publish RoomMateFinder.Client.csproj \
+    -c Release \
+    -o /app/publish \
+    --no-restore
+
+# ---------- RUNTIME ----------
+FROM nginx:alpine
+WORKDIR /usr/share/nginx/html
+
+# Config Nginx pentru Blazor routing
+COPY RoomMateFinder.Client/nginx.conf /etc/nginx/conf.d/default.conf
+
+# Fișierele statice Blazor
+COPY --from=build /app/publish/wwwroot .

@@ -15,11 +15,18 @@ builder.Services.AddScoped<AuthService>();
 builder.Services.AddTransient<AuthorizationMessageHandler>();
 
 // Principalul HttpClient folosit în aplicație
+var apiBaseUrl = builder.Configuration["ApiBaseUrl"]
+                 ?? throw new InvalidOperationException("ApiBaseUrl is not configured");
+
 builder.Services.AddHttpClient("RoomMateFinderAPI", client =>
     {
-        client.BaseAddress = new Uri("http://localhost:5044");
+        client.BaseAddress = new Uri(apiBaseUrl);
     })
     .AddHttpMessageHandler<AuthorizationMessageHandler>();
+
+builder.Services.AddScoped(sp =>
+        sp.GetRequiredService<IHttpClientFactory>()
+            .CreateClient("RoomMateFinderAPI"));
 
 // Simplify injection
 builder.Services.AddScoped(sp =>

@@ -183,7 +183,7 @@ builder.Services.AddCors(o =>
 {
     o.AddPolicy("AllowBlazor", p =>
     {
-        p.WithOrigins("http://localhost:5218", "https://localhost:5218")
+        p.WithOrigins("http://localhost:5218", "https://localhost:5218","https://client-wniw.onrender.com")
          .AllowAnyMethod()
          .AllowAnyHeader()
          .AllowCredentials();
@@ -215,7 +215,6 @@ app.UseCors("AllowBlazor");
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseErrorHandling();
-
 app.MapControllers();
 
 // ✅ SignalR Hub
